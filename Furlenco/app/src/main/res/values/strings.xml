@@ -1,3 +1,26 @@
 <resources>
     <string name="app_name">Furlenco</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="text_skip">Skip</string>
+    <string name="text_Next">Next</string>
+    <string name="text_great_design_beautifully_put_together">Great Design, Beautifully put together</string>
+    <string name="text_easyOnWallet">Easy on the wallet!</string>
+    <string name="text_monthlyRentals">Monthly Rentals start as low as Rs.799 per package</string>
+    <string name="text_stayMobile">Stay mobile, stay free</string>
+    <string name="text_MoveCities">Move cities often? Start and stop renting at will.</string>
+    <string name="text_weDont">We don\'t just ship</string>
+    <string name="text_wellComeOver">We\'ll come over and set everything up. With love, for free</string>
+    <string name="text_selectCity">Select City</string>
+    <string name="text_Bengaluru">Bengaluru</string>
+    <string name="text_Mumbai">Mumbai</string>
+    <string name="text_Pune">Pune</string>
+    <string name="text_Delhi">Delhi</string>
+    <string name="text_Gurugram">Gurugram</string>
+    <string name="text_Noida">Noida</string>
+    <string name="text_Hyderabad">Hyderabad</string>
+    <string name="text_Chennai">Chennai</string>
+
+
+    <string name="text_rentBeautiful">Rent beautiful furniture with matching home decor.</string>
 </resources>

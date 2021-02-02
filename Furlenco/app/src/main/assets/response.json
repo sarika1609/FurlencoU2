@@ -1,0 +1,359 @@
+{
+  "Explore Products": [
+    {
+      "Bedroom": [
+        {
+          "name": "Allen Bedroom",
+          "price": 749,
+          "offer": "available"
+        },
+        {
+          "name": "Allen Bedroom",
+          "price": 999,
+          "offer": "available"
+        },
+        {
+          "name": "Allen Bedroom",
+          "price": 550,
+          "offer": "available"
+        }
+      ]
+    },
+    {
+      "Living Room": [
+        {
+          "name": "Allen Bedroom",
+          "no of seats": 2,
+          "basic": "2 items",
+          "value": "3 items",
+          "prime": "4 items"
+        },
+        {
+          "name": "Allen Bedroom",
+          "no of seats": 2,
+          "basic": "2 items",
+          "value": "3 items",
+          "prime": "4 items"
+        },
+        {
+          "name": "Allen Bedroom",
+          "no of seats": 2,
+          "basic": "2 items",
+          "value": "3 items",
+          "prime": "4 items"
+        }
+      ]
+    },
+    {
+      "Appliances": [
+        {
+          "name": "Allen Bedroom",
+          "warranty": "2 years",
+          "units": "1 unit",
+          "price": "4 items"
+        },
+        {
+          "name": "Allen Bedroom",
+          "warranty": "2 years",
+          "units": "1 unit",
+          "price": "4 items"
+        },
+        {
+          "name": "Allen Bedroom",
+          "warranty": "2 years",
+          "units": "1 unit",
+          "price": "4 items"
+        }
+      ]
+    },
+    {
+      "Full Home": [
+        {
+          "name": "Allen Bedroom",
+          "price": "4 items"
+        },
+        {
+          "name": "Allen Bedroom",
+          "price": "4 items"
+        },
+        {
+          "name": "Allen Bedroom",
+          "price": "4 items"
+        }
+      ]
+    },
+    {
+      "Storage": [
+        {
+          "display": "Allen Bedroom",
+          "price": "4 items"
+        },
+        {
+          "display": "Allen Bedroom",
+          "price": "4 items"
+        },
+        {
+          "display": "Allen Bedroom",
+          "price": "4 items"
+        }
+      ]
+    },
+    {
+      "Study Room": [
+        {
+          "name": "Allen Bedroom",
+          "price": "4 items"
+        },
+        {
+          "name": "Allen Bedroom",
+          "price": "4 items"
+        },
+        {
+          "name": "Allen Bedroom",
+          "price": "4 items"
+        }
+      ]
+    },
+    {
+      "Kids Room": [
+        {
+          "storage": "Allen Bedroom",
+          "price": "4 items"
+        },
+        {
+          "storage": "Allen Bedroom",
+          "price": "4 items"
+        },
+        {
+          "storage": "Allen Bedroom",
+          "price": "4 items"
+        }
+      ]
+    },
+    {
+      "Dining Room": [
+        {
+          "name": "Allen Bedroom",
+          "price": "4 items"
+        },
+        {
+          "name": "Allen Bedroom",
+          "price": "4 items"
+        },
+        {
+          "name": "Allen Bedroom",
+          "price": "4 items"
+        }
+      ]
+    },
+    {
+      "2-Wheelers": [
+        {
+          "name": "Allen Bedroom",
+          "price": "4 items"
+        }
+      ]
+    },
+    {
+      "Special Deals": [
+        {
+          "name": "Allen Bedroom",
+          "price": "4 items"
+        },
+        {
+          "name": "Allen Bedroom",
+          "price": "4 items"
+        },
+        {
+          "name": "Allen Bedroom",
+          "price": "4 items"
+        }
+      ]
+    }
+  ],
+
+  "Browse Collections": [
+    {
+      "Special Deals": [
+        {
+          "name": "Allen Bedroom",
+          "url": "749",
+          "data": "available"
+        },
+        {
+          "name": "Allen Bedroom",
+          "url": "749",
+          "data": "available"
+        },
+        {
+          "name": "Allen Bedroom",
+          "url": "749",
+          "data": "available"
+        }
+      ]
+    },
+
+    {
+      "Vibrant Homes": [
+        {
+          "name": "Allen Bedroom",
+          "url": "749",
+          "data": "available"
+        },
+        {
+          "name": "Allen Bedroom",
+          "url": "749",
+          "data": "available"
+        },
+        {
+          "name": "Allen Bedroom",
+          "url": "749",
+          "data": "available"
+        }
+      ]
+    },
+
+    {
+      "Most Popular": [
+        {
+          "name": "Allen Bedroom",
+          "url": "749",
+          "data": "available"
+        },
+        {
+          "name": "Allen Bedroom",
+          "url": "749",
+          "data": "available"
+        },
+        {
+          "name": "Allen Bedroom",
+          "url": "749",
+          "data": "available"
+        }
+      ]
+    },
+
+    {
+      "Essentials": [
+        {
+          "name": "Allen Bedroom",
+          "url": "749",
+          "data": "available"
+        },
+        {
+          "name": "Allen Bedroom",
+          "url": "749",
+          "data": "available"
+        },
+        {
+          "name": "Allen Bedroom",
+          "url": "749",
+          "data": "available"
+        }
+      ]
+    },
+
+    {
+      "New Launch": [
+        {
+          "name": "Allen Bedroom",
+          "url": "749",
+          "data": "available"
+        },
+        {
+          "name": "Allen Bedroom",
+          "url": "749",
+          "data": "available"
+        },
+        {
+          "name": "Allen Bedroom",
+          "url": "749",
+          "data": "available"
+        }
+      ]
+    },
+
+    {
+      "Storage Combo": [
+        {
+          "name": "Allen Bedroom",
+          "url": "749",
+          "data": "available"
+        },
+        {
+          "name": "Allen Bedroom",
+          "url": "749",
+          "data": "available"
+        },
+        {
+          "name": "Allen Bedroom",
+          "url": "749",
+          "data": "available"
+        }
+      ]
+    },
+
+    {
+      "Award Winners": [
+        {
+          "name": "Allen Bedroom",
+          "url": "749",
+          "data": "available"
+        },
+        {
+          "name": "Allen Bedroom",
+          "url": "749",
+          "data": "available"
+        },
+        {
+          "name": "Allen Bedroom",
+          "url": "749",
+          "data": "available"
+        }
+      ]
+    },
+
+    {
+      "CRED Collection": [
+        {
+          "name": "Allen Bedroom",
+          "url": "749",
+          "data": "available"
+        },
+        {
+          "name": "Allen Bedroom",
+          "url": "749",
+          "data": "available"
+        },
+        {
+          "name": "Allen Bedroom",
+          "url": "749",
+          "data": "available"
+        }
+      ]
+    }
+  ],
+
+  "Award Winning Designs": [
+    {
+      "name": "Pico Queen Bed",
+      "url": "jaefhjehg.com",
+      "year": 1992,
+      "data": "ehfejg"
+    },
+
+    {
+      "name": "Pico Queen Bed",
+      "url": "jaefhjehg.com",
+      "year": 1992,
+      "data": "ehfejg"
+    },
+
+    {
+      "name": "Pico Queen Bed",
+      "url": "jaefhjehg.com",
+      "year": 1992,
+      "data": "ehfejg"
+    }
+  ]
+}

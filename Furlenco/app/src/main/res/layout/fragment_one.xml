@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/flContainer"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".InitialScreenFragments.FragmentOne">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/tvGreatDesign"
+            android:text="@string/text_great_design_beautifully_put_together"
+            style="@style/headerTextStyle" />
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/animationView"
+            style="@style/animationStyle"
+            app:lottie_rawRes="@raw/furniture"
+            android:layout_below="@+id/tvGreatDesign" />
+
+        <TextView
+            android:id="@+id/rentBeautiful"
+            style="@style/footerTextStyle"
+            android:text="@string/text_rentBeautiful"
+            android:layout_below="@+id/animationView" />
+
+        <Button
+            android:id="@+id/btnSkip"
+            style="@style/skipButtonStyle"
+            android:background="@drawable/skip_btn_background" />
+
+        <Button
+            android:id="@+id/btnNext"
+            style="@style/nextButtonStyle"
+            android:background="@drawable/next_btn_background" />
+
+    </RelativeLayout>
+
+</FrameLayout>
