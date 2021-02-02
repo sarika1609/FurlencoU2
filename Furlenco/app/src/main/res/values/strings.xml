@@ -1,6 +1,10 @@
 <resources>
     <string name="app_name">Furlenco</string>
-    <!-- TODO: Remove or change this placeholder text -->
+    <string name="home">Home</string>
+    <string name="products">Products</string>
+    <string name="collections">Collection</string>
+    <string name="cart">Cart</string>
+    <string name="me">Me</string>
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="text_skip">Skip</string>
     <string name="text_Next">Next</string>
