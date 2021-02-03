@@ -26,7 +26,7 @@
         android:text="@string/text_wellComeOver"
         android:layout_below="@+id/animationView4" />
 
-    <Button
+   <!-- <Button
         android:id="@+id/btnSkip4"
         style="@style/skipButtonStyle"
         android:background="@drawable/skip_btn_background" />
@@ -34,6 +34,6 @@
     <Button
         android:id="@+id/btnNext4"
         style="@style/nextButtonStyle"
-        android:background="@drawable/next_btn_background" />
+        android:background="@drawable/next_btn_background" />-->
 
 </RelativeLayout>

@@ -4,6 +4,8 @@ import androidx.appcompat.app.AppCompatActivity;
 
 
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
@@ -24,6 +26,8 @@ public class MainActivity extends AppCompatActivity {
     private TabLayout tabLayout;
     private FragmentManager fragmentManager;
     private String tag;
+    private Button mBtnSkip;
+    private Button mBtnNext;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,7 +40,15 @@ public class MainActivity extends AppCompatActivity {
     private void initViews() {
         viewPager = findViewById(R.id.viewPager);
         tabLayout = findViewById(R.id.tabLayout);
+        mBtnSkip = findViewById(R.id.btnSkip);
+        mBtnNext = findViewById(R.id.btnNext);
         fragmentManager = getSupportFragmentManager();
+        mBtnSkip.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                viewPager.setCurrentItem(4);
+            }
+        });
     }
 
     private void setViewPagerAdapter() {
@@ -46,7 +58,7 @@ public class MainActivity extends AppCompatActivity {
         tabLayout.setupWithViewPager(viewPager);
     }
 
-    private class ViewPagerAdapter extends FragmentStatePagerAdapter{
+    private class ViewPagerAdapter extends FragmentStatePagerAdapter {
 
         public ViewPagerAdapter(@NonNull FragmentManager fm, int behavior) {
             super(fm, behavior);
@@ -65,6 +77,8 @@ public class MainActivity extends AppCompatActivity {
                 case 3:
                     return FragmentFour.newInstance();
                 case 4:
+                    mBtnNext.setVisibility(View.GONE);
+                    mBtnSkip.setVisibility(View.GONE);
                     return FragmentFive.newInstance();
             }
             return null;

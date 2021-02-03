@@ -23,7 +23,7 @@
         android:text="@string/text_MoveCities"
         android:layout_below="@+id/animationView3" />
 
-    <Button
+   <!-- <Button
         android:id="@+id/btnSkip3"
         style="@style/skipButtonStyle"
         android:background="@drawable/skip_btn_background" />
@@ -32,5 +32,5 @@
         android:id="@+id/btnNext3"
         style="@style/nextButtonStyle"
         android:background="@drawable/next_btn_background" />
-
+-->
 </RelativeLayout>
