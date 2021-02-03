@@ -47,4 +47,7 @@
     <string name="text_Hyderabad">Hyderabad</string>
     <string name="text_Chennai">Chennai</string>
     <string name="text_rentBeautiful">Rent beautiful furniture with matching home decor.</string>
+    <string name="text1_cart">You have not added anything in</string>
+    <string name="text2_cart">your cart yet.</string>
+    <string name="img_EmptyCart">EmptyCart</string>
 </resources>
