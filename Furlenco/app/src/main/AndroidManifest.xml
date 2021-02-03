@@ -11,12 +11,13 @@
         android:roundIcon="@drawable/ic_furlenco_logo"
         android:supportsRtl="true"
         android:theme="@style/Theme.Furlenco">
-        <activity android:name=".Activities.CartActivity"></activity>
+        <activity android:name=".Activities.MainActivity" />
+        <activity android:name=".Activities.CartActivity" />
         <activity android:name=".Activities.ProfileActivity" />
         <activity android:name=".Activities.CollectionsActivity" />
         <activity android:name=".Activities.ProductsActivity" />
         <activity android:name=".Activities.HomeActivity" />
-        <activity android:name=".Activities.MainActivity">
+        <activity android:name=".Activities.HomeActivity2">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

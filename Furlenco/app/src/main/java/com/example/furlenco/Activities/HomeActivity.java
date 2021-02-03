@@ -79,8 +79,6 @@ public class HomeActivity extends AppCompatActivity implements OnProductClick {
         bindData();
     }
 
-
-
     private void bindData() {
        Thread thread = new Thread(apiRunnable);
        thread.start();

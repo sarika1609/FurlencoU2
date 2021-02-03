@@ -5,10 +5,10 @@
     <string name="collections">Collection</string>
     <string name="cart">Cart</string>
     <string name="me">Me</string>
-    <string name="safty_assured">Safty Assured</string>
+    <string name="safty_assured">Safety Assured</string>
     <string name="awesome_furtinure">Awesome Furniture.</string>
     <string name="delivered_safe">Delivered Safe.</string>
-    <string name="furlence">Furlence</string>
+    <string name="furlenco">FURLENCO</string>
     <string name="rent_free">Go rent-free for 4 months.Get flat 50%
     off per month. Hurry! Offer ends at midnight.TC Apply</string>
     <string name="explore_products">Explore Products</string>
@@ -56,4 +56,10 @@
 
     <string name="hello_first_fragment">Hello first fragment</string>
     <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <string name="title_activity_home2">HomeActivity2</string>
+    <!--
+    This string is used for square devices and overridden by hello_world in
+    values-round/strings.xml for round devices.
+    -->
+    <string name="hello_world">Hello Square World!</string>
 </resources>

@@ -1,4 +1,4 @@
-package com.example.furlenco.Fragments;
+package com.example.furlenco.StartScreenFragments;
 
 import android.content.Context;
 import android.content.Intent;
@@ -6,15 +6,14 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.cardview.widget.CardView;
 import androidx.fragment.app.Fragment;
 
-import com.example.furlenco.Activities.HomeActivity;
 import com.example.furlenco.Activities.MainActivity;
+import com.example.furlenco.Activities.HomeActivity2;
 import com.example.furlenco.R;
 
 public class FragmentFive extends Fragment implements View.OnClickListener {
@@ -58,8 +57,8 @@ public class FragmentFive extends Fragment implements View.OnClickListener {
         cvChennai.setOnClickListener(this);
     }
 
-    public void gotoHomeActivity(String name) {
-        Intent intent = new Intent(getContext(), HomeActivity.class);
+    public void launchHomeActivity(String name) {
+        Intent intent = new Intent(getContext(), HomeActivity2.class);
         intent.putExtra("city_name", name);
         startActivity(intent);
     }
@@ -82,28 +81,28 @@ public class FragmentFive extends Fragment implements View.OnClickListener {
     public void onClick(View v) {
         switch (v.getId()) {
             case R.id.cvBengaluru:
-                gotoHomeActivity("Bengaluru");
+                launchHomeActivity("Bengaluru");
                 break;
             case R.id.cvMumbai:
-                gotoHomeActivity("Mumbai");
+                launchHomeActivity("Mumbai");
                 break;
             case R.id.cvPune:
-                gotoHomeActivity("Pune");
+                launchHomeActivity("Pune");
                 break;
             case R.id.cvDelhi:
-                gotoHomeActivity("Delhi");
+                launchHomeActivity("Delhi");
                 break;
             case R.id.cvGurugram:
-                gotoHomeActivity("Gurugram");
+                launchHomeActivity("Gurugram");
                 break;
             case R.id.cvNoida:
-                gotoHomeActivity("Noida");
+                launchHomeActivity("Noida");
                 break;
             case R.id.cvHyderabad:
-                gotoHomeActivity("Hyderabad");
+                launchHomeActivity("Hyderabad");
                 break;
             case R.id.cvChennai:
-                gotoHomeActivity("Chennai");
+                launchHomeActivity("Chennai");
                 break;
         }
     }
