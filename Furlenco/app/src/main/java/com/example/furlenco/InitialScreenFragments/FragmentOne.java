@@ -47,12 +47,12 @@ public class FragmentOne extends Fragment {
 
 
 
-//        mBtnNext.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-////                (MainActivity(getActivity())
-//            }
-//        });
+        mBtnNext.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+            }
+        });
     }
 
     @Override
