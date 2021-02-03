@@ -9,6 +9,7 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
+import com.example.furlenco.Interfaces.OnProductClick;
 import com.example.furlenco.ModelClasses.ProductModelClass;
 import com.example.furlenco.POJOClasses.ExploreProductsItem;
 import com.example.furlenco.R;
@@ -17,11 +18,12 @@ public class ProductsViewHolder extends RecyclerView.ViewHolder {
     LinearLayout ll_products;
     ImageView iv_product;
     TextView tv_product;
+    OnProductClick onProductClick;
 
-
-    public ProductsViewHolder(@NonNull View itemView) {
+    public ProductsViewHolder(@NonNull View itemView, OnProductClick onProductClick) {
         super(itemView);
         initUI(itemView);
+        this.onProductClick = onProductClick;
     }
 
     private void initUI(View itemView) {
@@ -41,7 +43,7 @@ public class ProductsViewHolder extends RecyclerView.ViewHolder {
 
             @Override
             public void onClick(View view) {
-
+                onProductClick.productItemClicked(getAdapterPosition());
             }
         });
     }
