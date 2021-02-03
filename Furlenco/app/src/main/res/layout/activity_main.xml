@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".Activities.MainActivity">
 
     <androidx.viewpager.widget.ViewPager
         android:id="@+id/viewPager"
@@ -15,12 +15,22 @@
         android:id="@+id/tabLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="@dimen/dp_15"
         android:layout_alignParentBottom="true"
+        android:layout_marginBottom="@dimen/dp_15"
         android:background="@android:color/transparent"
         app:tabBackground="@drawable/tab_pager_selector"
         app:tabGravity="center"
         app:tabIndicatorHeight="0dp" />
+
+    <Button
+        android:id="@+id/btnSkip"
+        style="@style/skipButtonStyle"
+        android:background="@drawable/skip_btn_background" />
+
+    <Button
+        android:id="@+id/btnNext"
+        style="@style/nextButtonStyle"
+        android:background="@drawable/next_btn_background" />
 
     <!--    <FrameLayout-->
     <!--        android:id="@+id/flContainer"-->

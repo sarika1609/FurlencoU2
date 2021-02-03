@@ -1,4 +1,4 @@
-package com.example.furlenco;
+package com.example.furlenco.ViewPagers;
 
 import android.view.View;
 import android.widget.ImageView;
@@ -9,6 +9,8 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
+import com.example.furlenco.ModelClasses.ProductModelClass;
+import com.example.furlenco.R;
 
 public class ProductsViewHolder extends RecyclerView.ViewHolder {
     LinearLayout ll_products;

@@ -1,10 +1,11 @@
-package com.example.furlenco;
+package com.example.furlenco.Activities;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.recyclerview.widget.RecyclerView;
 
 
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
@@ -12,11 +13,12 @@ import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentStatePagerAdapter;
 import androidx.viewpager.widget.ViewPager;
 
-import com.example.furlenco.InitialScreenFragments.FragmentFive;
-import com.example.furlenco.InitialScreenFragments.FragmentFour;
-import com.example.furlenco.InitialScreenFragments.FragmentOne;
-import com.example.furlenco.InitialScreenFragments.FragmentThree;
-import com.example.furlenco.InitialScreenFragments.FragmentTwo;
+import com.example.furlenco.Fragments.FragmentFive;
+import com.example.furlenco.Fragments.FragmentFour;
+import com.example.furlenco.Fragments.FragmentOne;
+import com.example.furlenco.Fragments.FragmentThree;
+import com.example.furlenco.Fragments.FragmentTwo;
+import com.example.furlenco.R;
 import com.google.android.material.tabs.TabLayout;
 
 public class MainActivity extends AppCompatActivity {
@@ -24,6 +26,8 @@ public class MainActivity extends AppCompatActivity {
     private TabLayout tabLayout;
     private FragmentManager fragmentManager;
     private String tag;
+    private Button mBtnSkip;
+    private Button mBtnNext;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,7 +40,15 @@ public class MainActivity extends AppCompatActivity {
     private void initViews() {
         viewPager = findViewById(R.id.viewPager);
         tabLayout = findViewById(R.id.tabLayout);
+        mBtnSkip = findViewById(R.id.btnSkip);
+        mBtnNext = findViewById(R.id.btnNext);
         fragmentManager = getSupportFragmentManager();
+        mBtnSkip.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                viewPager.setCurrentItem(4);
+            }
+        });
     }
 
     private void setViewPagerAdapter() {
@@ -46,7 +58,7 @@ public class MainActivity extends AppCompatActivity {
         tabLayout.setupWithViewPager(viewPager);
     }
 
-    private class ViewPagerAdapter extends FragmentStatePagerAdapter{
+    private class ViewPagerAdapter extends FragmentStatePagerAdapter {
 
         public ViewPagerAdapter(@NonNull FragmentManager fm, int behavior) {
             super(fm, behavior);
@@ -65,6 +77,8 @@ public class MainActivity extends AppCompatActivity {
                 case 3:
                     return FragmentFour.newInstance();
                 case 4:
+                    mBtnNext.setVisibility(View.GONE);
+                    mBtnSkip.setVisibility(View.GONE);
                     return FragmentFive.newInstance();
             }
             return null;
