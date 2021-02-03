@@ -5,4 +5,26 @@
     <string name="collections">Collection</string>
     <string name="cart">Cart</string>
     <string name="me">Me</string>
+    <string name="safty_assured">Safty Assured</string>
+    <string name="awesome_furtinure">Awesome Furniture.</string>
+    <string name="delivered_safe">Delivered Safe.</string>
+    <string name="furlence">Furlence</string>
+    <string name="rent_free">Go rent-free for 4 months.Get flat 50%
+    off per month. Hurry! Offer ends at midnight.TC Apply</string>
+    <string name="explore_products">Explore Products</string>
+    <string name="bedroom">Bedroom</string>
+    <string name="living_room"> Living Room</string>
+    <string name="appliances">Appliances</string>
+    <string name="full_home">Full Home</string>
+    <string name="storage">Storage</string>
+    <string name="study_room">Study Room</string>
+    <string name="kids_room">Kids Room</string>
+    <string name="dining_room">Dining Room</string>
+    <string name="two_wheelers">2-Wheelers</string>
+    <string name="special_deals">Special Deals</string>
+    <string name="browse_collections">Browse Collections</string>
+    <string name="most_popular">Most Popular</string>
+    <string name="why_rent">Why you should rent</string>
+    <string name="rent_is_awesome">Renting is awesome</string>
+    <string name="live_better_now">Live better now</string>
 </resources>
