@@ -14,7 +14,7 @@
     <com.airbnb.lottie.LottieAnimationView
         android:id="@+id/animationView3"
         style="@style/animationStyle"
-        app:lottie_rawRes="@raw/furniture"
+        app:lottie_rawRes="@raw/travel2"
         android:layout_below="@+id/tvGreatDesign" />
 
     <TextView
@@ -23,14 +23,4 @@
         android:text="@string/text_MoveCities"
         android:layout_below="@+id/animationView3" />
 
-   <!-- <Button
-        android:id="@+id/btnSkip3"
-        style="@style/skipButtonStyle"
-        android:background="@drawable/skip_btn_background" />
-
-    <Button
-        android:id="@+id/btnNext3"
-        style="@style/nextButtonStyle"
-        android:background="@drawable/next_btn_background" />
--->
 </RelativeLayout>

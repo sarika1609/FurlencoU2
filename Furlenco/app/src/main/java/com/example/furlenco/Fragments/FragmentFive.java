@@ -6,7 +6,7 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ProgressBar;
+import android.widget.Button;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -17,9 +17,9 @@ import com.example.furlenco.Activities.HomeActivity;
 import com.example.furlenco.Activities.MainActivity;
 import com.example.furlenco.R;
 
-public class FragmentFive extends Fragment {
+public class FragmentFive extends Fragment implements View.OnClickListener {
     MainActivity mainActivity;
-    CardView cvBengaluru, cvMumbai, cvPune, cvDelhi, cvGurugram, cvNoida, cvHyderabad, cvCennai;
+    CardView cvBengaluru, cvMumbai, cvPune, cvDelhi, cvGurugram, cvNoida, cvHyderabad, cvChennai;
 
     public static FragmentFive newInstance() {
         FragmentFive fragmentFive = new FragmentFive();
@@ -38,6 +38,9 @@ public class FragmentFive extends Fragment {
         initUI(view);
     }
 
+
+
+
     private void initUI(View view) {
         cvBengaluru = view.findViewById(R.id.cvBengaluru);
         cvMumbai = view.findViewById(R.id.cvMumbai);
@@ -46,57 +49,16 @@ public class FragmentFive extends Fragment {
         cvGurugram = view.findViewById(R.id.cvGurugram);
         cvNoida = view.findViewById(R.id.cvNoida);
         cvHyderabad = view.findViewById(R.id.cvHyderabad);
-        cvCennai = view.findViewById(R.id.cvCennai);
+        cvChennai = view.findViewById(R.id.cvChennai);
 
-        cvBengaluru.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                gotoHomeActivity("Bengaluru");
-            }
-        });
-        cvMumbai.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                gotoHomeActivity("Mumbai");
-            }
-        });
-
-        cvPune.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                gotoHomeActivity("Pune");
-            }
-        });
-        cvDelhi.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                gotoHomeActivity("Delhi");
-            }
-        });
-        cvGurugram.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                gotoHomeActivity("Gurugram");
-            }
-        });
-        cvNoida.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                gotoHomeActivity("Noida");
-            }
-        });
-        cvHyderabad.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                gotoHomeActivity("Hyderabad");
-            }
-        });
-        cvCennai.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                gotoHomeActivity("Chennai");
-            }
-        });
+        cvBengaluru.setOnClickListener(this);
+        cvMumbai.setOnClickListener(this);
+        cvPune.setOnClickListener(this);
+        cvDelhi.setOnClickListener(this);
+        cvGurugram.setOnClickListener(this);
+        cvNoida.setOnClickListener(this);
+        cvHyderabad.setOnClickListener(this);
+        cvChennai.setOnClickListener(this);
     }
 
     public void gotoHomeActivity(String name) {
@@ -120,8 +82,32 @@ public class FragmentFive extends Fragment {
     }
 
     @Override
-    public void onResume() {
-        super.onResume();
+    public void onClick(View v) {
+        switch (v.getId()) {
+            case R.id.cvBengaluru:
+                gotoHomeActivity("Bengaluru");
+                break;
+            case R.id.cvMumbai:
+                gotoHomeActivity("Mumbai");
+                break;
+            case R.id.cvPune:
+                gotoHomeActivity("Pune");
+                break;
+            case R.id.cvDelhi:
+                gotoHomeActivity("Delhi");
+                break;
+            case R.id.cvGurugram:
+                gotoHomeActivity("Gurugram");
+                break;
+            case R.id.cvNoida:
+                gotoHomeActivity("Noida");
+                break;
+            case R.id.cvHyderabad:
+                gotoHomeActivity("Hyderabad");
+                break;
+            case R.id.cvChennai:
+                gotoHomeActivity("Chennai");
+                break;
+        }
     }
-
 }

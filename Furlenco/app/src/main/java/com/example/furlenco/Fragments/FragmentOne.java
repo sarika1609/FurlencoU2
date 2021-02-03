@@ -16,8 +16,6 @@ import com.example.furlenco.R;
 
 public class FragmentOne extends Fragment {
 
-    private MainActivity mainActivity;
-
     public static FragmentOne newInstance() {
         FragmentOne fragmentOne = new FragmentOne();
         return fragmentOne;
@@ -26,7 +24,6 @@ public class FragmentOne extends Fragment {
     @Override
     public void onAttach(@NonNull Context context) {
         super.onAttach(context);
-        mainActivity = (MainActivity) context;
     }
 
     @Override
