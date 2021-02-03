@@ -1,4 +1,4 @@
-package com.example.furlenco;
+package com.example.furlenco.Activities;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.GridLayoutManager;
@@ -6,6 +6,11 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
+
+import com.example.furlenco.Adapters.CollectionAdapter;
+import com.example.furlenco.ModelClasses.ProductModelClass;
+import com.example.furlenco.Adapters.ProductsAdapter;
+import com.example.furlenco.R;
 
 import java.util.ArrayList;
 import java.util.List;

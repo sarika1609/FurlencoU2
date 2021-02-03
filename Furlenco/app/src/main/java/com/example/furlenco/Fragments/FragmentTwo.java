@@ -1,4 +1,4 @@
-package com.example.furlenco.InitialScreenFragments;
+package com.example.furlenco.Fragments;
 
 import android.os.Bundle;
 

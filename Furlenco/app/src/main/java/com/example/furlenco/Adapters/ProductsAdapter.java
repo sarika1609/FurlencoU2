@@ -1,4 +1,4 @@
-package com.example.furlenco;
+package com.example.furlenco.Adapters;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -6,6 +6,10 @@ import android.view.ViewGroup;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
+
+import com.example.furlenco.ModelClasses.ProductModelClass;
+import com.example.furlenco.ViewPagers.ProductsViewHolder;
+import com.example.furlenco.R;
 
 import java.util.List;
 

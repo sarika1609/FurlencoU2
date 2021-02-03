@@ -1,8 +1,7 @@
-package com.example.furlenco.InitialScreenFragments;
+package com.example.furlenco.Fragments;
 
 import android.content.Context;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -12,7 +11,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
-import com.example.furlenco.MainActivity;
+import com.example.furlenco.Activities.MainActivity;
 import com.example.furlenco.R;
 
 public class FragmentOne extends Fragment {

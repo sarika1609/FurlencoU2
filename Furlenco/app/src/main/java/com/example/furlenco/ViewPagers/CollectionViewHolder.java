@@ -1,7 +1,6 @@
-package com.example.furlenco;
+package com.example.furlenco.ViewPagers;
 
 import android.view.View;
-import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -9,6 +8,8 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
+import com.example.furlenco.ModelClasses.ProductModelClass;
+import com.example.furlenco.R;
 
 public class CollectionViewHolder extends RecyclerView.ViewHolder {
     ImageView iv_collection;

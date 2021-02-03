@@ -1,4 +1,4 @@
-package com.example.furlenco;
+package com.example.furlenco.ModelClasses;
 
 public class ProductModelClass {
     int name;

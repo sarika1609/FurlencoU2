@@ -1,4 +1,4 @@
-package com.example.furlenco.InitialScreenFragments;
+package com.example.furlenco.Fragments;
 
 import android.content.Context;
 import android.os.Bundle;
@@ -10,7 +10,7 @@ import android.widget.Button;
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 
-import com.example.furlenco.MainActivity;
+import com.example.furlenco.Activities.MainActivity;
 import com.example.furlenco.R;
 
 public class FragmentFive extends Fragment {

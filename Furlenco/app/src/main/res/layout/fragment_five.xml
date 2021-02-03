@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:gravity="center"
     android:orientation="vertical"
-    tools:context=".InitialScreenFragments.FragmentFive">
+    tools:context=".Fragments.FragmentFive">
 
     <TextView
         android:id="@+id/tvSelectCity"

@@ -1,7 +1,6 @@
-package com.example.furlenco;
+package com.example.furlenco.Activities;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.recyclerview.widget.RecyclerView;
 
 
 import android.os.Bundle;
@@ -12,11 +11,12 @@ import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentStatePagerAdapter;
 import androidx.viewpager.widget.ViewPager;
 
-import com.example.furlenco.InitialScreenFragments.FragmentFive;
-import com.example.furlenco.InitialScreenFragments.FragmentFour;
-import com.example.furlenco.InitialScreenFragments.FragmentOne;
-import com.example.furlenco.InitialScreenFragments.FragmentThree;
-import com.example.furlenco.InitialScreenFragments.FragmentTwo;
+import com.example.furlenco.Fragments.FragmentFive;
+import com.example.furlenco.Fragments.FragmentFour;
+import com.example.furlenco.Fragments.FragmentOne;
+import com.example.furlenco.Fragments.FragmentThree;
+import com.example.furlenco.Fragments.FragmentTwo;
+import com.example.furlenco.R;
 import com.google.android.material.tabs.TabLayout;
 
 public class MainActivity extends AppCompatActivity {
