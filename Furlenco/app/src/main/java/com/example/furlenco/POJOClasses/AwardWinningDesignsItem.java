@@ -4,31 +4,31 @@ import com.google.gson.annotations.SerializedName;
 
 public class AwardWinningDesignsItem{
 
-	@SerializedName("data")
-	private String data;
+    @SerializedName("data")
+    private String data;
 
-	@SerializedName("year")
-	private Integer year;
+    @SerializedName("year")
+    private Integer year;
 
-	@SerializedName("name")
-	private String name;
+    @SerializedName("name")
+    private String name;
 
-	@SerializedName("url")
-	private String url;
+    @SerializedName("url")
+    private String url;
 
-	public String getData(){
-		return data;
-	}
+    public String getData(){
+        return data;
+    }
 
-	public Integer getYear(){
-		return year;
-	}
+    public Integer getYear(){
+        return year;
+    }
 
-	public String getName(){
-		return name;
-	}
+    public String getName(){
+        return name;
+    }
 
-	public String getUrl(){
-		return url;
-	}
+    public String getUrl(){
+        return url;
+    }
 }

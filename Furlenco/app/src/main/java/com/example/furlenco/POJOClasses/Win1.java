@@ -4,17 +4,17 @@ import com.google.gson.annotations.SerializedName;
 
 public class Win1{
 
-	@SerializedName("name")
-	private String name;
+    @SerializedName("name")
+    private String name;
 
-	@SerializedName("image url")
-	private String imageUrl;
+    @SerializedName("image url")
+    private String imageUrl;
 
-	public String getName(){
-		return name;
-	}
+    public String getName(){
+        return name;
+    }
 
-	public String getImageUrl(){
-		return imageUrl;
-	}
+    public String getImageUrl(){
+        return imageUrl;
+    }
 }

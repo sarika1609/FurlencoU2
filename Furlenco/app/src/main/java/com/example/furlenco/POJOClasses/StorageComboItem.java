@@ -4,24 +4,24 @@ import com.google.gson.annotations.SerializedName;
 
 public class StorageComboItem{
 
-	@SerializedName("data")
-	private String data;
+    @SerializedName("data")
+    private String data;
 
-	@SerializedName("name")
-	private String name;
+    @SerializedName("name")
+    private String name;
 
-	@SerializedName("url")
-	private String url;
+    @SerializedName("url")
+    private String url;
 
-	public String getData(){
-		return data;
-	}
+    public String getData(){
+        return data;
+    }
 
-	public String getName(){
-		return name;
-	}
+    public String getName(){
+        return name;
+    }
 
-	public String getUrl(){
-		return url;
-	}
+    public String getUrl(){
+        return url;
+    }
 }

@@ -16,8 +16,6 @@ import com.example.furlenco.R;
 
 public class FragmentOne extends Fragment {
 
-    private Button mBtnSkip;
-    private Button mBtnNext;
     private MainActivity mainActivity;
 
     public static FragmentOne newInstance() {
@@ -41,29 +39,11 @@ public class FragmentOne extends Fragment {
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-        mBtnSkip = view.findViewById(R.id.btnSkip);
-        mBtnNext = view.findViewById(R.id.btnNext);
 
-
-
-        mBtnNext.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
-            }
-        });
     }
 
     @Override
     public void onResume() {
         super.onResume();
-//        mBtnSkip.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                Log.d("tag","tag");
-//                FragmentFive.newInstance();
-////                mainActivity.launchFragment("Skip");
-//            }
-//        });
     }
 }

@@ -5,24 +5,24 @@ import com.google.gson.annotations.SerializedName;
 
 public class ResponseModel{
 
-	@SerializedName("Explore Products")
-	private List<ExploreProductsItem> exploreProducts;
+    @SerializedName("Explore Products")
+    private List<ExploreProductsItem> exploreProducts;
 
-	@SerializedName("Award Winning Designs")
-	private List<AwardWinningDesignsItem> awardWinningDesigns;
+    @SerializedName("Award Winning Designs")
+    private List<AwardWinningDesignsItem> awardWinningDesigns;
 
-	@SerializedName("Browse Collections")
-	private List<BrowseCollectionsItem> browseCollections;
+    @SerializedName("Browse Collections")
+    private List<BrowseCollectionsItem> browseCollections;
 
-	public List<ExploreProductsItem> getExploreProducts(){
-		return exploreProducts;
-	}
+    public List<ExploreProductsItem> getExploreProducts(){
+        return exploreProducts;
+    }
 
-	public List<AwardWinningDesignsItem> getAwardWinningDesigns(){
-		return awardWinningDesigns;
-	}
+    public List<AwardWinningDesignsItem> getAwardWinningDesigns(){
+        return awardWinningDesigns;
+    }
 
-	public List<BrowseCollectionsItem> getBrowseCollections(){
-		return browseCollections;
-	}
+    public List<BrowseCollectionsItem> getBrowseCollections(){
+        return browseCollections;
+    }
 }

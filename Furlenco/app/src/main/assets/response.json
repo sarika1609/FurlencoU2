@@ -1,12 +1,9 @@
 {
   "Explore Products": [
-    [
-
-    ],
     {
-      "name" : "Bedroom",
-      "image url": "",
+      "name": "Bedroom",
       "id": 0,
+      "image url": "https://assets.furlenco.com/image/upload/dpr_3.0,f_auto,q_auto/v1/furlenco-images/n4N6O1Ox_tablet_Allen-Queen-Bed-Basic-Desktop.jpg",
       "Bedroom": [
         {
           "name": "Allen Bedroom",
@@ -851,6 +848,9 @@
       ]
     },
     {
+      "name": "Living Room",
+      "id": 1,
+      "image url": "https://assets.furlenco.com/image/upload/dpr_3.0,f_auto,q_auto/v1/furlenco-images/yzMqnbUM_tablet_Azure-3-seater-Basic-Desktop.jpg",
       "Living Room": [
         {
           "name": "Viva Three-seater Living Room - Azure",
@@ -1190,6 +1190,9 @@
       ]
     },
     {
+      "name": "Appliances",
+      "id": 2,
+      "image url": "https://assets.furlenco.com/image/upload/dpr_3.0,f_auto,q_auto/v1/furlenco-images/wbtFjoUW_tablet_Desktop_tablet__25_.jpg",
       "Appliances": [
         {
           "name": "Refrigerator (181 -190 L) ",
@@ -1326,6 +1329,9 @@
       ]
     },
     {
+      "name": "Full Home",
+      "id": 3,
+      "image url": "https://assets.furlenco.com/image/upload/dpr_3.0,f_auto,q_auto/v1/furlenco-images/7SijVRpx_tablet_Desktop_Tablet.jpg",
       "Full Home": [
         {
           "name": "Allen Queen Studio",
@@ -1714,6 +1720,9 @@
       ]
     },
     {
+      "name": "Storage",
+      "id": 4,
+      "image url": "https://assets.furlenco.com/image/upload/dpr_3.0,f_auto,q_auto/v1/furlenco-images/u27akA3V_tablet_Desktop_Tablet.jpg",
       "Storage": [
         {
           "name": "Lana Wardrobe",
@@ -1958,6 +1967,9 @@
       ]
     },
     {
+      "name": "Study Room",
+      "id": 5,
+      "image url": "https://assets.furlenco.com/image/upload/dpr_3.0,f_auto,q_auto/v1/furlenco-images/EbkWaSbu_tablet_Nauka-study-Crux-Chair-Desktop.jpg",
       "Study Room": [
         {
           "name": "Nauka Workstation",
@@ -2026,6 +2038,9 @@
       ]
     },
     {
+      "name": "Kids Room",
+      "id": 6,
+      "image url": "https://assets.furlenco.com/image/upload/dpr_3.0,f_auto,q_auto/v1/furlenco-images/I36sCt0H_tablet_Desktop_Tablet.jpg",
       "Kids Room": [
         {
           "name": "The Racer's Kids Room",
@@ -2222,6 +2237,9 @@
       ]
     },
     {
+      "name": "Dining Room",
+      "id": 7,
+      "image url": "https://assets.furlenco.com/image/upload/dpr_3.0,f_auto,q_auto/v1/furlenco-images/qwX8fQHQ_tablet_Pico_4_Basic_Desktop.jpg",
       "Dining Room": [
         {
           "name": "Pico Dining Room",
@@ -2277,6 +2295,9 @@
       ]
     },
     {
+      "name": "2-Wheelers",
+      "id": 8,
+      "image url": "https://assets.furlenco.com/image/upload/dpr_3.0,f_auto,q_auto/v1/furlenco-images/13SCDU6d_tablet_TVS-Scooty-Zest-Desktop-3.jpg",
       "2-Wheelers": [
         {
           "name": "Scooty Zest",
@@ -2292,7 +2313,9 @@
         }
       ]
     },
-    {
+    { "name": "Special Deals",
+      "id": 0,
+      "image url": "https://assets.furlenco.com/image/upload/dpr_3.0,f_auto,q_auto/v1/furlenco-images/n4N6O1Ox_tablet_Allen-Queen-Bed-Basic-Desktop.jpg",
       "Special Deals": [
         {
           "name": "Allen Bedroom",

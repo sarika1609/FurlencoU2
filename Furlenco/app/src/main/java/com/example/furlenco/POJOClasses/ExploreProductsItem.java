@@ -5,73 +5,94 @@ import com.google.gson.annotations.SerializedName;
 
 public class ExploreProductsItem{
 
-	@SerializedName("Special Deals")
-	private List<SpecialDealsItem> specialDeals;
+    @SerializedName("Special Deals")
+    private List<SpecialDealsItem> specialDeals;
 
-	@SerializedName("2-Wheelers")
-	private List<JsonMember2WheelersItem> jsonMember2Wheelers;
+    @SerializedName("name")
+    private String name;
 
-	@SerializedName("Dining Room")
-	private List<DiningRoomItem> diningRoom;
+    @SerializedName("image url")
+    private String imageUrl;
 
-	@SerializedName("Kids Room")
-	private List<KidsRoomItem> kidsRoom;
+    @SerializedName("id")
+    private Integer id;
 
-	@SerializedName("Study Room")
-	private List<StudyRoomItem> studyRoom;
+    @SerializedName("2-Wheelers")
+    private List<JsonMember2WheelersItem> jsonMember2Wheelers;
 
-	@SerializedName("Storage")
-	private List<StorageItem> storage;
+    @SerializedName("Dining Room")
+    private List<DiningRoomItem> diningRoom;
 
-	@SerializedName("Full Home")
-	private List<FullHomeItem> fullHome;
+    @SerializedName("Kids Room")
+    private List<KidsRoomItem> kidsRoom;
 
-	@SerializedName("Appliances")
-	private List<AppliancesItem> appliances;
+    @SerializedName("Study Room")
+    private List<StudyRoomItem> studyRoom;
 
-	@SerializedName("Living Room")
-	private List<LivingRoomItem> livingRoom;
+    @SerializedName("Storage")
+    private List<StorageItem> storage;
 
-	@SerializedName("Bedroom")
-	private List<BedroomItem> bedroom;
+    @SerializedName("Full Home")
+    private List<FullHomeItem> fullHome;
 
-	public List<SpecialDealsItem> getSpecialDeals(){
-		return specialDeals;
-	}
+    @SerializedName("Appliances")
+    private List<AppliancesItem> appliances;
 
-	public List<JsonMember2WheelersItem> getJsonMember2Wheelers(){
-		return jsonMember2Wheelers;
-	}
+    @SerializedName("Living Room")
+    private List<LivingRoomItem> livingRoom;
 
-	public List<DiningRoomItem> getDiningRoom(){
-		return diningRoom;
-	}
+    @SerializedName("Bedroom")
+    private List<BedroomItem> bedroom;
 
-	public List<KidsRoomItem> getKidsRoom(){
-		return kidsRoom;
-	}
+    public List<SpecialDealsItem> getSpecialDeals(){
+        return specialDeals;
+    }
 
-	public List<StudyRoomItem> getStudyRoom(){
-		return studyRoom;
-	}
+    public String getName(){
+        return name;
+    }
 
-	public List<StorageItem> getStorage(){
-		return storage;
-	}
+    public String getImageUrl(){
+        return imageUrl;
+    }
 
-	public List<FullHomeItem> getFullHome(){
-		return fullHome;
-	}
+    public Integer getId(){
+        return id;
+    }
 
-	public List<AppliancesItem> getAppliances(){
-		return appliances;
-	}
+    public List<JsonMember2WheelersItem> getJsonMember2Wheelers(){
+        return jsonMember2Wheelers;
+    }
 
-	public List<LivingRoomItem> getLivingRoom(){
-		return livingRoom;
-	}
+    public List<DiningRoomItem> getDiningRoom(){
+        return diningRoom;
+    }
 
-	public List<BedroomItem> getBedroom(){
-		return bedroom;
-	}
+    public List<KidsRoomItem> getKidsRoom(){
+        return kidsRoom;
+    }
+
+    public List<StudyRoomItem> getStudyRoom(){
+        return studyRoom;
+    }
+
+    public List<StorageItem> getStorage(){
+        return storage;
+    }
+
+    public List<FullHomeItem> getFullHome(){
+        return fullHome;
+    }
+
+    public List<AppliancesItem> getAppliances(){
+        return appliances;
+    }
+
+    public List<LivingRoomItem> getLivingRoom(){
+        return livingRoom;
+    }
+
+    public List<BedroomItem> getBedroom(){
+        return bedroom;
+    }
 }
