@@ -5,9 +5,13 @@ import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.TextView;
 
 import com.example.furlenco.Adapters.CollectionAdapter;
+import com.example.furlenco.Interfaces.OnProductClick;
 import com.example.furlenco.ModelClasses.ProductModelClass;
 import com.example.furlenco.Adapters.ProductsAdapter;
 import com.example.furlenco.R;
@@ -15,10 +19,11 @@ import com.example.furlenco.R;
 import java.util.ArrayList;
 import java.util.List;
 
-public class HomeActivity extends AppCompatActivity {
+public class HomeActivity extends AppCompatActivity implements OnProductClick {
     RecyclerView rv_products, rv_collection;
     List<ProductModelClass> productModelClassList = new ArrayList<>();
     List<ProductModelClass> productModelClassListc = new ArrayList<>();
+    TextView tv_home, tv_products, tv_collection, tv_cart, tv_profile;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,6 +35,49 @@ public class HomeActivity extends AppCompatActivity {
     private void initUI() {
         rv_products = findViewById(R.id.rv_products);
         rv_collection = findViewById(R.id.rv_collection);
+        tv_home = findViewById(R.id.tv_home);
+        tv_products = findViewById(R.id.tv_products);
+        tv_collection = findViewById(R.id.tv_collection);
+        tv_cart = findViewById(R.id.tv_cart);
+        tv_profile = findViewById(R.id.tv_profile);
+        tv_home.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(HomeActivity.this, HomeActivity.class);
+                startActivity(intent);
+            }
+        });
+        tv_products.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(HomeActivity.this, ProductsActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        tv_collection.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(HomeActivity.this, CollectionsActivity.class);
+                startActivity(intent);
+            }
+        });
+        tv_cart.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(HomeActivity.this, CartActivity.class);
+                startActivity(intent);
+            }
+        });
+        tv_profile.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(HomeActivity.this, ProfileActivity.class);
+                startActivity(intent);
+            }
+        });
+
+
         bindData();
         setData();
         bindCollectionData();
@@ -37,7 +85,7 @@ public class HomeActivity extends AppCompatActivity {
     }
 
     private void setColectionsData() {
-        LinearLayoutManager linearLayoutManager = new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL,true);
+        LinearLayoutManager linearLayoutManager = new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, true);
         rv_collection.setLayoutManager(linearLayoutManager);
         CollectionAdapter collectionAdapter = new CollectionAdapter(productModelClassListc);
         rv_collection.setAdapter(collectionAdapter);
@@ -79,7 +127,7 @@ public class HomeActivity extends AppCompatActivity {
     private void setData() {
         GridLayoutManager gridLayoutManager = new GridLayoutManager(this, 3);
         rv_products.setLayoutManager(gridLayoutManager);
-        ProductsAdapter productsAdapter = new ProductsAdapter(productModelClassList);
+        ProductsAdapter productsAdapter = new ProductsAdapter(productModelClassList, this);
         rv_products.setAdapter(productsAdapter);
     }
 
@@ -113,5 +161,11 @@ public class HomeActivity extends AppCompatActivity {
                 productModelClassList.add(new ProductModelClass(R.string.two_wheelers, "https://5.imimg.com/data5/SY/SV/ZT/GLADMIN-10494303/selection-014-500x500.png"));
             }
         }
+    }
+
+    @Override
+    public void productItemClicked(int position) {
+        Intent intent = new Intent(HomeActivity.this, ProductsActivity.class);
+        startActivity(intent);
     }
 }

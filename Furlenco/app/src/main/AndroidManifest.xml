@@ -2,7 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.furlenco">
 
-    <uses-permission android:name="android.permission.INTERNET"></uses-permission>
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:allowBackup="true"
         android:icon="@drawable/ic_furlenco_logo"
@@ -10,7 +11,11 @@
         android:roundIcon="@drawable/ic_furlenco_logo"
         android:supportsRtl="true"
         android:theme="@style/Theme.Furlenco">
-        <activity android:name=".Activities.HomeActivity"></activity>
+        <activity android:name=".Activities.CartActivity"></activity>
+        <activity android:name=".Activities.ProfileActivity" />
+        <activity android:name=".Activities.CollectionsActivity" />
+        <activity android:name=".Activities.ProductsActivity" />
+        <activity android:name=".Activities.HomeActivity" />
         <activity android:name=".Activities.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
