@@ -1,6 +1,12 @@
 {
   "Explore Products": [
+    [
+
+    ],
     {
+      "name" : "Bedroom",
+      "image url": "",
+      "id": 0,
       "Bedroom": [
         {
           "name": "Allen Bedroom",

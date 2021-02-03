@@ -3,6 +3,7 @@
     package="com.example.furlenco">
 
     <uses-permission android:name="android.permission.INTERNET"></uses-permission>
+
     <application
         android:allowBackup="true"
         android:icon="@drawable/ic_furlenco_logo"
@@ -10,8 +11,8 @@
         android:roundIcon="@drawable/ic_furlenco_logo"
         android:supportsRtl="true"
         android:theme="@style/Theme.Furlenco">
-        <activity android:name=".MainActivity"></activity>
-        <activity android:name=".HomeActivity">
+        <activity android:name=".Activities.HomeActivity"></activity>
+        <activity android:name=".Activities.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
