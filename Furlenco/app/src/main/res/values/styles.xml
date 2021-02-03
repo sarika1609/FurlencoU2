@@ -10,6 +10,104 @@
         <item name="android:layout_marginTop">@dimen/dp_10</item>
         <item name="android:gravity">center</item>
         <item name="android:textSize">@dimen/dp_12</item>
+
+    </style>
+
+    <style name="skipButtonStyle">
+
+        <item name="android:layout_alignParentStart">true</item>
+        <item name="android:layout_alignParentBottom">true</item>
+        <item name="android:layout_marginStart">@dimen/dp_30</item>
+        <item name="android:layout_marginBottom">@dimen/dp_25</item>
+        <item name="fontFamily">@font/roboto</item>
+        <item name="android:textColor">@color/dark_grey</item>
+        <item name="android:textSize">@dimen/sp_14</item>
+        <item name="android:text">@string/text_skip</item>
+        <item name="android:layout_height">@dimen/dp_25</item>
+        <item name="android:layout_width">@dimen/dp_60</item>
+
+    </style>
+
+    <style name="nextButtonStyle">
+
+        <item name="android:layout_alignParentEnd">true</item>
+        <item name="android:layout_alignParentBottom">true</item>
+        <item name="android:layout_marginEnd">@dimen/dp_30</item>
+        <item name="android:layout_marginBottom">@dimen/dp_25</item>
+        <item name="paddingStart">@dimen/dp_10</item>
+        <item name="paddingEnd">@dimen/dp_10</item>
+        <item name="fontFamily">@font/roboto_medium</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">@dimen/sp_14</item>
+        <item name="android:text">@string/text_Next</item>
+        <item name="android:layout_height">@dimen/dp_25</item>
+        <item name="android:layout_width">@dimen/dp_60</item>
+
+    </style>
+
+    <style name="headerTextStyle">
+
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_alignParentStart">true</item>
+        <item name="android:layout_alignParentTop">true</item>
+        <item name="fontFamily">@font/roboto_medium</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@color/button_blue</item>
+        <item name="android:textSize">@dimen/sp_18</item>
+        <item name="android:layout_marginTop">@dimen/dp_200</item>
+
+
+    </style>
+
+    <style name="animationStyle">
+
+        <item name="android:layout_height">@dimen/dp_350</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_marginTop">@dimen/dp_30</item>
+        <item name="lottie_autoPlay">true</item>
+        <item name="lottie_loop">true</item>
+
+    </style>
+
+    <style name="footerTextStyle">
+
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_alignParentStart">true</item>
+        <item name="fontFamily">@font/roboto_light</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@color/button_blue</item>
+        <item name="android:textSize">@dimen/sp_16</item>
+
+    </style>
+
+    <style name="cardViewStyle">
+
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_marginTop">@dimen/dp_15</item>
+        <item name="elevation">@dimen/dp_10</item>
+
+    </style>
+
+    <style name="textViewInCardView">
+
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:padding">@dimen/dp_10</item>
+        <item name="android:gravity">center</item>
+
+    </style>
+
+    <style name="imageViewInCardView">
+
+        <item name="android:layout_height">100dp</item>
+        <item name="android:padding">@dimen/dp_10</item>
+        <item name="android:layout_width">@dimen/dp_195</item>
+
+
     </style>
     <style name="View_HomePage">
         <item name="android:layout_width">match_parent</item>

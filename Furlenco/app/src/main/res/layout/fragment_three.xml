@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".InitialScreenFragments.FragmentThree">
+
+    <TextView
+        android:id="@+id/tvGreatDesign"
+        android:text="@string/text_stayMobile"
+        style="@style/headerTextStyle" />
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/animationView3"
+        style="@style/animationStyle"
+        app:lottie_rawRes="@raw/furniture"
+        android:layout_below="@+id/tvGreatDesign" />
+
+    <TextView
+        android:id="@+id/rentBeautiful"
+        style="@style/footerTextStyle"
+        android:text="@string/text_MoveCities"
+        android:layout_below="@+id/animationView3" />
+
+    <Button
+        android:id="@+id/btnSkip3"
+        style="@style/skipButtonStyle"
+        android:background="@drawable/skip_btn_background" />
+
+    <Button
+        android:id="@+id/btnNext3"
+        style="@style/nextButtonStyle"
+        android:background="@drawable/next_btn_background" />
+
+</RelativeLayout>

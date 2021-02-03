@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical"
+    tools:context=".InitialScreenFragments.FragmentFive">
+
+    <TextView
+        android:id="@+id/tvSelectCity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_20"
+        android:fontFamily="@font/roboto"
+        android:text="@string/text_selectCity"
+        android:textColor="@color/button_blue"
+        android:textSize="26sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cvBengaluru"
+        style="@style/cardViewStyle"
+        android:layout_marginStart="@dimen/dp_10"
+        app:cardCornerRadius="@dimen/dp_10"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvSelectCity">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                style="@style/textViewInCardView"
+                android:background="@color/light_blue"
+                android:text="@string/text_Bengaluru" />
+
+            <ImageView
+                style="@style/imageViewInCardView"
+                android:src="@drawable/ic_bengaluru" />
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cvMumbai"
+        style="@style/cardViewStyle"
+        android:layout_marginEnd="@dimen/dp_10"
+        app:cardCornerRadius="@dimen/dp_10"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvSelectCity">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                style="@style/textViewInCardView"
+                android:background="@color/light_blue"
+                android:text="@string/text_Mumbai" />
+
+            <ImageView
+                style="@style/imageViewInCardView"
+                android:src="@drawable/ic_mumbai" />
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cvPune"
+        style="@style/cardViewStyle"
+        android:layout_marginStart="@dimen/dp_10"
+        app:cardCornerRadius="@dimen/dp_10"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cvBengaluru">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                style="@style/textViewInCardView"
+                android:background="@color/light_blue"
+                android:text="@string/text_Pune" />
+
+            <ImageView
+                style="@style/imageViewInCardView"
+                android:src="@drawable/ic_pune" />
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cvDelhi"
+        style="@style/cardViewStyle"
+        android:layout_marginEnd="@dimen/dp_10"
+        app:cardCornerRadius="@dimen/dp_10"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cvBengaluru">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                style="@style/textViewInCardView"
+                android:background="@color/light_blue"
+                android:text="@string/text_Delhi" />
+
+            <ImageView
+                style="@style/imageViewInCardView"
+                android:src="@drawable/ic_new_delhi" />
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cvGurugram"
+        style="@style/cardViewStyle"
+        android:layout_marginStart="@dimen/dp_10"
+        app:cardCornerRadius="@dimen/dp_10"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cvPune">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                style="@style/textViewInCardView"
+                android:background="@color/light_blue"
+                android:text="@string/text_Gurugram" />
+
+            <ImageView
+                style="@style/imageViewInCardView"
+                android:src="@drawable/ic_gurugram" />
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cvNoida"
+        style="@style/cardViewStyle"
+        android:layout_marginEnd="@dimen/dp_10"
+        app:cardCornerRadius="@dimen/dp_10"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cvDelhi">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                style="@style/textViewInCardView"
+                android:background="@color/light_blue"
+                android:text="@string/text_Noida" />
+
+            <ImageView
+                style="@style/imageViewInCardView"
+                android:src="@drawable/ic_noida" />
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cvHyderabad"
+        style="@style/cardViewStyle"
+        android:layout_marginStart="@dimen/dp_10"
+        app:cardCornerRadius="@dimen/dp_10"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cvGurugram">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                style="@style/textViewInCardView"
+                android:background="@color/light_blue"
+                android:text="@string/text_Hyderabad" />
+
+            <ImageView
+                style="@style/imageViewInCardView"
+                android:src="@drawable/ic_hyderabad" />
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cvCennai"
+        style="@style/cardViewStyle"
+        android:layout_marginEnd="@dimen/dp_10"
+        app:cardCornerRadius="@dimen/dp_10"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cvNoida">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                style="@style/textViewInCardView"
+                android:background="@color/light_blue"
+                android:text="@string/text_Chennai" />
+
+            <ImageView
+                style="@style/imageViewInCardView"
+                android:src="@drawable/ic_chennai" />
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
