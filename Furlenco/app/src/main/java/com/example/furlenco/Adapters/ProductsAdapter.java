@@ -10,7 +10,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.example.furlenco.Interfaces.OnProductClick;
 import com.example.furlenco.ModelClasses.ProductModelClass;
 import com.example.furlenco.POJOClasses.ExploreProductsItem;
-import com.example.furlenco.ViewPagers.ProductsViewHolder;
+import com.example.furlenco.ViewHolders.ProductsViewHolder;
 import com.example.furlenco.R;
 
 import java.util.List;

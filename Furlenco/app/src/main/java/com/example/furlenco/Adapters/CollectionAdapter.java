@@ -7,7 +7,7 @@ import android.view.ViewGroup;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.furlenco.ViewPagers.CollectionViewHolder;
+import com.example.furlenco.ViewHolders.CollectionViewHolder;
 import com.example.furlenco.ModelClasses.ProductModelClass;
 import com.example.furlenco.R;
 

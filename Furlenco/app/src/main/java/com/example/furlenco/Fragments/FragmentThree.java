@@ -10,13 +10,13 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.MediaController;
+import android.widget.VideoView;
 
 import com.example.furlenco.R;
 
 public class FragmentThree extends Fragment {
 
-    private Button mBtnSkip;
-    private Button mBtnNext;
 
     public static FragmentThree newInstance() {
         FragmentThree fragmentThree = new FragmentThree();
@@ -41,9 +41,11 @@ public class FragmentThree extends Fragment {
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-//        LottieAnimationView lottieAnimationView = view.findViewById(R.id.animationView3);
-//        lottieAnimationView.setImageAssetsFolder("images/");
-//        lottieAnimationView.setAnimation(R.raw.travel);
-//        lottieAnimationView.playAnimation();
+
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
     }
 }

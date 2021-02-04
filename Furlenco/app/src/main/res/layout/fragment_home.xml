@@ -1,0 +1,320 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".HomeScreenFragments.HomeFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/btn_serach"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="@dimen/dp_10"
+            android:background="@color/white"
+            android:drawableStart="@drawable/ic_furlenco_logo"
+            android:drawableEnd="@drawable/ic_search"
+            android:drawablePadding="@dimen/dp_10"
+            android:fontFamily="sans-serif-light"
+            android:text="@string/furlenco"
+            android:textColor="@color/black"
+            android:textSize="@dimen/dp_25" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/light_blue"
+            android:orientation="vertical"
+            android:visibility="visible">
+
+            <LinearLayout
+                android:id="@+id/ll_features"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/light_blue"
+                android:orientation="horizontal"
+                android:paddingTop="@dimen/dp_20"
+                android:paddingBottom="@dimen/dp_20">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="@dimen/dp_10"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tv_safety"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/dp_5"
+                        android:drawableStart="@drawable/ic_shield"
+                        android:drawablePadding="@dimen/dp_5"
+                        android:gravity="center"
+                        android:text="@string/safty_assured"
+                        android:textAllCaps="true"
+                        android:textColor="@color/navy_blue"
+                        android:textSize="10sp" />
+
+                    <TextView
+                        android:id="@+id/tv_furniture"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/tv_safety"
+                        android:layout_margin="@dimen/dp_5"
+                        android:fontFamily="@font/roboto"
+                        android:text="@string/awesome_furtinure"
+                        android:textColor="@color/black" />
+
+                    <TextView
+                        android:id="@+id/tv_delivered"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/tv_furniture"
+                        android:layout_margin="@dimen/dp_5"
+                        android:fontFamily="@font/roboto"
+                        android:text="@string/delivered_safe"
+                        android:textColor="@color/black" />
+                </LinearLayout>
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="85dp"
+                    android:src="@drawable/ic_truck" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="@dimen/dp_25"
+                    android:src="@drawable/ic_person_with_mask" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dp_10"
+                    android:layout_marginTop="@dimen/dp_10"
+                    android:layout_marginEnd="@dimen/dp_5"
+                    android:layout_marginBottom="@dimen/dp_10"
+                    android:elevation="@dimen/dp_10">
+
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:id="@+id/iv_sanitisec"
+                            android:layout_width="75dp"
+                            android:layout_height="75dp"
+                            android:layout_margin="@dimen/dp_5"
+                            android:src="@drawable/home_furniture" />
+
+                        <TextView
+                            android:id="@+id/tv_sanitised"
+                            android:layout_width="@dimen/dp_100"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="@dimen/dp_5"
+                            android:layout_toEndOf="@id/iv_sanitisec"
+                            android:fontFamily="@font/roboto"
+                            android:paddingTop="@dimen/dp_15"
+                            android:text="@string/text_sanitised_furniture_and_appliances"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/sp_10" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/tv_sanitised"
+                            android:layout_marginStart="@dimen/dp_5"
+                            android:layout_toEndOf="@+id/iv_sanitisec"
+                            android:drawableEnd="@drawable/button_with_arrow"
+                            android:drawablePadding="4dp"
+                            android:fontFamily="@font/roboto"
+                            android:text="@string/know_more"
+                            android:textColor="@color/button_blue"
+                            android:textSize="@dimen/sp_10" />
+
+                    </RelativeLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dp_5"
+                    android:layout_marginTop="@dimen/dp_10"
+                    android:layout_marginEnd="@dimen/dp_10"
+                    android:layout_marginBottom="@dimen/dp_10"
+                    android:elevation="@dimen/dp_10">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:id="@+id/iv_hygienic"
+                            android:layout_width="75dp"
+                            android:layout_height="75dp"
+                            android:layout_margin="@dimen/dp_5"
+                            android:src="@drawable/home_mask" />
+
+                        <TextView
+                            android:id="@+id/tv_hygienic"
+                            android:layout_width="@dimen/dp_100"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="@dimen/dp_5"
+                            android:layout_toEndOf="@id/iv_hygienic"
+                            android:fontFamily="@font/roboto"
+                            android:paddingTop="@dimen/dp_15"
+                            android:text="Hygienic Delivery and Pickup"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/sp_10" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/tv_hygienic"
+                            android:layout_marginStart="@dimen/dp_5"
+                            android:layout_toEndOf="@+id/iv_hygienic"
+                            android:drawableEnd="@drawable/button_with_arrow"
+                            android:drawablePadding="4dp"
+                            android:fontFamily="@font/roboto"
+                            android:text="@string/know_more"
+                            android:textColor="@color/button_blue"
+                            android:textSize="@dimen/sp_10" />
+
+                    </RelativeLayout>
+                </androidx.cardview.widget.CardView>
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/dp_10"
+            android:elevation="@dimen/dp_10">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableStart="@drawable/ic_discount"
+                android:drawablePadding="@dimen/dp_10"
+                android:padding="@dimen/dp_10"
+                android:text="@string/rent_free" />
+
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp_10"
+            android:fontFamily="@font/roboto"
+            android:text="@string/explore_products"
+            android:textAllCaps="true"
+            android:textColor="@color/black"
+            android:textSize="@dimen/sp_16">
+
+        </TextView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:layout_height="match_parent">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_products"
+                android:layout_gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp_10"
+            android:fontFamily="@font/roboto"
+            android:layout_marginTop="@dimen/dp_10"
+            android:text="@string/browse_collections"
+            android:textAllCaps="true"
+            android:textColor="@color/black"
+            android:textSize="@dimen/sp_16">
+
+        </TextView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:layout_height="match_parent">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_collection"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp_10"
+                android:layout_marginTop="@dimen/dp_5"
+                android:layout_marginEnd="@dimen/dp_10" />
+
+        </LinearLayout>
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp_10"
+            android:fontFamily="@font/roboto"
+            android:layout_marginTop="@dimen/dp_10"
+            android:text="@string/why_rent"
+            android:textAllCaps="true"
+            android:textColor="@color/black"
+            android:textSize="@dimen/sp_16">
+
+        </TextView>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp_10"
+            android:fontFamily="@font/roboto"
+            android:layout_marginTop="@dimen/dp_5"
+            android:text="@string/rent_is_awesome"
+            android:textAllCaps="true"
+            android:textColor="@color/black"
+            android:textSize="@dimen/sp_14">
+
+        </TextView>
+
+
+
+
+
+    </LinearLayout>
+
+</ScrollView>
+
+<!---->

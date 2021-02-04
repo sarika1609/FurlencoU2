@@ -1,4 +1,4 @@
-package com.example.furlenco.ViewPagers;
+package com.example.furlenco.ViewHolders;
 
 import android.view.View;
 import android.widget.ImageView;

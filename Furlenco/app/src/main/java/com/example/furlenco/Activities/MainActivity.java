@@ -1,13 +1,11 @@
 package com.example.furlenco.Activities;
 
-import androidx.appcompat.app.AppCompatActivity;
-
-
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentStatePagerAdapter;
@@ -24,8 +22,6 @@ import com.google.android.material.tabs.TabLayout;
 public class MainActivity extends AppCompatActivity {
     private ViewPager viewPager;
     private TabLayout tabLayout;
-    private FragmentManager fragmentManager;
-    private String tag;
     private Button mBtnSkip;
     private Button mBtnNext;
 
@@ -37,12 +33,43 @@ public class MainActivity extends AppCompatActivity {
         setViewPagerAdapter();
     }
 
+    private int getItem(int i) {
+        return viewPager.getCurrentItem() + i;
+    }
+
     private void initViews() {
         viewPager = findViewById(R.id.viewPager);
         tabLayout = findViewById(R.id.tabLayout);
         mBtnSkip = findViewById(R.id.btnSkip);
         mBtnNext = findViewById(R.id.btnNext);
-        fragmentManager = getSupportFragmentManager();
+
+        viewPager.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {
+            @Override
+            public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
+
+            }
+
+            @Override
+            public void onPageSelected(int position) {
+                if (position == 4) {
+                    mBtnNext.setVisibility(View.GONE);
+                    mBtnSkip.setVisibility(View.GONE);
+                }
+            }
+
+            @Override
+            public void onPageScrollStateChanged(int state) {
+
+            }
+        });
+
+        mBtnNext.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                viewPager.setCurrentItem(getItem(+1), true);
+            }
+        });
+
         mBtnSkip.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -85,8 +112,6 @@ public class MainActivity extends AppCompatActivity {
                     mBtnSkip.setVisibility(View.VISIBLE);
                     return FragmentFour.newInstance();
                 case 4:
-                    mBtnNext.setVisibility(View.GONE);
-                    mBtnSkip.setVisibility(View.GONE);
                     return FragmentFive.newInstance();
             }
             return null;
@@ -97,19 +122,4 @@ public class MainActivity extends AppCompatActivity {
             return 5;
         }
     }
-
-//    public void launchFragment(String tag) {
-//        this.tag = tag;
-//        if (tag.equals("Skip")) {
-//            FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-//            FragmentFive fragmentFive = new FragmentFive();
-//            fragmentTransaction.replace(R.id.flContainer, fragmentFive, "FragmentFive").addToBackStack("FragmentFive").commit();
-//        }
-//    }
-//
-//    public void openFifthFragment(CommunicationListener listener) {
-//        if (listener != null) {
-//            listener.onDataPassed(tag);
-//        }
-//    }
 }
