@@ -31,6 +31,7 @@ public class ProductsActivity extends AppCompatActivity {
         setProductsViewPagerAdapter();
     }
 
+
     private void setProductsViewPagerAdapter() {
         ProductsViewPagerAdapter productsViewPagerAdapter = new ProductsViewPagerAdapter(getSupportFragmentManager(),
                 FragmentStatePagerAdapter.BEHAVIOR_RESUME_ONLY_CURRENT_FRAGMENT);

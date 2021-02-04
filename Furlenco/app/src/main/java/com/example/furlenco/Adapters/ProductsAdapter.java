@@ -17,16 +17,11 @@ import java.util.List;
 
 public class ProductsAdapter extends RecyclerView.Adapter<ProductsViewHolder> {
     List<ExploreProductsItem> exploreProductsItemList;
-    List<ProductModelClass> productModelClassList;
     OnProductClick onProductClick;
 
-    public ProductsAdapter(List<ProductModelClass> productModelClassList, OnProductClick onProductClick) {
-        this.productModelClassList = productModelClassList;
-        this.onProductClick = onProductClick;
-    }
-
-    public ProductsAdapter(List<ExploreProductsItem> exploreProductsItemList) {
+    public ProductsAdapter(List<ExploreProductsItem> exploreProductsItemList, OnProductClick onProductClick) {
         this.exploreProductsItemList = exploreProductsItemList;
+        this.onProductClick = onProductClick;
     }
 
     @NonNull

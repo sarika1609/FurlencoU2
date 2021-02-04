@@ -21,15 +21,14 @@ public class ProductsViewHolder extends RecyclerView.ViewHolder {
 
     public ProductsViewHolder(@NonNull View itemView, OnProductClick onProductClick) {
         super(itemView);
-        initUI(itemView);
         this.onProductClick = onProductClick;
+        initUI(itemView);
     }
 
     private void initUI(View itemView) {
         tv_product = itemView.findViewById(R.id.tv_product);
         iv_product = itemView.findViewById(R.id.iv_product);
         ll_products = itemView.findViewById(R.id.ll_products);
-
     }
 
     public void setData(ExploreProductsItem exploreProductsItem) {

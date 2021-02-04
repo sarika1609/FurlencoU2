@@ -1,11 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
+<<<<<<< HEAD
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+=======
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+>>>>>>> 9e0c252840e8d72e75e66313e5a1dd1bc58c8ddd
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".HomeScreenFragments.ProductsFragment">
 
+<<<<<<< HEAD
     <!-- TODO: Update blank fragment layout -->
 
 
@@ -20,3 +26,22 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"></androidx.viewpager.widget.ViewPager>
 </FrameLayout>
+=======
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tabLayout3"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_30"
+        android:background="@color/white"
+        app:tabGravity="center"
+        app:tabIndicatorColor="#f8d568"
+        app:tabIndicatorHeight="3dp"
+        app:tabMode="scrollable" />
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/viewPager3"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+
+</LinearLayout>
+>>>>>>> 9e0c252840e8d72e75e66313e5a1dd1bc58c8ddd

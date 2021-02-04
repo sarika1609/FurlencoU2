@@ -1,20 +1,24 @@
 package com.example.furlenco.HomeScreenFragments;
 
+import android.content.Context;
 import android.os.Bundle;
-
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
-import androidx.fragment.app.Fragment;
-import androidx.recyclerview.widget.GridLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
-
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
+import androidx.recyclerview.widget.GridLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+import androidx.viewpager.widget.ViewPager;
+
 import com.example.furlenco.Activities.HomeActivity2;
 import com.example.furlenco.Adapters.ProductsAdapter;
+import com.example.furlenco.Interfaces.OnProductClick;
 import com.example.furlenco.POJOClasses.ResponseModel;
 import com.example.furlenco.R;
 import com.google.gson.Gson;
@@ -24,10 +28,17 @@ import java.io.InputStream;
 import java.lang.reflect.Type;
 
 
-public class HomeFragment extends Fragment {
+public class HomeFragment extends Fragment implements OnProductClick {
 
     RecyclerView rv_products, rv_collection;
     ResponseModel responseModel;
+    private HomeActivity2 homeActivity2;
+    private Runnable apiRunnable = new Runnable() {
+        @Override
+        public void run() {
+            getDataFromJson();
+        }
+    };
 
     public static HomeFragment newInstance() {
         HomeFragment fragment = new HomeFragment();
@@ -60,13 +71,6 @@ public class HomeFragment extends Fragment {
         Thread thread = new Thread(apiRunnable);
         thread.start();
     }
-
-    private Runnable apiRunnable = new Runnable() {
-        @Override
-        public void run() {
-            getDataFromJson();
-        }
-    };
 
     private void getDataFromJson() {
         InputStream inputStream = null;
@@ -103,9 +107,27 @@ public class HomeFragment extends Fragment {
             public void run() {
                 GridLayoutManager gridLayoutManager = new GridLayoutManager(getContext(), 3);
                 rv_products.setLayoutManager(gridLayoutManager);
-                ProductsAdapter productsAdapter = new ProductsAdapter(responseModel.getExploreProducts());
+                ProductsAdapter productsAdapter = new ProductsAdapter(responseModel.getExploreProducts(),HomeFragment.this::productItemClicked);
                 rv_products.setAdapter(productsAdapter);
             }
         });
     }
+
+    @Override
+    public void onAttach(@NonNull Context context) {
+        super.onAttach(context);
+        homeActivity2 = (HomeActivity2) context;
+    }
+
+    @Override
+    public void productItemClicked(int position) {
+        sendDataToActivity(position);
+    }
+
+    private void sendDataToActivity(int position) {
+        if (homeActivity2!=null){
+            homeActivity2.sendingAdapterPosition(position);
+        }
+    }
+
 }

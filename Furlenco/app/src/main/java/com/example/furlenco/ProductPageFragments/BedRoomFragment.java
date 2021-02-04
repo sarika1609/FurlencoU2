@@ -13,7 +13,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.example.furlenco.Activities.HomeActivity;
 import com.example.furlenco.R;
 import com.google.android.material.tabs.TabLayout;
 
@@ -21,7 +20,6 @@ import com.google.android.material.tabs.TabLayout;
 public class BedRoomFragment extends Fragment {
     ViewPager bed_viewpager;
     TabLayout bed_tablayout;
-    HomeActivity mainActivity;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,

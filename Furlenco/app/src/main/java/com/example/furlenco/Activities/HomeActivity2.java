@@ -1,8 +1,6 @@
 package com.example.furlenco.Activities;
 
 import android.os.Bundle;
-import android.util.Log;
-import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -10,12 +8,11 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentStatePagerAdapter;
-import androidx.recyclerview.widget.GridLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
 import androidx.viewpager.widget.ViewPager;
 
 import com.example.furlenco.Adapters.ProductsAdapter;
 import com.example.furlenco.Fragments.AddCartFragment;
+
 import com.example.furlenco.HomeScreenFragments.CartFragment;
 import com.example.furlenco.HomeScreenFragments.CollectionsFragment;
 import com.example.furlenco.HomeScreenFragments.HomeFragment;
@@ -30,9 +27,8 @@ import com.google.android.material.tabs.TabLayout;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 
-import java.io.InputStream;
-import java.lang.reflect.Type;
 import java.util.List;
+
 
 public class HomeActivity2 extends AppCompatActivity {
     List<CartModelClass> cartModelClassList;
@@ -53,6 +49,8 @@ public class HomeActivity2 extends AppCompatActivity {
             R.drawable.ic_baseline_shopping_cart_24,
             R.drawable.ic_baseline_person_24
     };
+
+    private int position;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -100,9 +98,22 @@ public class HomeActivity2 extends AppCompatActivity {
         tabLayout = findViewById(R.id.tabLayout2);
     }
 
+
     public void setCartData(List<CartModelClass> cartModelClassList) {
-        this.cartModelClassList=cartModelClassList;
+        this.cartModelClassList = cartModelClassList;
     }
+
+    public void sendingAdapterPosition(int position) {
+        viewPager.setCurrentItem(1);
+        this.position = position;
+    }
+
+   /* public void sendCartDataToDisplayFragment(ProductsClickListener listner) {
+        if (listner != null) {
+            listner.onProductClicked(position);
+        }
+    }
+*/
 
     public void sendCartDataToDisplayFragment(CartCommunationListner listner) {
         if (listner != null) {
@@ -123,7 +134,7 @@ public class HomeActivity2 extends AppCompatActivity {
                 case 0:
                     return HomeFragment.newInstance();
                 case 1:
-                    return ProductsFragment.newInstance();
+                    return HomeFragment.newInstance();
                 case 2:
                     return CollectionsFragment.newInstance();
                 case 3:
