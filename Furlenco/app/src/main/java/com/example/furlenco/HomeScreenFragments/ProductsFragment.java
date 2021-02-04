@@ -1,38 +1,42 @@
 package com.example.furlenco.HomeScreenFragments;
 
+import android.content.Context;
 import android.os.Bundle;
-
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
-import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentStatePagerAdapter;
-import androidx.viewpager.widget.ViewPager;
-
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.example.furlenco.Adapters.ProductsViewPagerAdapter;
-import com.example.furlenco.POJOClasses.ResponseModel;
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentStatePagerAdapter;
+import androidx.viewpager.widget.ViewPager;
+
+import com.example.furlenco.Activities.HomeActivity2;
+import com.example.furlenco.Interfaces.ProductsClickListener;
+import com.example.furlenco.ProdcutsFragments.AppliancesFragment;
+import com.example.furlenco.ProdcutsFragments.BedroomFragment;
+import com.example.furlenco.ProdcutsFragments.DiningRoomFragment;
+import com.example.furlenco.ProdcutsFragments.FullHomeFragment;
+import com.example.furlenco.ProdcutsFragments.KidsRoomFragment;
+import com.example.furlenco.ProdcutsFragments.LivingRoomFragment;
+import com.example.furlenco.ProdcutsFragments.SpecialDealsFragment;
+import com.example.furlenco.ProdcutsFragments.StorageFragment;
+import com.example.furlenco.ProdcutsFragments.StudyRoomFragment;
+import com.example.furlenco.ProdcutsFragments.TwoWheelersFragment;
 import com.example.furlenco.R;
 import com.google.android.material.tabs.TabLayout;
 
-public class ProductsFragment extends Fragment {
-    ViewPager m_viewpager;
-    TabLayout m_tablayout;
-    ResponseModel responseModel;
+public class ProductsFragment extends Fragment implements ProductsClickListener {
+
+    private ViewPager viewPager;
+    private TabLayout tabLayout;
+    private HomeActivity2 homeActivity2;
 
     public static ProductsFragment newInstance() {
         ProductsFragment fragment = new ProductsFragment();
         return fragment;
-    }
-
-    @Override
-    public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        if (getArguments() != null) {
-
-        }
     }
 
     @Override
@@ -45,12 +49,11 @@ public class ProductsFragment extends Fragment {
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-        initUI(view);
-    }
-
-    private void initUI(View view) {
-        m_tablayout = view.findViewById(R.id.m_tablayout);
-        m_viewpager = view.findViewById(R.id.m_viewpager);
+        viewPager = view.findViewById(R.id.viewPager3);
+        tabLayout = view.findViewById(R.id.tabLayout3);
+        if (homeActivity2 != null) {
+            homeActivity2.sendPostionToFragment(this);
+        }
         setProductsViewPagerAdapter();
     }
 
@@ -58,9 +61,113 @@ public class ProductsFragment extends Fragment {
     private void setProductsViewPagerAdapter() {
         ProductsViewPagerAdapter productsViewPagerAdapter = new ProductsViewPagerAdapter(getChildFragmentManager(),
                 FragmentStatePagerAdapter.BEHAVIOR_RESUME_ONLY_CURRENT_FRAGMENT);
-        m_viewpager.setAdapter(productsViewPagerAdapter);
-        m_tablayout.setupWithViewPager(m_viewpager);
+        viewPager.setAdapter(productsViewPagerAdapter);
+        tabLayout.setupWithViewPager(viewPager);
+    }
+
+    @Override
+    public void onAttach(@NonNull Context context) {
+        super.onAttach(context);
+        homeActivity2 = (HomeActivity2) context;
+
     }
 
 
+    @Override
+    public void onResume() {
+        super.onResume();
+        if (homeActivity2 != null) {
+            homeActivity2.sendPostionToFragment(this);
+        }
+    }
+
+
+
+
+    @Override
+    public void onProductClicked(Bundle bundle) {
+        if (bundle != null) {
+            int position = bundle.getInt("position");
+            viewPager.setCurrentItem(position);
+        }
+    }
+
+
+    private class ProductsViewPagerAdapter extends FragmentStatePagerAdapter {
+        public ProductsViewPagerAdapter(@NonNull FragmentManager fm, int behavior) {
+            super(fm, behavior);
+        }
+
+        @NonNull
+        @Override
+        public Fragment getItem(int position) {
+            switch (position) {
+                case 0:
+                    return BedroomFragment.newInstance();
+                case 1:
+                    return LivingRoomFragment.newInstance();
+                case 2:
+                    return AppliancesFragment.newInstance();
+                case 3:
+                    return FullHomeFragment.newInstance();
+                case 4:
+                    return StorageFragment.newInstance();
+                case 5:
+                    return StudyRoomFragment.newInstance();
+                case 6:
+                    return KidsRoomFragment.newInstance();
+                case 7:
+                    return DiningRoomFragment.newInstance();
+                case 8:
+                    return TwoWheelersFragment.newInstance();
+                case 9:
+                    return SpecialDealsFragment.newInstance();
+            }
+            return null;
+        }
+
+        @Override
+        public int getCount() {
+            return 10;
+        }
+
+        @Nullable
+        @Override
+        public CharSequence getPageTitle(int position) {
+            String name = "Tab1";
+            switch (position) {
+                case 0:
+                    name = "Bed Room";
+                    break;
+                case 1:
+                    name = "Living Room";
+                    break;
+                case 2:
+                    name = "Appliances";
+                    break;
+                case 3:
+                    name = "Full Home";
+                    break;
+                case 4:
+                    name = "Storage";
+                    break;
+                case 5:
+                    name = "Study Room";
+                    break;
+                case 6:
+                    name = "Kids Room";
+                    break;
+                case 7:
+                    name = "Dining Room";
+                    break;
+                case 8:
+                    name = "2-Wheelers";
+                    break;
+                case 9:
+                    name = "Special Deals";
+                    break;
+            }
+            return name;
+        }
+    }
 }

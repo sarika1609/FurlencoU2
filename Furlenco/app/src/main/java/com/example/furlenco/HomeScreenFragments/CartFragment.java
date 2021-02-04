@@ -70,7 +70,7 @@ public class CartFragment extends Fragment implements CartCommunationListner {
     @Override
     public void onResume() {
         super.onResume();
-        setCardAdapterData(cartModelClassList);
+        //setCardAdapterData(cartModelClassList);
         if (homeActivity2 != null) {
             homeActivity2.sendCartDataToDisplayFragment(this);
         }

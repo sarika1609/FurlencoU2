@@ -21,13 +21,13 @@ public class ProductsActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_products);
+      //  setContentView(R.layout.activity_products);
         initUI();
     }
 
     private void initUI() {
-        m_tablayout = findViewById(R.id.m_tablayout);
-        m_viewpager = findViewById(R.id.m_viewpager);
+     //   m_tablayout = findViewById(R.id.m_tablayout);
+     //   m_viewpager = findViewById(R.id.m_viewpager);
         setProductsViewPagerAdapter();
     }
 

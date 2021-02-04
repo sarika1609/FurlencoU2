@@ -18,6 +18,7 @@ import com.example.furlenco.HomeScreenFragments.CollectionsFragment;
 import com.example.furlenco.HomeScreenFragments.HomeFragment;
 import com.example.furlenco.HomeScreenFragments.MeFragment;
 import com.example.furlenco.HomeScreenFragments.ProductsFragment;
+import com.example.furlenco.Interfaces.ProductsClickListener;
 import com.example.furlenco.Listners.AddCartListner;
 import com.example.furlenco.Listners.CartCommunationListner;
 import com.example.furlenco.ModelClasses.CartModelClass;
@@ -32,6 +33,8 @@ import java.util.List;
 
 public class HomeActivity2 extends AppCompatActivity {
     List<CartModelClass> cartModelClassList;
+    int current_postion = 0;
+    ProductsClickListener listener;
 
     private ViewPager viewPager;
     private TabLayout tabLayout;
@@ -50,7 +53,6 @@ public class HomeActivity2 extends AppCompatActivity {
             R.drawable.ic_baseline_person_24
     };
 
-    private int position;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -103,23 +105,26 @@ public class HomeActivity2 extends AppCompatActivity {
         this.cartModelClassList = cartModelClassList;
     }
 
-    public void sendingAdapterPosition(int position) {
-        viewPager.setCurrentItem(1);
-        this.position = position;
-    }
-
-   /* public void sendCartDataToDisplayFragment(ProductsClickListener listner) {
-        if (listner != null) {
-            listner.onProductClicked(position);
-        }
-    }
-*/
-
     public void sendCartDataToDisplayFragment(CartCommunationListner listner) {
         if (listner != null) {
             listner.updateCartList(cartModelClassList);
         }
     }
+
+    public void sendingAdapterPosition(int position) {
+        this.current_postion = position;
+        viewPager.setCurrentItem(1);
+        ProductsFragment.newInstance().onResume();
+    }
+
+    public void sendPostionToFragment(ProductsClickListener listener) {
+        if (listener != null) {
+            Bundle bundle = new Bundle();
+            bundle.putInt("position", current_postion);
+            listener.onProductClicked(bundle);
+        }
+    }
+
 
     private class HomeScreenViewPagerAdapter extends FragmentStatePagerAdapter {
 
@@ -134,7 +139,7 @@ public class HomeActivity2 extends AppCompatActivity {
                 case 0:
                     return HomeFragment.newInstance();
                 case 1:
-                    return HomeFragment.newInstance();
+                    return ProductsFragment.newInstance();
                 case 2:
                     return CollectionsFragment.newInstance();
                 case 3:

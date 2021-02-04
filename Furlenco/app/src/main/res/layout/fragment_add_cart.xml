@@ -15,7 +15,7 @@
             android:id="@+id/iv_cart_product"
             android:layout_width="fill_parent"
             android:layout_height="@dimen/dp_180"
-            android:src="@drawable/bed_storage"></ImageView>
+            android:src="@drawable/kidsroom"></ImageView>
 
         <TextView
             android:id="@+id/btn_cart_count"
