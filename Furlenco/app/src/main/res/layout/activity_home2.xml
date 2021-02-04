@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -9,19 +9,22 @@
 
     <androidx.viewpager.widget.ViewPager
         android:id="@+id/viewPager2"
+        android:layout_weight="1"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
 
     <com.google.android.material.tabs.TabLayout
+        android:background="@color/white"
+        android:layout_weight="1"
         android:id="@+id/tabLayout2"
         app:tabTextAppearance="@style/MineCustomTabText"
         app:tabTextColor="@color/button_blue"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="125dp"
         android:layout_alignParentBottom="true"
         app:tabGravity="center"
         app:tabIndicatorGravity="top"
         app:tabIndicatorColor="#f8d568"
         app:tabIndicatorHeight="3dp" />
 
-</RelativeLayout>
+</LinearLayout>

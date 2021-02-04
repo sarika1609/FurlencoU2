@@ -55,27 +55,27 @@ public class HomeActivity extends AppCompatActivity implements OnProductClick {
             }
         });
 
-        tv_collection.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(HomeActivity.this, CollectionsActivity.class);
-                startActivity(intent);
-            }
-        });
-        tv_cart.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(HomeActivity.this, CartActivity.class);
-                startActivity(intent);
-            }
-        });
-        tv_profile.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(HomeActivity.this, ProfileActivity.class);
-                startActivity(intent);
-            }
-        });
+//        tv_collection.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                Intent intent = new Intent(HomeActivity.this, CollectionsActivity.class);
+//                startActivity(intent);
+//            }
+//        });
+//        tv_cart.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                Intent intent = new Intent(HomeActivity.this, CartActivity.class);
+//                startActivity(intent);
+//            }
+//        });
+//        tv_profile.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                Intent intent = new Intent(HomeActivity.this, ProfileActivity.class);
+//                startActivity(intent);
+//            }
+//        });
         bindData();
     }
 

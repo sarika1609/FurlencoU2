@@ -1,6 +1,8 @@
 package com.example.furlenco.Activities;
 
 import android.os.Bundle;
+import android.util.Log;
+import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -8,15 +10,24 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentStatePagerAdapter;
+import androidx.recyclerview.widget.GridLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 import androidx.viewpager.widget.ViewPager;
 
+import com.example.furlenco.Adapters.ProductsAdapter;
 import com.example.furlenco.HomeScreenFragments.CartFragment;
 import com.example.furlenco.HomeScreenFragments.CollectionsFragment;
 import com.example.furlenco.HomeScreenFragments.HomeFragment;
 import com.example.furlenco.HomeScreenFragments.MeFragment;
 import com.example.furlenco.HomeScreenFragments.ProductsFragment;
+import com.example.furlenco.POJOClasses.ResponseModel;
 import com.example.furlenco.R;
 import com.google.android.material.tabs.TabLayout;
+import com.google.gson.Gson;
+import com.google.gson.reflect.TypeToken;
+
+import java.io.InputStream;
+import java.lang.reflect.Type;
 
 public class HomeActivity2 extends AppCompatActivity {
 
@@ -82,6 +93,8 @@ public class HomeActivity2 extends AppCompatActivity {
         viewPager = findViewById(R.id.viewPager2);
         tabLayout = findViewById(R.id.tabLayout2);
     }
+
+
 
     private class HomeScreenViewPagerAdapter extends FragmentStatePagerAdapter {
 

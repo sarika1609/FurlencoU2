@@ -10,7 +10,7 @@
     <string name="delivered_safe">Delivered Safe.</string>
     <string name="furlenco">FURLENCO</string>
     <string name="rent_free">Go rent-free for 4 months.Get flat 50%
-    off per month. Hurry! Offer ends at midnight.TC Apply</string>
+    off per month. Hurry! Offer ends at midnight.T and C Apply</string>
     <string name="explore_products">Explore Products</string>
     <string name="bedroom">Bedroom</string>
     <string name="living_room"> Living Room</string>
@@ -25,7 +25,7 @@
     <string name="browse_collections">Browse Collections</string>
     <string name="most_popular">Most Popular</string>
     <string name="why_rent">Why you should rent</string>
-    <string name="rent_is_awesome">Renting is awesome</string>
+    <string name="rent_is_awesome">Renting is awesome!</string>
     <string name="live_better_now">Live better now</string>
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="text_skip">Skip</string>
@@ -62,4 +62,6 @@
     values-round/strings.xml for round devices.
     -->
     <string name="hello_world">Hello Square World!</string>
+    <string name="text_sanitised_furniture_and_appliances">Sanitised Furniture and Appliances</string>
+    <string name="know_more">Know More</string>
 </resources>
