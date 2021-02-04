@@ -33,7 +33,6 @@ public class ProductsFragment extends Fragment implements ProductsClickListener 
     private ViewPager viewPager;
     private TabLayout tabLayout;
     private HomeActivity2 homeActivity2;
-    private int currentPosition;
 
     public static ProductsFragment newInstance() {
         ProductsFragment fragment = new ProductsFragment();
@@ -72,14 +71,14 @@ public class ProductsFragment extends Fragment implements ProductsClickListener 
     public void onResume() {
         super.onResume();
         if (homeActivity2 != null) {
-            homeActivity2.sendCartDataToDisplayFragment(this);
+            homeActivity2.sendListener(this);
         }
 
     }
 
     @Override
     public void onProductClicked(int position) {
-        currentPosition = position;
+        viewPager.setCurrentItem(position);
     }
 
 
@@ -91,9 +90,6 @@ public class ProductsFragment extends Fragment implements ProductsClickListener 
         @NonNull
         @Override
         public Fragment getItem(int position) {
-            if (currentPosition!=-1){
-                position = currentPosition;
-            }
             switch (position) {
                 case 0:
                     return BedroomFragment.newInstance();

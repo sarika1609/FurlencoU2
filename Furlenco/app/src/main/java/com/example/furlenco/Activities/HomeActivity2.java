@@ -100,7 +100,7 @@ public class HomeActivity2 extends AppCompatActivity {
         this.position = position;
     }
 
-    public void sendCartDataToDisplayFragment(ProductsClickListener listner) {
+    public void sendListener(ProductsClickListener listner) {
         if (listner != null) {
             listner.onProductClicked(position);
         }
