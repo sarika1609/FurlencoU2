@@ -37,7 +37,7 @@ public class ProductsViewHolder extends RecyclerView.ViewHolder {
         } else tv_product.setText(exploreProductsItem.getName());
 
         if (exploreProductsItem.getImageUrl()==null){
-            iv_product.setImageResource(R.drawable.ic_discount);
+            iv_product.setImageResource(R.drawable.ic_launcher_background);
         }else {
             Glide.with(iv_product).
                     load(exploreProductsItem.getImageUrl()).
