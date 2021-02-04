@@ -69,12 +69,20 @@ public class MainActivity extends AppCompatActivity {
         public Fragment getItem(int position) {
             switch (position) {
                 case 0:
+                    mBtnNext.setVisibility(View.VISIBLE);
+                    mBtnSkip.setVisibility(View.VISIBLE);
                     return FragmentOne.newInstance();
                 case 1:
+                    mBtnNext.setVisibility(View.VISIBLE);
+                    mBtnSkip.setVisibility(View.VISIBLE);
                     return FragmentTwo.newInstance();
                 case 2:
+                    mBtnNext.setVisibility(View.VISIBLE);
+                    mBtnSkip.setVisibility(View.VISIBLE);
                     return FragmentThree.newInstance();
                 case 3:
+                    mBtnNext.setVisibility(View.VISIBLE);
+                    mBtnSkip.setVisibility(View.VISIBLE);
                     return FragmentFour.newInstance();
                 case 4:
                     mBtnNext.setVisibility(View.GONE);
