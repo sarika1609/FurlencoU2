@@ -11,7 +11,7 @@
         android:roundIcon="@drawable/ic_furlenco_logo"
         android:supportsRtl="true"
         android:theme="@style/Theme.Furlenco">
-        <activity android:name=".Activities.HomeActivity2" />
+        <activity android:name=".Activities.HomeActivity" />
         <activity android:name=".Activities.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

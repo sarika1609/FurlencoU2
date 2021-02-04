@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".Activities.HomeActivity2">
+    tools:context=".Activities.HomeActivity">
 
     <androidx.viewpager.widget.ViewPager
         android:id="@+id/viewPager2"
@@ -17,10 +17,6 @@
         android:id="@+id/tabLayout2"
         android:layout_width="match_parent"
         android:layout_height="125dp"
-<<<<<<< HEAD
-        android:layout_alignParentBottom="true"
-=======
->>>>>>> 9e0c252840e8d72e75e66313e5a1dd1bc58c8ddd
         android:layout_weight="1"
         android:background="@color/white"
         app:tabGravity="center"

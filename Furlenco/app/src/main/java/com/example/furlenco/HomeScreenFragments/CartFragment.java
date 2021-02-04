@@ -13,7 +13,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.example.furlenco.Activities.HomeActivity2;
+import com.example.furlenco.Activities.HomeActivity;
 import com.example.furlenco.Adapters.ViewCartAdapter;
 import com.example.furlenco.Listners.CartCommunationListner;
 import com.example.furlenco.ModelClasses.CartModelClass;
@@ -25,7 +25,7 @@ import java.util.List;
 public class CartFragment extends Fragment implements CartCommunationListner {
     RecyclerView rv_carts;
     CartModelClass cartModelClass;
-    HomeActivity2 homeActivity2;
+    HomeActivity homeActivity;
     List<CartModelClass> cartModelClassList = new ArrayList<>();
     CartCommunationListner listner;
 
@@ -64,15 +64,15 @@ public class CartFragment extends Fragment implements CartCommunationListner {
     @Override
     public void onAttach(@NonNull Context context) {
         super.onAttach(context);
-        homeActivity2 = (HomeActivity2) context;
+        homeActivity = (HomeActivity) context;
     }
 
     @Override
     public void onResume() {
         super.onResume();
         setCardAdapterData(cartModelClassList);
-        if (homeActivity2 != null) {
-            homeActivity2.sendCartDataToDisplayFragment(this);
+        if (homeActivity != null) {
+            homeActivity.sendCartDataToDisplayFragment(this);
         }
 
     }

@@ -31,7 +31,7 @@ import com.google.gson.reflect.TypeToken;
 import java.util.List;
 
 
-public class HomeActivity2 extends AppCompatActivity {
+public class HomeActivity extends AppCompatActivity {
     List<CartModelClass> cartModelClassList;
 
     private ViewPager viewPager;
@@ -100,21 +100,20 @@ public class HomeActivity2 extends AppCompatActivity {
     }
 
 
+    public void sendingAdapterPosition(int position) {
+        viewPager.setCurrentItem(1);
+//        this.position = position;
+    }
+
+//    public void sendListener(ProductsClickListener listener) {
+//        if (listener != null) {
+//            listener.onProductClicked(position);
+//        }
+//    }
+
     public void setCartData(List<CartModelClass> cartModelClassList) {
         this.cartModelClassList = cartModelClassList;
     }
-
-    public void sendingAdapterPosition(int position) {
-        viewPager.setCurrentItem(1);
-        this.position = position;
-    }
-
-    public void sendCartDataToDisplayFragment(ProductsClickListener listner) {
-        if (listner != null) {
-            listner.onProductClicked(position);
-        }
-    }
-*/
 
     public void sendCartDataToDisplayFragment(CartCommunationListner listner) {
         if (listner != null) {

@@ -14,22 +14,21 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageView;
 
-import com.example.furlenco.Activities.HomeActivity2;
+import com.example.furlenco.Activities.HomeActivity;
 import com.example.furlenco.Listners.AddCartListner;
-import com.example.furlenco.Listners.CartCommunationListner;
 import com.example.furlenco.ModelClasses.CartModelClass;
 import com.example.furlenco.ModelClasses.ProductModelClass;
 import com.example.furlenco.R;
 
-import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
 
 public class AddCartFragment extends Fragment implements AddCartListner {
+
     Button btn_cart_amount, btn_add_cart;
     ImageView iv_cart_product;
-    HomeActivity2 homeActivity2;
+    HomeActivity homeActivity;
     List<CartModelClass> cartModelClassList = new ArrayList<>();
 
     @Override
@@ -46,7 +45,7 @@ public class AddCartFragment extends Fragment implements AddCartListner {
     }
 
     private void initUI(View view) {
-        iv_cart_product = view.findViewById(R.id.iv_cart_product);
+        iv_cart_product = view.findViewById(R.id.ivImageInProductView);
         btn_cart_amount = view.findViewById(R.id.btn_cart_amount);
         btn_add_cart = view.findViewById(R.id.btn_add_cart);
         btn_add_cart.setOnClickListener(new View.OnClickListener() {
@@ -76,7 +75,7 @@ public class AddCartFragment extends Fragment implements AddCartListner {
     @Override
     public void onAttach(@NonNull Context context) {
         super.onAttach(context);
-        homeActivity2 = (HomeActivity2) context;
+        homeActivity = (HomeActivity) context;
     }
 
 
@@ -86,8 +85,8 @@ public class AddCartFragment extends Fragment implements AddCartListner {
     }
 
     private void sendDataToActivity(List<CartModelClass> cartModelClassList) {
-        if (homeActivity2!=null){
-            homeActivity2.setCartData(cartModelClassList);
+        if (homeActivity !=null){
+            homeActivity.setCartData(cartModelClassList);
         }
     }
 }

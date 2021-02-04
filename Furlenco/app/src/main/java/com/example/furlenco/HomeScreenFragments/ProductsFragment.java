@@ -13,7 +13,7 @@ import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentStatePagerAdapter;
 import androidx.viewpager.widget.ViewPager;
 
-import com.example.furlenco.Activities.HomeActivity2;
+import com.example.furlenco.Activities.HomeActivity;
 import com.example.furlenco.Interfaces.ProductsClickListener;
 import com.example.furlenco.ProdcutsFragments.AppliancesFragment;
 import com.example.furlenco.ProdcutsFragments.BedroomFragment;
@@ -32,7 +32,7 @@ public class ProductsFragment extends Fragment implements ProductsClickListener 
 
     private ViewPager viewPager;
     private TabLayout tabLayout;
-    private HomeActivity2 homeActivity2;
+    private HomeActivity homeActivity;
 
     public static ProductsFragment newInstance() {
         ProductsFragment fragment = new ProductsFragment();
@@ -66,21 +66,21 @@ public class ProductsFragment extends Fragment implements ProductsClickListener 
     @Override
     public void onAttach(@NonNull Context context) {
         super.onAttach(context);
-        homeActivity2 = (HomeActivity2) context;
+        homeActivity = (HomeActivity) context;
     }
 
-    @Override
-    public void onResume() {
-        super.onResume();
-        if (homeActivity2 != null) {
-            homeActivity2.sendListener(this);
-        }
-    }
+//    @Override
+//    public void onResume() {
+//        super.onResume();
+//        if (homeActivity != null) {
+//            homeActivity.sendListener(this);
+//        }
+//    }
 
 
     @Override
     public void onProductClicked(int position) {
-        viewPager.setCurrentItem(position);
+//        viewPager.setCurrentItem(position);
     }
 
 
