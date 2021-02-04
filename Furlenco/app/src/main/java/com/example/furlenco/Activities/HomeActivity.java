@@ -31,7 +31,7 @@ import com.google.gson.reflect.TypeToken;
 import java.util.List;
 
 
-public class HomeActivity2 extends AppCompatActivity {
+public class HomeActivity extends AppCompatActivity {
     List<CartModelClass> cartModelClassList;
     int current_postion = 0;
     ProductsClickListener listener;
@@ -53,6 +53,7 @@ public class HomeActivity2 extends AppCompatActivity {
             R.drawable.ic_baseline_person_24
     };
 
+    private int position;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

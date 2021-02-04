@@ -13,7 +13,7 @@ import androidx.cardview.widget.CardView;
 import androidx.fragment.app.Fragment;
 
 import com.example.furlenco.Activities.MainActivity;
-import com.example.furlenco.Activities.HomeActivity2;
+import com.example.furlenco.Activities.HomeActivity;
 import com.example.furlenco.R;
 
 public class FragmentFive extends Fragment implements View.OnClickListener {
@@ -58,7 +58,7 @@ public class FragmentFive extends Fragment implements View.OnClickListener {
     }
 
     public void launchHomeActivity(String name) {
-        Intent intent = new Intent(getContext(), HomeActivity2.class);
+        Intent intent = new Intent(getContext(), HomeActivity.class);
         intent.putExtra("city_name", name);
         startActivity(intent);
     }

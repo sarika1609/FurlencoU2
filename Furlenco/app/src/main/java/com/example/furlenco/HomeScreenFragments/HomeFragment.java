@@ -10,13 +10,10 @@ import android.view.ViewGroup;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentManager;
-import androidx.fragment.app.FragmentTransaction;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
-import androidx.viewpager.widget.ViewPager;
 
-import com.example.furlenco.Activities.HomeActivity2;
+import com.example.furlenco.Activities.HomeActivity;
 import com.example.furlenco.Adapters.ProductsAdapter;
 import com.example.furlenco.Interfaces.OnProductClick;
 import com.example.furlenco.POJOClasses.ResponseModel;
@@ -32,7 +29,7 @@ public class HomeFragment extends Fragment implements OnProductClick {
 
     RecyclerView rv_products, rv_collection;
     ResponseModel responseModel;
-    private HomeActivity2 homeActivity2;
+    private HomeActivity homeActivity;
     private Runnable apiRunnable = new Runnable() {
         @Override
         public void run() {
@@ -107,7 +104,7 @@ public class HomeFragment extends Fragment implements OnProductClick {
             public void run() {
                 GridLayoutManager gridLayoutManager = new GridLayoutManager(getContext(), 3);
                 rv_products.setLayoutManager(gridLayoutManager);
-                ProductsAdapter productsAdapter = new ProductsAdapter(responseModel.getExploreProducts(),HomeFragment.this::productItemClicked);
+                ProductsAdapter productsAdapter = new ProductsAdapter(responseModel.getExploreProducts(), HomeFragment.this::productItemClicked);
                 rv_products.setAdapter(productsAdapter);
             }
         });
@@ -116,18 +113,15 @@ public class HomeFragment extends Fragment implements OnProductClick {
     @Override
     public void onAttach(@NonNull Context context) {
         super.onAttach(context);
-        homeActivity2 = (HomeActivity2) context;
+        homeActivity = (HomeActivity) context;
     }
 
     @Override
     public void productItemClicked(int position) {
-        sendDataToActivity(position);
-    }
-
-    private void sendDataToActivity(int position) {
-        if (homeActivity2!=null){
-            homeActivity2.sendingAdapterPosition(position);
+        if (homeActivity != null) {
+            homeActivity.sendingAdapterPosition(position);
         }
     }
+
 
 }

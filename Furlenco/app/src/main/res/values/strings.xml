@@ -65,4 +65,11 @@
     <string name="hello_world">Hello Square World!</string>
     <string name="text_sanitised_furniture_and_appliances">Sanitised Furniture and Appliances</string>
     <string name="know_more">Know More</string>
+    <string name="add_to_cart">Add To Cart</string>
+    <string name="minimum_rental_tenure_is_6_months">Minimum rental tenure is 6 months</string>
+    <string name="here_are_some_offers_for_you">Here are some offers for you</string>
+    <string name="go_rent_free_for_4_months_get_flat_50_off_per_month_hurry_offer_ends_at_midnight_t_and_c_apply">Go rent-free for 4 months. Get flat 50% off per month. Hurry! Offer ends at midnight. T and C Apply.</string>
+    <string name="ends_in_1_days">Ends in 1 days</string>
+    <string name="view_terms">View Terms</string>
+    <string name="text_our_designs">Our designs are user inspired, and our furniture is uniquely designed by in-house experts to solve your day to day problems</string>
 </resources>
