@@ -12,8 +12,6 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Furlenco">
         <activity android:name=".Activities.HomeActivity2" />
-        <activity android:name=".Activities.ProductsActivity" />
-        <activity android:name=".Activities.HomeActivity" />
         <activity android:name=".Activities.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

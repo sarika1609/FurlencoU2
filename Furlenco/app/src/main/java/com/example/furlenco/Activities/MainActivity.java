@@ -11,12 +11,12 @@ import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentStatePagerAdapter;
 import androidx.viewpager.widget.ViewPager;
 
-import com.example.furlenco.Fragments.FragmentFive;
-import com.example.furlenco.Fragments.FragmentFour;
-import com.example.furlenco.Fragments.FragmentOne;
-import com.example.furlenco.Fragments.FragmentThree;
-import com.example.furlenco.Fragments.FragmentTwo;
 import com.example.furlenco.R;
+import com.example.furlenco.StartScreenFragments.FragmentFive;
+import com.example.furlenco.StartScreenFragments.FragmentFour;
+import com.example.furlenco.StartScreenFragments.FragmentOne;
+import com.example.furlenco.StartScreenFragments.FragmentThree;
+import com.example.furlenco.StartScreenFragments.FragmentTwo;
 import com.google.android.material.tabs.TabLayout;
 
 public class MainActivity extends AppCompatActivity {

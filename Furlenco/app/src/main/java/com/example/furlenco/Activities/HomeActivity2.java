@@ -1,8 +1,6 @@
 package com.example.furlenco.Activities;
 
 import android.os.Bundle;
-import android.util.Log;
-import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -10,24 +8,26 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentStatePagerAdapter;
-import androidx.recyclerview.widget.GridLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
 import androidx.viewpager.widget.ViewPager;
 
-import com.example.furlenco.Adapters.ProductsAdapter;
 import com.example.furlenco.HomeScreenFragments.CartFragment;
 import com.example.furlenco.HomeScreenFragments.CollectionsFragment;
 import com.example.furlenco.HomeScreenFragments.HomeFragment;
 import com.example.furlenco.HomeScreenFragments.MeFragment;
 import com.example.furlenco.HomeScreenFragments.ProductsFragment;
-import com.example.furlenco.POJOClasses.ResponseModel;
+import com.example.furlenco.Interfaces.ProductsClickListener;
+import com.example.furlenco.ProdcutsFragments.AppliancesFragment;
+import com.example.furlenco.ProdcutsFragments.BedroomFragment;
+import com.example.furlenco.ProdcutsFragments.DiningRoomFragment;
+import com.example.furlenco.ProdcutsFragments.FullHomeFragment;
+import com.example.furlenco.ProdcutsFragments.KidsRoomFragment;
+import com.example.furlenco.ProdcutsFragments.LivingRoomFragment;
+import com.example.furlenco.ProdcutsFragments.SpecialDealsFragment;
+import com.example.furlenco.ProdcutsFragments.StorageFragment;
+import com.example.furlenco.ProdcutsFragments.StudyRoomFragment;
+import com.example.furlenco.ProdcutsFragments.TwoWheelersFragment;
 import com.example.furlenco.R;
 import com.google.android.material.tabs.TabLayout;
-import com.google.gson.Gson;
-import com.google.gson.reflect.TypeToken;
-
-import java.io.InputStream;
-import java.lang.reflect.Type;
 
 public class HomeActivity2 extends AppCompatActivity {
 
@@ -48,6 +48,7 @@ public class HomeActivity2 extends AppCompatActivity {
             R.drawable.ic_baseline_person_24
     };
 
+    private int position;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -92,6 +93,17 @@ public class HomeActivity2 extends AppCompatActivity {
     private void initViews() {
         viewPager = findViewById(R.id.viewPager2);
         tabLayout = findViewById(R.id.tabLayout2);
+    }
+
+    public void sendingAdapterPosition(int position) {
+        viewPager.setCurrentItem(1);
+        this.position = position;
+    }
+
+    public void sendCartDataToDisplayFragment(ProductsClickListener listner) {
+        if (listner != null) {
+            listner.onProductClicked(position);
+        }
     }
 
 
