@@ -9,14 +9,8 @@ import androidx.fragment.app.FragmentStatePagerAdapter;
 import androidx.viewpager.widget.ViewPager;
 
 import android.os.Bundle;
-import android.view.View;
 
-import com.example.furlenco.Fragments.BedRoomFragment;
-import com.example.furlenco.Fragments.FragmentFive;
-import com.example.furlenco.Fragments.FragmentFour;
-import com.example.furlenco.Fragments.FragmentOne;
-import com.example.furlenco.Fragments.FragmentThree;
-import com.example.furlenco.Fragments.FragmentTwo;
+import com.example.furlenco.ProductPageFragments.BedRoomFragment;
 import com.example.furlenco.R;
 import com.google.android.material.tabs.TabLayout;
 
@@ -42,6 +36,7 @@ public class ProductsActivity extends AppCompatActivity {
                 FragmentStatePagerAdapter.BEHAVIOR_RESUME_ONLY_CURRENT_FRAGMENT);
         m_viewpager.setAdapter(productsViewPagerAdapter);
         m_tablayout.setupWithViewPager(m_viewpager);
+        m_tablayout.getTabAt(0).setIcon(R.drawable.ic_discount);
     }
 
     private class ProductsViewPagerAdapter extends FragmentStatePagerAdapter {

@@ -15,11 +15,15 @@ import androidx.recyclerview.widget.RecyclerView;
 import androidx.viewpager.widget.ViewPager;
 
 import com.example.furlenco.Adapters.ProductsAdapter;
+import com.example.furlenco.Fragments.AddCartFragment;
 import com.example.furlenco.HomeScreenFragments.CartFragment;
 import com.example.furlenco.HomeScreenFragments.CollectionsFragment;
 import com.example.furlenco.HomeScreenFragments.HomeFragment;
 import com.example.furlenco.HomeScreenFragments.MeFragment;
 import com.example.furlenco.HomeScreenFragments.ProductsFragment;
+import com.example.furlenco.Listners.AddCartListner;
+import com.example.furlenco.Listners.CartCommunationListner;
+import com.example.furlenco.ModelClasses.CartModelClass;
 import com.example.furlenco.POJOClasses.ResponseModel;
 import com.example.furlenco.R;
 import com.google.android.material.tabs.TabLayout;
@@ -28,8 +32,10 @@ import com.google.gson.reflect.TypeToken;
 
 import java.io.InputStream;
 import java.lang.reflect.Type;
+import java.util.List;
 
 public class HomeActivity2 extends AppCompatActivity {
+    List<CartModelClass> cartModelClassList;
 
     private ViewPager viewPager;
     private TabLayout tabLayout;
@@ -94,7 +100,15 @@ public class HomeActivity2 extends AppCompatActivity {
         tabLayout = findViewById(R.id.tabLayout2);
     }
 
+    public void setCartData(List<CartModelClass> cartModelClassList) {
+        this.cartModelClassList=cartModelClassList;
+    }
 
+    public void sendCartDataToDisplayFragment(CartCommunationListner listner) {
+        if (listner != null) {
+            listner.updateCartList(cartModelClassList);
+        }
+    }
 
     private class HomeScreenViewPagerAdapter extends FragmentStatePagerAdapter {
 
@@ -115,7 +129,7 @@ public class HomeActivity2 extends AppCompatActivity {
                 case 3:
                     return CartFragment.newInstance();
                 case 4:
-                    return MeFragment.newInstance();
+                    return AddCartFragment.newInstance();
             }
             return null;
         }

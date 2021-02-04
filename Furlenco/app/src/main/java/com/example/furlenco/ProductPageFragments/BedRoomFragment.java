@@ -1,6 +1,5 @@
-package com.example.furlenco.Fragments;
+package com.example.furlenco.ProductPageFragments;
 
-import android.content.Context;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -8,7 +7,6 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentStatePagerAdapter;
-import androidx.recyclerview.widget.RecyclerView;
 import androidx.viewpager.widget.ViewPager;
 
 import android.view.LayoutInflater;
@@ -16,8 +14,6 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.example.furlenco.Activities.HomeActivity;
-import com.example.furlenco.Activities.MainActivity;
-import com.example.furlenco.Activities.ProductsActivity;
 import com.example.furlenco.R;
 import com.google.android.material.tabs.TabLayout;
 
