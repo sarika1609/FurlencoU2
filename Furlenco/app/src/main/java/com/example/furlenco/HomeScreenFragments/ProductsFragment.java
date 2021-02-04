@@ -49,9 +49,11 @@ public class ProductsFragment extends Fragment implements ProductsClickListener 
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
+
         viewPager = view.findViewById(R.id.viewPager3);
         tabLayout = view.findViewById(R.id.tabLayout3);
         setProductsViewPagerAdapter();
+
     }
 
     private void setProductsViewPagerAdapter() {
@@ -73,8 +75,8 @@ public class ProductsFragment extends Fragment implements ProductsClickListener 
         if (homeActivity2 != null) {
             homeActivity2.sendListener(this);
         }
-
     }
+
 
     @Override
     public void onProductClicked(int position) {

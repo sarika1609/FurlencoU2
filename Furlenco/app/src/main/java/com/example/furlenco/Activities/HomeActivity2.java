@@ -16,16 +16,6 @@ import com.example.furlenco.HomeScreenFragments.HomeFragment;
 import com.example.furlenco.HomeScreenFragments.MeFragment;
 import com.example.furlenco.HomeScreenFragments.ProductsFragment;
 import com.example.furlenco.Interfaces.ProductsClickListener;
-import com.example.furlenco.ProdcutsFragments.AppliancesFragment;
-import com.example.furlenco.ProdcutsFragments.BedroomFragment;
-import com.example.furlenco.ProdcutsFragments.DiningRoomFragment;
-import com.example.furlenco.ProdcutsFragments.FullHomeFragment;
-import com.example.furlenco.ProdcutsFragments.KidsRoomFragment;
-import com.example.furlenco.ProdcutsFragments.LivingRoomFragment;
-import com.example.furlenco.ProdcutsFragments.SpecialDealsFragment;
-import com.example.furlenco.ProdcutsFragments.StorageFragment;
-import com.example.furlenco.ProdcutsFragments.StudyRoomFragment;
-import com.example.furlenco.ProdcutsFragments.TwoWheelersFragment;
 import com.example.furlenco.R;
 import com.google.android.material.tabs.TabLayout;
 
@@ -49,6 +39,7 @@ public class HomeActivity2 extends AppCompatActivity {
     };
 
     private int position;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -100,12 +91,11 @@ public class HomeActivity2 extends AppCompatActivity {
         this.position = position;
     }
 
-    public void sendListener(ProductsClickListener listner) {
-        if (listner != null) {
-            listner.onProductClicked(position);
+    public void sendListener(ProductsClickListener listener) {
+        if (listener != null) {
+            listener.onProductClicked(position);
         }
     }
-
 
 
     private class HomeScreenViewPagerAdapter extends FragmentStatePagerAdapter {
