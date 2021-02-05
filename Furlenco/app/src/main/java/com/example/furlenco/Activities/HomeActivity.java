@@ -33,6 +33,8 @@ import java.util.List;
 
 public class HomeActivity extends AppCompatActivity {
     List<CartModelClass> cartModelClassList;
+    int current_postion = 0;
+    ProductsClickListener listener;
 
     private ViewPager viewPager;
     private TabLayout tabLayout;
@@ -100,17 +102,6 @@ public class HomeActivity extends AppCompatActivity {
     }
 
 
-    public void sendingAdapterPosition(int position) {
-        viewPager.setCurrentItem(1);
-//        this.position = position;
-    }
-
-//    public void sendListener(ProductsClickListener listener) {
-//        if (listener != null) {
-//            listener.onProductClicked(position);
-//        }
-//    }
-
     public void setCartData(List<CartModelClass> cartModelClassList) {
         this.cartModelClassList = cartModelClassList;
     }
@@ -120,6 +111,21 @@ public class HomeActivity extends AppCompatActivity {
             listner.updateCartList(cartModelClassList);
         }
     }
+
+    public void sendingAdapterPosition(int position) {
+        this.current_postion = position;
+        viewPager.setCurrentItem(1);
+        ProductsFragment.newInstance().onResume();
+    }
+
+    public void sendPostionToFragment(ProductsClickListener listener) {
+        if (listener != null) {
+            Bundle bundle = new Bundle();
+            bundle.putInt("position", current_postion);
+            listener.onProductClicked(bundle);
+        }
+    }
+
 
     private class HomeScreenViewPagerAdapter extends FragmentStatePagerAdapter {
 

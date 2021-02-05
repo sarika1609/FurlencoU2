@@ -4,6 +4,7 @@
     android:id="@+id/llProduct"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
+    android:layout_margin="@dimen/dp_10"
     android:orientation="vertical">
 
     <androidx.cardview.widget.CardView
@@ -15,7 +16,7 @@
         <ImageView
             android:id="@+id/ivImage"
             android:layout_width="wrap_content"
-            android:layout_height="@dimen/dp_60"
+            android:layout_height="@dimen/dp_100"
             android:scaleType="centerCrop"
             android:src="@drawable/bed" />
     </androidx.cardview.widget.CardView>
