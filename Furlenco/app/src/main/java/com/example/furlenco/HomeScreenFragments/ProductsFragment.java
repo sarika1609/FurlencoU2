@@ -33,6 +33,7 @@ public class ProductsFragment extends Fragment implements ProductsClickListener 
     private ViewPager viewPager;
     private TabLayout tabLayout;
     private HomeActivity homeActivity;
+    int current_position = 0;
 
     public static ProductsFragment newInstance() {
         ProductsFragment fragment = new ProductsFragment();
@@ -57,7 +58,7 @@ public class ProductsFragment extends Fragment implements ProductsClickListener 
     }
 
     private void setProductsViewPagerAdapter() {
-        ProductsViewPagerAdapter productsViewPagerAdapter = new ProductsViewPagerAdapter(getActivity().getSupportFragmentManager(),
+        ProductsViewPagerAdapter productsViewPagerAdapter = new ProductsViewPagerAdapter(getChildFragmentManager(),
                 FragmentStatePagerAdapter.BEHAVIOR_RESUME_ONLY_CURRENT_FRAGMENT);
         viewPager.setAdapter(productsViewPagerAdapter);
         tabLayout.setupWithViewPager(viewPager);
@@ -69,7 +70,14 @@ public class ProductsFragment extends Fragment implements ProductsClickListener 
         homeActivity = (HomeActivity) context;
     }
 
-//    @Override
+    @Override
+    public void onResume() {
+        super.onResume();
+        if (homeActivity != null) {
+            homeActivity.sendPostionToFragment(this);
+        }
+    }
+    //    @Override
 //    public void onResume() {
 //        super.onResume();
 //        if (homeActivity != null) {
@@ -79,8 +87,11 @@ public class ProductsFragment extends Fragment implements ProductsClickListener 
 
 
     @Override
-    public void onProductClicked(int position) {
-//        viewPager.setCurrentItem(position);
+    public void onProductClicked(Bundle bundle) {
+        if (bundle != null) {
+            current_position = bundle.getInt("position");
+            viewPager.setCurrentItem(current_position);
+        }
     }
 
 

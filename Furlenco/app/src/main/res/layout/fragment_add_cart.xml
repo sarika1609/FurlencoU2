@@ -821,7 +821,7 @@
                 <ImageButton
                     android:layout_width="@dimen/dp_30"
                     android:layout_marginStart="@dimen/dp_20"
-                    android:src="@drawable/ic_whatsapp"
+                    android:src="@drawable/ic_facebook"
                     android:layout_height="@dimen/dp_30"/>
 
                 <ImageButton
