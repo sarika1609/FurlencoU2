@@ -1,6 +1,8 @@
 package com.example.furlenco.Activities;
 
 import android.os.Bundle;
+import android.view.View;
+import android.widget.FrameLayout;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -8,6 +10,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentStatePagerAdapter;
+import androidx.fragment.app.FragmentTransaction;
 import androidx.viewpager.widget.ViewPager;
 
 import com.example.furlenco.Adapters.ProductsAdapter;
@@ -18,10 +21,13 @@ import com.example.furlenco.HomeScreenFragments.CollectionsFragment;
 import com.example.furlenco.HomeScreenFragments.HomeFragment;
 import com.example.furlenco.HomeScreenFragments.MeFragment;
 import com.example.furlenco.HomeScreenFragments.ProductsFragment;
+import com.example.furlenco.Interfaces.BedRoomCartCommunicationListner;
 import com.example.furlenco.Interfaces.ProductsClickListener;
 import com.example.furlenco.Listners.AddCartListner;
 import com.example.furlenco.Listners.CartCommunationListner;
 import com.example.furlenco.ModelClasses.CartModelClass;
+import com.example.furlenco.POJOClasses.BedroomItem;
+import com.example.furlenco.POJOClasses.LivingRoomItem;
 import com.example.furlenco.POJOClasses.ResponseModel;
 import com.example.furlenco.R;
 import com.google.android.material.tabs.TabLayout;
@@ -33,8 +39,12 @@ import java.util.List;
 
 public class HomeActivity extends AppCompatActivity {
     List<CartModelClass> cartModelClassList;
+    BedroomItem bedroomItem;
+    LivingRoomItem livingRoomItem;
     int current_postion = 0;
     ProductsClickListener listener;
+    String name, url, backstack;
+    FragmentManager fragmentManager;
 
     private ViewPager viewPager;
     private TabLayout tabLayout;
@@ -54,6 +64,7 @@ public class HomeActivity extends AppCompatActivity {
     };
 
     private int position;
+    FrameLayout flContainer1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -99,6 +110,8 @@ public class HomeActivity extends AppCompatActivity {
     private void initViews() {
         viewPager = findViewById(R.id.viewPager2);
         tabLayout = findViewById(R.id.tabLayout2);
+        flContainer1 = findViewById(R.id.flContainer1);
+        fragmentManager = getSupportFragmentManager();
     }
 
 
@@ -126,6 +139,25 @@ public class HomeActivity extends AppCompatActivity {
         }
     }
 
+    public void setBedRoomCartData(String name, String url, String backstack) {
+        flContainer1.setVisibility(View.VISIBLE);
+        this.name = name;
+        this.url = url;
+        this.backstack = backstack;
+        launchAddCartFragment(name, url, backstack);
+    }
+
+
+    private void launchAddCartFragment(String name, String url, String backstack) {
+        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+        AddCartFragment addCartFragment = new AddCartFragment();
+        Bundle bundle = new Bundle();
+        bundle.putString("name", name);
+        bundle.putString("url", url);
+        bundle.putString("backstack", backstack);
+        addCartFragment.setArguments(bundle);
+        fragmentTransaction.replace(R.id.flContainer1, addCartFragment, "AddCartFragnment").addToBackStack("AddCartFragnment").commit();
+    }
 
     private class HomeScreenViewPagerAdapter extends FragmentStatePagerAdapter {
 
@@ -146,7 +178,7 @@ public class HomeActivity extends AppCompatActivity {
                 case 3:
                     return CartFragment.newInstance();
                 case 4:
-                    return AddCartFragment.newInstance();
+                    return MeFragment.newInstance();
             }
             return null;
         }

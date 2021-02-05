@@ -1,5 +1,7 @@
 package com.example.furlenco.ProdcutsFragments;
 
+import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -13,6 +15,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.example.furlenco.Activities.AddCartActivity;
+import com.example.furlenco.Activities.HomeActivity;
 import com.example.furlenco.Adapters.ProductAdapter;
 import com.example.furlenco.Interfaces.RecyclerItemClickListener;
 import com.example.furlenco.POJOClasses.AppliancesItem;
@@ -36,6 +40,7 @@ import java.lang.reflect.Type;
 public class DiningRoomFragment extends Fragment implements RecyclerItemClickListener {
 ResponseModel responseModel;
 RecyclerView rvdining;
+HomeActivity homeActivity;
     public static DiningRoomFragment newInstance() {
         DiningRoomFragment fragment = new DiningRoomFragment();
         return fragment;
@@ -149,8 +154,29 @@ RecyclerView rvdining;
 
     @Override
     public void onDiningItemClicked(DiningRoomItem diningRoomItem) {
-
+        Intent intent= new Intent(getContext(), AddCartActivity.class);
+        intent.putExtra("name",diningRoomItem.getName());
+        intent.putExtra("url",diningRoomItem.getImageUrl());
+        intent.putExtra("rent",diningRoomItem.getMonthlyRental());
+        intent.putExtra("price",diningRoomItem.getPrice());
+        intent.putExtra("url2", diningRoomItem.getImageUrl2());
+        intent.putExtra("win1", diningRoomItem.getWin2().getName());
+        intent.putExtra("win2", diningRoomItem.getWin2().getName());
+        startActivity(intent);
     }
+
+    private void sendDataToActivity(String name,String url) {
+        if (homeActivity !=null){
+            homeActivity.setBedRoomCartData(name,url,"dining_tag");
+        }
+    }
+
+    @Override
+    public void onAttach(@NonNull Context context) {
+        super.onAttach(context);
+        homeActivity= (HomeActivity) context;
+    }
+
 
     @Override
     public void onTwoWheelerItemClicked(JsonMember2WheelersItem jsonMember2WheelersItem) {

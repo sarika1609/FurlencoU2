@@ -167,7 +167,7 @@ public class ProductViewHolder extends RecyclerView.ViewHolder {
     }
 
     public void setDiningRoomData(DiningRoomItem diningRoomItem, String name) {
-        if (name != null &&name.equalsIgnoreCase("Dining Room")) {
+        if (name.equalsIgnoreCase("Dining Room")) {
             tvName.setText(diningRoomItem.getName());
             tvOffer.setText(diningRoomItem.getOffer());
             tvPrice.setText(diningRoomItem.getMonthlyRental());
@@ -184,7 +184,7 @@ public class ProductViewHolder extends RecyclerView.ViewHolder {
     }
 
     public void setWheelerData(JsonMember2WheelersItem jsonMember2WheelersItem, String name) {
-        if (name != null &&name.equalsIgnoreCase("2 Wheeler")) {
+        if (name.equalsIgnoreCase("2 Wheeler")) {
             tvName.setText(jsonMember2WheelersItem.getName());
             tvOffer.setText(jsonMember2WheelersItem.getOffer());
             tvPrice.setText(jsonMember2WheelersItem.getMonthlyRental());

@@ -11,8 +11,16 @@
         android:roundIcon="@drawable/ic_furlenco_logo"
         android:supportsRtl="true"
         android:theme="@style/Theme.Furlenco">
-        <activity android:name=".Activities.HomeActivity" />
-        <activity android:name=".Activities.MainActivity">
+        <service
+            android:name=".DetailsIntentService"
+            android:exported="false"></service>
+        <service
+            android:name=".MyIntentService"
+            android:exported="false" />
+
+        <activity android:name=".Activities.AddCartActivity" />
+        <activity android:name=".Activities.MainActivity" />
+        <activity android:name=".Activities.HomeActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

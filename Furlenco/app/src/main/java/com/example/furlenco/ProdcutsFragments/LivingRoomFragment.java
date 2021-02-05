@@ -1,5 +1,7 @@
 package com.example.furlenco.ProdcutsFragments;
 
+import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -13,6 +15,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.example.furlenco.Activities.AddCartActivity;
+import com.example.furlenco.Activities.HomeActivity;
 import com.example.furlenco.Adapters.ProductAdapter;
 import com.example.furlenco.Interfaces.RecyclerItemClickListener;
 import com.example.furlenco.POJOClasses.AppliancesItem;
@@ -39,6 +43,7 @@ import java.util.List;
 public class LivingRoomFragment extends Fragment implements RecyclerItemClickListener {
     ResponseModel responseModel;
     RecyclerView rvlivingroom;
+    HomeActivity homeActivity;
     List<LivingRoomItem> livingRoomItemList;
 
     public static LivingRoomFragment newInstance() {
@@ -123,8 +128,29 @@ public class LivingRoomFragment extends Fragment implements RecyclerItemClickLis
 
     @Override
     public void onLivingItemClicked(LivingRoomItem livingRoomItem) {
-
+        Intent intent= new Intent(getContext(), AddCartActivity.class);
+        intent.putExtra("name",livingRoomItem.getName());
+        intent.putExtra("url",livingRoomItem.getImageUrl());
+        intent.putExtra("rent",livingRoomItem.getMonthlyRental());
+        intent.putExtra("price",livingRoomItem.getPrice());
+        intent.putExtra("url2", livingRoomItem.getImageUrl2());
+        intent.putExtra("win1", livingRoomItem.getWin1().getName());
+        intent.putExtra("win2", livingRoomItem.getWin2().getName());
+        startActivity(intent);
     }
+
+    private void sendDataToActivity(String name,String url) {
+        if (homeActivity !=null){
+            homeActivity.setBedRoomCartData(name,url,"living_tag");
+        }
+    }
+
+    @Override
+    public void onAttach(@NonNull Context context) {
+        super.onAttach(context);
+        homeActivity= (HomeActivity) context;
+    }
+
 
     @Override
     public void onItemClicked(BedroomItem bedroomItem) {

@@ -1,5 +1,7 @@
 package com.example.furlenco.ProdcutsFragments;
 
+import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -13,6 +15,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.example.furlenco.Activities.AddCartActivity;
+import com.example.furlenco.Activities.HomeActivity;
 import com.example.furlenco.Adapters.ProductAdapter;
 import com.example.furlenco.Interfaces.RecyclerItemClickListener;
 import com.example.furlenco.POJOClasses.AppliancesItem;
@@ -36,6 +40,7 @@ import java.lang.reflect.Type;
 public class KidsRoomFragment extends Fragment implements RecyclerItemClickListener {
     RecyclerView rvKids;
     ResponseModel responseModel;
+    HomeActivity homeActivity;
 
     public static KidsRoomFragment newInstance() {
         KidsRoomFragment fragment = new KidsRoomFragment();
@@ -146,8 +151,29 @@ public class KidsRoomFragment extends Fragment implements RecyclerItemClickListe
 
     @Override
     public void onKidsItemClicked(KidsRoomItem kidsRoomItem) {
-
+        Intent intent= new Intent(getContext(), AddCartActivity.class);
+        intent.putExtra("name",kidsRoomItem.getName());
+        intent.putExtra("url",kidsRoomItem.getImageUrl());
+        intent.putExtra("rent",kidsRoomItem.getMonthlyRental());
+        intent.putExtra("price",kidsRoomItem.getPrice());
+        intent.putExtra("url2", kidsRoomItem.getImageUrl2());
+        intent.putExtra("win1", kidsRoomItem.getWin1().getName());
+        intent.putExtra("win2", kidsRoomItem.getWin1().getName());
+        startActivity(intent);
     }
+
+    private void sendDataToActivity(String name,String url) {
+        if (homeActivity !=null){
+            homeActivity.setBedRoomCartData(name,url,"kids_tag");
+        }
+    }
+
+    @Override
+    public void onAttach(@NonNull Context context) {
+        super.onAttach(context);
+        homeActivity= (HomeActivity) context;
+    }
+
 
 
     @Override
