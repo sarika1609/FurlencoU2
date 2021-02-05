@@ -821,7 +821,7 @@
                 <ImageButton
                     android:layout_width="@dimen/dp_30"
                     android:layout_marginStart="@dimen/dp_20"
-                    android:src="@drawable/ic_whatsapp"
+                    android:src="@drawable/ic_facebook"
                     android:layout_height="@dimen/dp_30"/>
 
                 <ImageButton
@@ -862,7 +862,7 @@
                 android:textColor="@color/black" />
 
             <Button
-                android:id="@+id/btn_add_cart"
+                android:id="@+id/btnAddCart"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_margin="@dimen/dp_15"

@@ -13,6 +13,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 import com.example.furlenco.Activities.HomeActivity;
 import com.example.furlenco.Listners.AddCartListner;
@@ -26,7 +27,8 @@ import java.util.List;
 
 public class AddCartFragment extends Fragment implements AddCartListner {
 
-    Button btn_cart_amount, btn_add_cart;
+    Button btn_add_cart;
+    TextView btn_cart_amount;
     ImageView iv_cart_product;
     HomeActivity homeActivity;
     List<CartModelClass> cartModelClassList = new ArrayList<>();
@@ -47,7 +49,7 @@ public class AddCartFragment extends Fragment implements AddCartListner {
     private void initUI(View view) {
         iv_cart_product = view.findViewById(R.id.ivImageInProductView);
         btn_cart_amount = view.findViewById(R.id.btn_cart_amount);
-        btn_add_cart = view.findViewById(R.id.btn_add_cart);
+        btn_add_cart = view.findViewById(R.id.btnAddCart);
         btn_add_cart.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
