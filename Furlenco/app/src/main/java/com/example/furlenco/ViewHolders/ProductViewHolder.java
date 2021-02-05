@@ -46,24 +46,26 @@ public class ProductViewHolder extends RecyclerView.ViewHolder {
 
 
     public void setLivingRoomData(LivingRoomItem livingRoomItem, String name) {
-        if (name.equalsIgnoreCase("Living Room")) {
-            tvName.setText(livingRoomItem.getName());
-            tvOffer.setText(livingRoomItem.getOffer());
-            tvPrice.setText(livingRoomItem.getMonthlyRental());
-            tvVariant.setText(livingRoomItem.getVariants());
-            Glide.with(ivImage).load(livingRoomItem.getImageUrl()).into(ivImage);
+        if (name != null) {
+            if (name.equalsIgnoreCase("Living Room")) {
+                tvName.setText(livingRoomItem.getName());
+                tvOffer.setText(livingRoomItem.getOffer());
+                tvPrice.setText(livingRoomItem.getMonthlyRental());
+                tvVariant.setText(livingRoomItem.getVariants());
+                Glide.with(ivImage).load(livingRoomItem.getImageUrl()).into(ivImage);
 
-            llProduct.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    listener.onLivingItemClicked(livingRoomItem);
-                }
-            });
+                llProduct.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        listener.onLivingItemClicked(livingRoomItem);
+                    }
+                });
+            }
         }
     }
 
     public void setBedRoomData(BedroomItem bedRoomData, String name) {
-        if (name.equalsIgnoreCase("Bed Room")) {
+        if (name != null &&name.equalsIgnoreCase("Bed Room")) {
             tvName.setText(bedRoomData.getName());
             tvOffer.setText(bedRoomData.getOffer());
             tvPrice.setText(bedRoomData.getMonthlyRental());
@@ -80,7 +82,7 @@ public class ProductViewHolder extends RecyclerView.ViewHolder {
     }
 
     public void setApplianceRoomData(AppliancesItem appliancesItem, String name) {
-        if (name.equalsIgnoreCase("Appliance Room")) {
+        if (name != null &&name.equalsIgnoreCase("Appliance Room")) {
             tvName.setText(appliancesItem.getName());
             tvOffer.setText(appliancesItem.getOffer());
             tvPrice.setText(appliancesItem.getMonthlyRental());
@@ -97,7 +99,7 @@ public class ProductViewHolder extends RecyclerView.ViewHolder {
     }
 
     public void setFullRoomData(FullHomeItem fullHomeItem, String name) {
-        if (name.equalsIgnoreCase("Full Room")) {
+        if (name != null &&name.equalsIgnoreCase("Full Room")) {
             tvName.setText(fullHomeItem.getName());
             tvOffer.setText(fullHomeItem.getOffer());
             tvPrice.setText(fullHomeItem.getMonthlyRental());
@@ -114,7 +116,7 @@ public class ProductViewHolder extends RecyclerView.ViewHolder {
     }
 
     public void setStorageData(StorageItem storageItem, String name) {
-        if (name.equalsIgnoreCase("Storage Room")) {
+        if (name != null &&name.equalsIgnoreCase("Storage Room")) {
             tvName.setText(storageItem.getName());
             tvOffer.setText(storageItem.getOffer());
             tvPrice.setText(storageItem.getMonthlyRental());
@@ -131,7 +133,7 @@ public class ProductViewHolder extends RecyclerView.ViewHolder {
     }
 
     public void setStudhoyRoomData(StudyRoomItem studyRoomItem, String name) {
-        if (name.equalsIgnoreCase("Study Room")) {
+        if (name != null &&name.equalsIgnoreCase("Study Room")) {
             tvName.setText(studyRoomItem.getName());
             tvOffer.setText(studyRoomItem.getOffer());
             tvPrice.setText(studyRoomItem.getMonthlyRental());
@@ -146,8 +148,9 @@ public class ProductViewHolder extends RecyclerView.ViewHolder {
             });
         }
     }
+
     public void setKidsRoomData(KidsRoomItem kidsRoomItem, String name) {
-        if (name.equalsIgnoreCase("Kids Room")) {
+        if (name != null &&name.equalsIgnoreCase("Kids Room")) {
             tvName.setText(kidsRoomItem.getName());
             tvOffer.setText(kidsRoomItem.getOffer());
             tvPrice.setText(kidsRoomItem.getMonthlyRental());
@@ -164,7 +167,7 @@ public class ProductViewHolder extends RecyclerView.ViewHolder {
     }
 
     public void setDiningRoomData(DiningRoomItem diningRoomItem, String name) {
-        if (name.equalsIgnoreCase("Dining Room")) {
+        if (name != null &&name.equalsIgnoreCase("Dining Room")) {
             tvName.setText(diningRoomItem.getName());
             tvOffer.setText(diningRoomItem.getOffer());
             tvPrice.setText(diningRoomItem.getMonthlyRental());
@@ -179,8 +182,9 @@ public class ProductViewHolder extends RecyclerView.ViewHolder {
             });
         }
     }
+
     public void setWheelerData(JsonMember2WheelersItem jsonMember2WheelersItem, String name) {
-        if (name.equalsIgnoreCase("2 Wheeler")) {
+        if (name != null &&name.equalsIgnoreCase("2 Wheeler")) {
             tvName.setText(jsonMember2WheelersItem.getName());
             tvOffer.setText(jsonMember2WheelersItem.getOffer());
             tvPrice.setText(jsonMember2WheelersItem.getMonthlyRental());

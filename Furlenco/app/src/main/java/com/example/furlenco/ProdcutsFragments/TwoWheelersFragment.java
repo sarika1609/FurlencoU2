@@ -108,7 +108,7 @@ public class TwoWheelersFragment extends Fragment implements RecyclerItemClickLi
             public void run() {
                 GridLayoutManager gridLayoutManager = new GridLayoutManager(getContext(), 2);
                 rvwheeler.setLayoutManager(gridLayoutManager);
-                ProductAdapter productAdapter = new ProductAdapter(TwoWheelersFragment.this, responseModel.getExploreProducts(), "2 Wheeler");
+                ProductAdapter productAdapter = new ProductAdapter(TwoWheelersFragment.this, responseModel.getExploreProducts().get(8).getJsonMember2Wheelers(), "2 Wheeler");
                 rvwheeler.setAdapter(productAdapter);
             }
         });

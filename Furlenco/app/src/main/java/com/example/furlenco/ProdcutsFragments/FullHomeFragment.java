@@ -107,7 +107,7 @@ public class FullHomeFragment extends Fragment implements RecyclerItemClickListe
             public void run() {
                 GridLayoutManager gridLayoutManager = new GridLayoutManager(getContext(), 2);
                 rvfullhome.setLayoutManager(gridLayoutManager);
-                ProductAdapter productAdapter = new ProductAdapter(FullHomeFragment.this, responseModel.getExploreProducts(), "Full Room");
+                ProductAdapter productAdapter = new ProductAdapter(FullHomeFragment.this, responseModel.getExploreProducts().get(3).getFullHome(), "Full Room");
                 rvfullhome.setAdapter(productAdapter);
             }
         });

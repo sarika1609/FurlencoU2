@@ -108,7 +108,7 @@ public class AppliancesFragment extends Fragment implements RecyclerItemClickLis
             public void run() {
                 GridLayoutManager gridLayoutManager = new GridLayoutManager(getContext(), 2);
                 rvappliance.setLayoutManager(gridLayoutManager);
-                ProductAdapter productAdapter = new ProductAdapter(AppliancesFragment.this, responseModel.getExploreProducts(), "Appliance Room");
+                ProductAdapter productAdapter = new ProductAdapter(AppliancesFragment.this, responseModel.getExploreProducts().get(2).getAppliances(), "Appliance Room");
                 rvappliance.setAdapter(productAdapter);
             }
         });

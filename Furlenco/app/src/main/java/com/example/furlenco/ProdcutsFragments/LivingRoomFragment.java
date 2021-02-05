@@ -113,7 +113,7 @@ public class LivingRoomFragment extends Fragment implements RecyclerItemClickLis
             public void run() {
                 GridLayoutManager gridLayoutManager = new GridLayoutManager(getContext(), 2);
                 rvlivingroom.setLayoutManager(gridLayoutManager);
-                ProductAdapter productAdapter = new ProductAdapter(LivingRoomFragment.this, responseModel.getExploreProducts(), "Living Room");
+                ProductAdapter productAdapter = new ProductAdapter(LivingRoomFragment.this, responseModel.getExploreProducts().get(1).getLivingRoom(), "Living Room");
                 rvlivingroom.setAdapter(productAdapter);
                 //  Log.d("Test",responseModel.getExploreProducts().get(0).getLivingRoom().get(0).getName().toString());
             }

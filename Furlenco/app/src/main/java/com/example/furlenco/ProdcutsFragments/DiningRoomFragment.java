@@ -105,7 +105,7 @@ RecyclerView rvdining;
             public void run() {
                 GridLayoutManager gridLayoutManager = new GridLayoutManager(getContext(), 2);
                 rvdining.setLayoutManager(gridLayoutManager);
-                ProductAdapter productAdapter = new ProductAdapter(DiningRoomFragment.this, responseModel.getExploreProducts(), "Dining Room");
+                ProductAdapter productAdapter = new ProductAdapter(DiningRoomFragment.this, responseModel.getExploreProducts().get(7).getDiningRoom(), "Dining Room");
                 rvdining.setAdapter(productAdapter);
             }
         });

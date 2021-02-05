@@ -107,7 +107,7 @@ public class StorageFragment extends Fragment implements RecyclerItemClickListen
             public void run() {
                 GridLayoutManager gridLayoutManager = new GridLayoutManager(getContext(), 2);
                 rvstorage.setLayoutManager(gridLayoutManager);
-                ProductAdapter productAdapter = new ProductAdapter(StorageFragment.this, responseModel.getExploreProducts(), "Storage Room");
+                ProductAdapter productAdapter = new ProductAdapter(StorageFragment.this, responseModel.getExploreProducts().get(4).getStorage(), "Storage Room");
                 rvstorage.setAdapter(productAdapter);
             }
         });

@@ -107,7 +107,7 @@ public class StudyRoomFragment extends Fragment implements RecyclerItemClickList
             public void run() {
                 GridLayoutManager gridLayoutManager = new GridLayoutManager(getContext(), 2);
                 rvstudyroom.setLayoutManager(gridLayoutManager);
-                ProductAdapter productAdapter = new ProductAdapter(StudyRoomFragment.this, responseModel.getExploreProducts(), "Study Room");
+                ProductAdapter productAdapter = new ProductAdapter(StudyRoomFragment.this, responseModel.getExploreProducts().get(5).getStudyRoom(), "Study Room");
                 rvstudyroom.setAdapter(productAdapter);
             }
         });

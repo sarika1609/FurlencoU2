@@ -108,7 +108,7 @@ public class KidsRoomFragment extends Fragment implements RecyclerItemClickListe
             public void run() {
                 GridLayoutManager gridLayoutManager = new GridLayoutManager(getContext(), 2);
                 rvKids.setLayoutManager(gridLayoutManager);
-                ProductAdapter productAdapter = new ProductAdapter(KidsRoomFragment.this, responseModel.getExploreProducts(), "Kids Room");
+                ProductAdapter productAdapter = new ProductAdapter(KidsRoomFragment.this, responseModel.getExploreProducts().get(6).getKidsRoom(), "Kids Room");
                 rvKids.setAdapter(productAdapter);
             }
         });

@@ -118,7 +118,7 @@ public class BedroomFragment extends Fragment implements RecyclerItemClickListen
             public void run() {
                 GridLayoutManager gridLayoutManager = new GridLayoutManager(getContext(), 2);
                 rvBedroom.setLayoutManager(gridLayoutManager);
-                ProductAdapter productAdapter = new ProductAdapter(BedroomFragment.this, responseModel.getExploreProducts(), "Bed Room");
+                ProductAdapter productAdapter = new ProductAdapter(BedroomFragment.this, responseModel.getExploreProducts().get(0).getBedroom(), "Bed Room");
                 rvBedroom.setAdapter(productAdapter);
             }
         });
