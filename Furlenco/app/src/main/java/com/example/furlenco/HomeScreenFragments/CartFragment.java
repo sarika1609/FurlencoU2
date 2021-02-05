@@ -1,6 +1,7 @@
 package com.example.furlenco.HomeScreenFragments;
 
 import android.content.Context;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -15,18 +16,23 @@ import android.view.ViewGroup;
 
 import com.example.furlenco.Activities.HomeActivity;
 import com.example.furlenco.Adapters.ViewCartAdapter;
+import com.example.furlenco.CartPreferenceHelper;
 import com.example.furlenco.Listners.CartCommunationListner;
 import com.example.furlenco.ModelClasses.CartModelClass;
 import com.example.furlenco.R;
+import com.google.gson.Gson;
+import com.google.gson.reflect.TypeToken;
 
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.InputStreamReader;
+import java.lang.reflect.Type;
 import java.util.ArrayList;
 import java.util.List;
 
-public class CartFragment extends Fragment implements CartCommunationListner {
+public class CartFragment extends Fragment {
     RecyclerView rv_carts;
-    CartModelClass cartModelClass;
-    HomeActivity homeActivity;
-    List<CartModelClass> cartModelClassList = new ArrayList<>();
+    List<CartModelClass> cartModelClassList;
     CartCommunationListner listner;
 
     public static CartFragment newInstance() {
@@ -57,23 +63,8 @@ public class CartFragment extends Fragment implements CartCommunationListner {
 
     private void initUI(View view) {
         rv_carts = view.findViewById(R.id.rv_carts);
+        getList();
         setCardAdapterData(cartModelClassList);
-
-    }
-
-    @Override
-    public void onAttach(@NonNull Context context) {
-        super.onAttach(context);
-        homeActivity = (HomeActivity) context;
-    }
-
-    @Override
-    public void onResume() {
-        super.onResume();
-        setCardAdapterData(cartModelClassList);
-        if (homeActivity != null) {
-            homeActivity.sendCartDataToDisplayFragment(this);
-        }
 
     }
 
@@ -86,8 +77,16 @@ public class CartFragment extends Fragment implements CartCommunationListner {
     }
 
 
-    @Override
-    public void updateCartList(List<CartModelClass> cartModelClassList) {
-        setCardAdapterData(cartModelClassList);
+    public List<CartModelClass> getList() {
+        //CartPreferenceHelper.getInstance(getActivity());
+        String serializedObject = CartPreferenceHelper.getString("data");
+        if (serializedObject != null) {
+            Gson gson = new Gson();
+            Type type = new TypeToken<List<CartModelClass>>() {
+            }.getType();
+            cartModelClassList = gson.fromJson(serializedObject, type);
+        }
+        return cartModelClassList;
     }
+
 }

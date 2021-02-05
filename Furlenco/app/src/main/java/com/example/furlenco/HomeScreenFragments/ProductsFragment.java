@@ -77,14 +77,6 @@ public class ProductsFragment extends Fragment implements ProductsClickListener 
             homeActivity.sendPostionToFragment(this);
         }
     }
-    //    @Override
-//    public void onResume() {
-//        super.onResume();
-//        if (homeActivity != null) {
-//            homeActivity.sendListener(this);
-//        }
-//    }
-
 
     @Override
     public void onProductClicked(Bundle bundle) {

@@ -25,6 +25,7 @@ import com.example.furlenco.ProdcutsFragments.DiningRoomFragment;
 import com.example.furlenco.ProdcutsFragments.FullHomeFragment;
 import com.example.furlenco.ProdcutsFragments.KidsRoomFragment;
 import com.example.furlenco.ProdcutsFragments.LivingRoomFragment;
+import com.example.furlenco.ProdcutsFragments.SpecialDealsFragment;
 import com.example.furlenco.ProdcutsFragments.StorageFragment;
 import com.example.furlenco.ProdcutsFragments.StudyRoomFragment;
 import com.example.furlenco.ProdcutsFragments.TwoWheelersFragment;
@@ -108,6 +109,12 @@ public class ProductAdapter extends RecyclerView.Adapter<ProductViewHolder> {
         this.name = name;
     }
 
+    public ProductAdapter(SpecialDealsFragment listener, List<BedroomItem> bedroom, String name) {
+        this.listener = listener;
+        this.bedroomItemList = bedroom;
+        this.name = name;
+    }
+
 
     @NonNull
     @Override
@@ -123,6 +130,7 @@ public class ProductAdapter extends RecyclerView.Adapter<ProductViewHolder> {
             BedroomItem bedroomItem = bedroomItemList.get(position);
             if (bedroomItem != null) {
                 holder.setBedRoomData(bedroomItem, name);
+                holder.setBedRoomData(bedroomItem,name);
             }
         } else if (livingRoomItemList.size() > 0) {
             LivingRoomItem livingRoomItem = livingRoomItemList.get(position);

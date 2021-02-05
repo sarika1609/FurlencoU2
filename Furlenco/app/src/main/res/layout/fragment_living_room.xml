@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.recyclerview.widget.RecyclerView xmlns:android="http://schemas.android.com/apk/res/android"
-xmlns:tools="http://schemas.android.com/tools"
-android:layout_width="match_parent"
-android:id="@+id/rvlivingroom"
-android:layout_height="wrap_content"
-android:layout_margin="@dimen/dp_10"
-tools:context=".ProdcutsFragments.LivingRoomFragment">
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rvlivingroom"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/dp_10"
+    android:tag="living_tag"
+    tools:context=".ProdcutsFragments.LivingRoomFragment">
 
 
 </androidx.recyclerview.widget.RecyclerView>

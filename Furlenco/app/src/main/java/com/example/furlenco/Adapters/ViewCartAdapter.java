@@ -15,7 +15,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class ViewCartAdapter extends RecyclerView.Adapter<ViewCartHolder> {
-    List<CartModelClass> cartModelClassList = new ArrayList<>();
+    List<CartModelClass> cartModelClassList;
 
     public ViewCartAdapter(List<CartModelClass> cartModelClassList) {
         this.cartModelClassList = cartModelClassList;
@@ -36,9 +36,6 @@ public class ViewCartAdapter extends RecyclerView.Adapter<ViewCartHolder> {
 
     @Override
     public int getItemCount() {
-        if ((cartModelClassList!=null&&cartModelClassList.size() > 0)) {
-            return cartModelClassList.size();
-        }
-        return 0;
+        return cartModelClassList.size();
     }
 }

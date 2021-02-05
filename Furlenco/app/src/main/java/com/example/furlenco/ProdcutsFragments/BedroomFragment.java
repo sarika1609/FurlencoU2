@@ -1,5 +1,7 @@
 package com.example.furlenco.ProdcutsFragments;
 
+import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -13,16 +15,13 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.example.furlenco.Activities.AddCartActivity;
+import com.example.furlenco.Activities.HomeActivity;
 import com.example.furlenco.Adapters.ProductAdapter;
-import com.example.furlenco.Adapters.ProductsAdapter;
-import com.example.furlenco.Fragments.AddCartFragment;
-import com.example.furlenco.HomeScreenFragments.HomeFragment;
-import com.example.furlenco.HomeScreenFragments.ProductsFragment;
 import com.example.furlenco.Interfaces.RecyclerItemClickListener;
 import com.example.furlenco.POJOClasses.AppliancesItem;
 import com.example.furlenco.POJOClasses.BedroomItem;
 import com.example.furlenco.POJOClasses.DiningRoomItem;
-import com.example.furlenco.POJOClasses.ExploreProductsItem;
 import com.example.furlenco.POJOClasses.FullHomeItem;
 import com.example.furlenco.POJOClasses.JsonMember2WheelersItem;
 import com.example.furlenco.POJOClasses.KidsRoomItem;
@@ -37,13 +36,13 @@ import com.google.gson.reflect.TypeToken;
 
 import java.io.InputStream;
 import java.lang.reflect.Type;
-import java.util.ArrayList;
-import java.util.List;
+
 
 public class BedroomFragment extends Fragment implements RecyclerItemClickListener {
 
     private RecyclerView rvBedroom;
     ResponseModel responseModel;
+    HomeActivity homeActivity;
 
     public static BedroomFragment newInstance() {
         BedroomFragment bedroomFragment = new BedroomFragment();
@@ -131,7 +130,28 @@ public class BedroomFragment extends Fragment implements RecyclerItemClickListen
 
     @Override
     public void onItemClicked(BedroomItem bedroomItem) {
+        Intent intent = new Intent(getContext(), AddCartActivity.class);
+        intent.putExtra("name", bedroomItem.getName());
+        intent.putExtra("url", bedroomItem.getImageUrl());
+        intent.putExtra("rent", bedroomItem.getMonthlyRental());
+        intent.putExtra("price", bedroomItem.getPrice());
+        intent.putExtra("url2", bedroomItem.getImageUrl2());
+        intent.putExtra("win1", bedroomItem.getWin2().getName());
+        intent.putExtra("win2", bedroomItem.getWin2().getName());
+        startActivity(intent);
+        //sendDataToActivity(bedroomItem.getName(),bedroomItem.getImageUrl());
+    }
 
+    private void sendDataToActivity(String name, String url) {
+        if (homeActivity != null) {
+            homeActivity.setBedRoomCartData(name, url, "bedroom_tag");
+        }
+    }
+
+    @Override
+    public void onAttach(@NonNull Context context) {
+        super.onAttach(context);
+        homeActivity = (HomeActivity) context;
     }
 
     @Override

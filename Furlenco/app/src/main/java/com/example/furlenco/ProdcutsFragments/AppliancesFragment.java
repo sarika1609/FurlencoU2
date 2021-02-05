@@ -1,5 +1,7 @@
 package com.example.furlenco.ProdcutsFragments;
 
+import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -13,6 +15,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.example.furlenco.Activities.AddCartActivity;
+import com.example.furlenco.Activities.HomeActivity;
 import com.example.furlenco.Adapters.ProductAdapter;
 import com.example.furlenco.Interfaces.RecyclerItemClickListener;
 import com.example.furlenco.POJOClasses.AppliancesItem;
@@ -37,6 +41,7 @@ import java.util.ArrayList;
 public class AppliancesFragment extends Fragment implements RecyclerItemClickListener {
     private RecyclerView rvappliance;
     ResponseModel responseModel;
+    HomeActivity homeActivity;
 
     public static AppliancesFragment newInstance() {
         AppliancesFragment fragment = new AppliancesFragment();
@@ -126,7 +131,27 @@ public class AppliancesFragment extends Fragment implements RecyclerItemClickLis
 
     @Override
     public void onApplianceItemClicked(AppliancesItem appliancesItem) {
+        Intent intent = new Intent(getContext(), AddCartActivity.class);
+        intent.putExtra("name", appliancesItem.getName());
+        intent.putExtra("url", appliancesItem.getImageUrl());
+        intent.putExtra("rent", appliancesItem.getMonthlyRental());
+        intent.putExtra("price", appliancesItem.getPrice());
+        intent.putExtra("url2", appliancesItem.getWin1().getImageUrl());
+        intent.putExtra("win1", appliancesItem.getWin1().getName());
+        intent.putExtra("win2", appliancesItem.getWin1().getName());
+        startActivity(intent);
+    }
 
+    private void sendDataToActivity(String name, String url) {
+        if (homeActivity != null) {
+            homeActivity.setBedRoomCartData(name, url, "appliance_tag");
+        }
+    }
+
+    @Override
+    public void onAttach(@NonNull Context context) {
+        super.onAttach(context);
+        homeActivity = (HomeActivity) context;
     }
 
     @Override

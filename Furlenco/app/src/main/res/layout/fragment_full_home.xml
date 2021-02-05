@@ -5,6 +5,7 @@ android:layout_width="match_parent"
 android:id="@+id/rvfullhome"
 android:layout_height="wrap_content"
 android:layout_margin="@dimen/dp_10"
+    android:tag="full_tag"
 tools:context=".ProdcutsFragments.FullHomeFragment">
 
 

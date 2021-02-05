@@ -1,5 +1,7 @@
 package com.example.furlenco.ProdcutsFragments;
 
+import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -13,6 +15,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.example.furlenco.Activities.AddCartActivity;
+import com.example.furlenco.Activities.HomeActivity;
 import com.example.furlenco.Adapters.ProductAdapter;
 import com.example.furlenco.Interfaces.RecyclerItemClickListener;
 import com.example.furlenco.POJOClasses.AppliancesItem;
@@ -37,6 +41,7 @@ public class TwoWheelersFragment extends Fragment implements RecyclerItemClickLi
 
     private RecyclerView rvwheeler;
     ResponseModel responseModel;
+    HomeActivity homeActivity;
 
     public static TwoWheelersFragment newInstance() {
         TwoWheelersFragment fragment = new TwoWheelersFragment();
@@ -157,7 +162,27 @@ public class TwoWheelersFragment extends Fragment implements RecyclerItemClickLi
 
     @Override
     public void onTwoWheelerItemClicked(JsonMember2WheelersItem jsonMember2WheelersItem) {
+        Intent intent = new Intent(getContext(), AddCartActivity.class);
+        intent.putExtra("name", jsonMember2WheelersItem.getName());
+        intent.putExtra("url", jsonMember2WheelersItem.getImageUrl());
+        intent.putExtra("rent", jsonMember2WheelersItem.getMonthlyRental());
+        intent.putExtra("price", jsonMember2WheelersItem.getPrice());
+        intent.putExtra("url2", jsonMember2WheelersItem.getImageUrl2());
+        intent.putExtra("win1", jsonMember2WheelersItem.getWin1().getName());
+        intent.putExtra("win2", jsonMember2WheelersItem.getWin1().getName());
+        startActivity(intent);
+    }
 
+    private void sendDataToActivity(String name, String url) {
+        if (homeActivity != null) {
+            homeActivity.setBedRoomCartData(name, url, "wheels_tab");
+        }
+    }
+
+    @Override
+    public void onAttach(@NonNull Context context) {
+        super.onAttach(context);
+        homeActivity = (HomeActivity) context;
     }
 
     @Override

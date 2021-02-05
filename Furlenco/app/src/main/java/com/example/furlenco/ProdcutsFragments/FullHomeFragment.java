@@ -1,5 +1,7 @@
 package com.example.furlenco.ProdcutsFragments;
 
+import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -13,6 +15,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.example.furlenco.Activities.AddCartActivity;
+import com.example.furlenco.Activities.HomeActivity;
 import com.example.furlenco.Adapters.ProductAdapter;
 import com.example.furlenco.Interfaces.RecyclerItemClickListener;
 import com.example.furlenco.POJOClasses.AppliancesItem;
@@ -36,6 +40,7 @@ import java.lang.reflect.Type;
 public class FullHomeFragment extends Fragment implements RecyclerItemClickListener {
     private RecyclerView rvfullhome;
     ResponseModel responseModel;
+    HomeActivity homeActivity;
 
     public static FullHomeFragment newInstance() {
         FullHomeFragment fragment = new FullHomeFragment();
@@ -131,6 +136,27 @@ public class FullHomeFragment extends Fragment implements RecyclerItemClickListe
     @Override
     public void onFullHomeItemClicked(FullHomeItem fullHomeItem) {
 
+        Intent intent= new Intent(getContext(), AddCartActivity.class);
+        intent.putExtra("name",fullHomeItem.getName());
+        intent.putExtra("url",fullHomeItem.getImageUrl());
+        intent.putExtra("rent",fullHomeItem.getMonthlyRental());
+        intent.putExtra("price",fullHomeItem.getPrice());
+        intent.putExtra("url2", fullHomeItem.getImageUrl2());
+        intent.putExtra("win1", fullHomeItem.getWin1().getName());
+        intent.putExtra("win2", fullHomeItem.getWin2().getName());
+        startActivity(intent);
+    }
+
+    private void sendDataToActivity(String name,String url) {
+        if (homeActivity !=null){
+            homeActivity.setBedRoomCartData(name,url,"full_tag");
+        }
+    }
+
+    @Override
+    public void onAttach(@NonNull Context context) {
+        super.onAttach(context);
+        homeActivity= (HomeActivity) context;
     }
 
     @Override
