@@ -240,16 +240,16 @@
 
         <LinearLayout
             android:layout_width="match_parent"
+            android:layout_height="match_parent"
             android:layout_weight="1"
             android:gravity="center"
-            android:orientation="vertical"
-            android:layout_height="match_parent">
+            android:orientation="vertical">
 
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/rv_products"
-                android:layout_gravity="center"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content"
+                android:layout_gravity="center" />
 
         </LinearLayout>
 
@@ -257,8 +257,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/dp_10"
-            android:fontFamily="@font/roboto"
             android:layout_marginTop="@dimen/dp_10"
+            android:fontFamily="@font/roboto"
             android:text="@string/browse_collections"
             android:textAllCaps="true"
             android:textColor="@color/black"
@@ -268,15 +268,14 @@
 
         <LinearLayout
             android:layout_width="match_parent"
+            android:layout_height="match_parent"
             android:layout_weight="1"
-            android:orientation="vertical"
-            android:layout_height="match_parent">
+            android:orientation="vertical">
 
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/rv_collection"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="@dimen/dp_10"
                 android:layout_marginTop="@dimen/dp_5"
                 android:layout_marginEnd="@dimen/dp_10" />
 
@@ -287,8 +286,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/dp_10"
-            android:fontFamily="@font/roboto"
             android:layout_marginTop="@dimen/dp_10"
+            android:fontFamily="@font/roboto"
             android:text="@string/why_rent"
             android:textAllCaps="true"
             android:textColor="@color/black"
@@ -300,8 +299,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/dp_10"
-            android:fontFamily="@font/roboto"
             android:layout_marginTop="@dimen/dp_5"
+            android:fontFamily="@font/roboto"
             android:text="@string/rent_is_awesome"
             android:textAllCaps="true"
             android:textColor="@color/black"
@@ -309,8 +308,108 @@
 
         </TextView>
 
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvRentingIsAwesome"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/dp_10"
+                android:layout_marginTop="@dimen/dp_5" />
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp_10"
+            android:layout_marginTop="@dimen/dp_5"
+            android:fontFamily="@font/roboto"
+            android:text="WE DESIGN IN-HOUSE"
+            android:textAllCaps="true"
+            android:textColor="@color/black"
+            android:textSize="@dimen/sp_14">
+
+        </TextView>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvWeDesign"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/dp_10"
+                android:layout_marginTop="@dimen/dp_5" />
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp_10"
+            android:layout_marginTop="@dimen/dp_5"
+            android:fontFamily="@font/roboto"
+            android:text="CURATED PACKAGES"
+            android:textAllCaps="true"
+            android:textColor="@color/black"
+            android:textSize="@dimen/sp_14">
+
+        </TextView>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvCuratedPackages"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/dp_10"
+                android:layout_marginTop="@dimen/dp_5" />
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp_10"
+            android:layout_marginTop="@dimen/dp_5"
+            android:fontFamily="@font/roboto"
+            android:text="AWESOME SERVICES"
+            android:textAllCaps="true"
+            android:textColor="@color/black"
+            android:textSize="@dimen/sp_14">
+
+        </TextView>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvAwesomeServices"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/dp_10"
+                android:layout_marginTop="@dimen/dp_5" />
+
+        </LinearLayout>
+
+
     </LinearLayout>
 
 </ScrollView>
 
-<!---->
+    <!---->

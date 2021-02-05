@@ -3,6 +3,7 @@ package com.example.furlenco.ViewHolders;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -28,6 +29,7 @@ public class ProductViewHolder extends RecyclerView.ViewHolder {
     private LinearLayout llProduct;
     private RecyclerItemClickListener listener;
     private ImageView ivImage;
+    private ProgressBar mProgressBar;
 
     public ProductViewHolder(@NonNull View itemView, RecyclerItemClickListener listener) {
         super(itemView);
@@ -156,7 +158,6 @@ public class ProductViewHolder extends RecyclerView.ViewHolder {
             tvPrice.setText(kidsRoomItem.getMonthlyRental());
             // tvVariant.setText(kidsRoomItem.getVariants());
             Glide.with(ivImage).load(kidsRoomItem.getImageUrl()).into(ivImage);
-
             llProduct.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
