@@ -37,16 +37,17 @@ import java.util.List;
 public class ProductAdapter extends RecyclerView.Adapter<ProductViewHolder> {
 
     private RecyclerItemClickListener listener;
-    private List<ExploreProductsItem> exploreProductsItemList=new ArrayList<>();;
-    private List<JsonMember2WheelersItem> jsonMember2WheelersItemList=new ArrayList<>();
-    private List<BedroomItem> bedroomItemList=new ArrayList<>();
-    private List<LivingRoomItem> livingRoomItemList=new ArrayList<>();
-    private List<AppliancesItem> appliancesItemList=new ArrayList<>();
-    private List<FullHomeItem> fullHomeItemList=new ArrayList<>();
-    private List<StorageItem> storageItemList=new ArrayList<>();
-    private List<StudyRoomItem> studyRoomItemList=new ArrayList<>();
-    private List<KidsRoomItem> kidsRoomItemList=new ArrayList<>();
-    private List<DiningRoomItem> diningRoomItemList=new ArrayList<>();
+    private List<ExploreProductsItem> exploreProductsItemList = new ArrayList<>();
+    ;
+    private List<JsonMember2WheelersItem> jsonMember2WheelersItemList = new ArrayList<>();
+    private List<BedroomItem> bedroomItemList = new ArrayList<>();
+    private List<LivingRoomItem> livingRoomItemList = new ArrayList<>();
+    private List<AppliancesItem> appliancesItemList = new ArrayList<>();
+    private List<FullHomeItem> fullHomeItemList = new ArrayList<>();
+    private List<StorageItem> storageItemList = new ArrayList<>();
+    private List<StudyRoomItem> studyRoomItemList = new ArrayList<>();
+    private List<KidsRoomItem> kidsRoomItemList = new ArrayList<>();
+    private List<DiningRoomItem> diningRoomItemList = new ArrayList<>();
 
 
     String name;
@@ -123,55 +124,43 @@ public class ProductAdapter extends RecyclerView.Adapter<ProductViewHolder> {
             if (bedroomItem != null) {
                 holder.setBedRoomData(bedroomItem, name);
             }
-        }
-
-      else   if (livingRoomItemList .size()>0) {
+        } else if (livingRoomItemList.size() > 0) {
             LivingRoomItem livingRoomItem = livingRoomItemList.get(position);
             if (livingRoomItem != null) {
                 holder.setLivingRoomData(livingRoomItem, name);
             }
 
-        }
-
-       else if (appliancesItemList.size() > 0) {
+        } else if (appliancesItemList.size() > 0) {
             AppliancesItem appliancesItem = appliancesItemList.get(position);
             if (appliancesItem != null) {
                 holder.setApplianceRoomData(appliancesItem, name);
             }
-        }
-       else if (fullHomeItemList .size()>0) {
+        } else if (fullHomeItemList.size() > 0) {
             FullHomeItem fullHomeItem = fullHomeItemList.get(position);
             if (fullHomeItem != null) {
                 holder.setFullRoomData(fullHomeItem, name);
             }
-        }
-      else   if (storageItemList .size()>0) {
+        } else if (storageItemList.size() > 0) {
             StorageItem storageItem = storageItemList.get(position);
             if (storageItem != null) {
                 holder.setStorageData(storageItem, name);
             }
-        }
-      else   if (studyRoomItemList .size()>0) {
+        } else if (studyRoomItemList.size() > 0) {
             StudyRoomItem studyRoomItem = studyRoomItemList.get(position);
             if (studyRoomItem != null) {
                 holder.setStudhoyRoomData(studyRoomItem, name);
             }
-        }
-
-       else if (kidsRoomItemList .size()>0) {
+        } else if (kidsRoomItemList.size() > 0) {
             KidsRoomItem kidsRoomItem = kidsRoomItemList.get(position);
             if (kidsRoomItem != null) {
                 holder.setKidsRoomData(kidsRoomItem, name);
             }
-        }
-
-       else if (diningRoomItemList .size()>0) {
+        } else if (diningRoomItemList.size() > 0) {
             DiningRoomItem diningRoomItem = diningRoomItemList.get(0);
             if (diningRoomItem != null) {
                 holder.setDiningRoomData(diningRoomItem, name);
             }
-        }
-     else    if (jsonMember2WheelersItemList.size() > 0) {
+        } else if (jsonMember2WheelersItemList.size() > 0) {
             JsonMember2WheelersItem jsonMember2WheelersItem = jsonMember2WheelersItemList.get(position);
             holder.setWheelerData(jsonMember2WheelersItem, name);
         }
@@ -181,23 +170,31 @@ public class ProductAdapter extends RecyclerView.Adapter<ProductViewHolder> {
 
     @Override
     public int getItemCount() {
-        if (jsonMember2WheelersItemList.size()>0) {
+        if (jsonMember2WheelersItemList.size() > 0) {
             return jsonMember2WheelersItemList.size();
-        }  if (diningRoomItemList.size()>0) {
+        }
+        if (diningRoomItemList.size() > 0) {
             return diningRoomItemList.size();
-        }  if (kidsRoomItemList.size()>0) {
+        }
+        if (kidsRoomItemList.size() > 0) {
             return kidsRoomItemList.size();
-        }  if (studyRoomItemList.size()>0) {
+        }
+        if (studyRoomItemList.size() > 0) {
             return studyRoomItemList.size();
-        }  if (storageItemList.size()>0) {
+        }
+        if (storageItemList.size() > 0) {
             return storageItemList.size();
-        }  if (fullHomeItemList.size()>0) {
+        }
+        if (fullHomeItemList.size() > 0) {
             return fullHomeItemList.size();
-        }  if (appliancesItemList.size()>0) {
+        }
+        if (appliancesItemList.size() > 0) {
             return appliancesItemList.size();
-        }  if (livingRoomItemList.size()>0) {
+        }
+        if (livingRoomItemList.size() > 0) {
             return livingRoomItemList.size();
-        }  if (bedroomItemList.size()>0) {
+        }
+        if (bedroomItemList.size() > 0) {
             return bedroomItemList.size();
         }
         return 0;
