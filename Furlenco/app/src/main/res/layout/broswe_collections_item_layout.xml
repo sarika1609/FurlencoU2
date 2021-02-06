@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <androidx.cardview.widget.CardView
+        android:layout_margin="@dimen/dp_10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:elevation="@dimen/dp_10"
+        app:cardCornerRadius="@dimen/dp_10">
+
+        <ImageView
+            android:id="@+id/ivBrowseImage"
+            android:layout_width="@dimen/dp_150"
+            android:layout_height="@dimen/dp_200"
+            android:src="@drawable/mp_1" />
+
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/tvTag"
+        android:layout_margin="@dimen/dp_10"
+        android:layout_width="@dimen/dp_150"
+        android:layout_height="wrap_content"
+        android:text="Amazing discounts on furnitures." />
+
+</LinearLayout>

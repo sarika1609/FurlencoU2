@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".Fragments.FragmentThree">
+
+    <TextView
+        android:id="@+id/tvGreatDesign"
+        android:text="@string/text_stayMobile"
+        style="@style/headerTextStyle" />
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/animationView3"
+        style="@style/animationStyle"
+        app:lottie_rawRes="@raw/travel2"
+        android:layout_below="@+id/tvGreatDesign" />
+
+    <TextView
+        android:id="@+id/rentBeautiful"
+        style="@style/footerTextStyle"
+        android:text="@string/text_MoveCities"
+        android:layout_below="@+id/animationView3" />
+
+</RelativeLayout>

@@ -1,3 +1,91 @@
 <resources>
     <string name="app_name">Furlenco</string>
+    <string name="home">Home</string>
+    <string name="products">Products</string>
+    <string name="collections">Collection</string>
+    <string name="cart">Cart</string>
+    <string name="me">Me</string>
+    <string name="safty_assured">Safety Assured</string>
+    <string name="awesome_furtinure">Awesome Furniture.</string>
+    <string name="delivered_safe">Delivered Safe.</string>
+    <string name="furlenco">FURLENCO</string>
+    <string name="rent_free">Go rent-free for 4 months.Get flat 50%
+    off per month. Hurry! Offer ends at midnight.T and C Apply</string>
+    <string name="explore_products">Explore Products</string>
+    <string name="bedroom">Bedroom</string>
+    <string name="living_room"> Living Room</string>
+    <string name="appliances">Appliances</string>
+    <string name="full_home">Full Home</string>
+    <string name="storage">Storage</string>
+    <string name="study_room">Study Room</string>
+    <string name="kids_room">Kids Room</string>
+    <string name="dining_room">Dining Room</string>
+    <string name="two_wheelers">2-Wheelers</string>
+    <string name="special_deals">Special Deals</string>
+    <string name="browse_collections">Browse Collections</string>
+    <string name="most_popular">Most Popular</string>
+    <string name="why_rent">Why you should rent</string>
+    <string name="rent_is_awesome">Renting is awesome!</string>
+    <string name="live_better_now">Live better now</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="text_skip">Skip</string>
+    <string name="text_Next">Next</string>
+    <string name="text_great_design_beautifully_put_together">Great Design, Beautifully put together</string>
+    <string name="text_easyOnWallet">Easy on the wallet!</string>
+    <string name="text_monthlyRentals">Monthly Rentals start as low as Rs.799 per package</string>
+    <string name="text_stayMobile">Stay mobile, stay free</string>
+    <string name="text_MoveCities">Move cities often? Start and stop renting at will.</string>
+    <string name="text_weDont">We don\'t just ship</string>
+    <string name="text_wellComeOver">We\'ll come over and set everything up. With love, for free</string>
+    <string name="text_selectCity">Select City</string>
+    <string name="text_Bengaluru">Bengaluru</string>
+    <string name="text_Mumbai">Mumbai</string>
+    <string name="text_Pune">Pune</string>
+    <string name="text_Delhi">Delhi</string>
+    <string name="text_Gurugram">Gurugram</string>
+    <string name="text_Noida">Noida</string>
+    <string name="text_Hyderabad">Hyderabad</string>
+    <string name="text_Chennai">Chennai</string>
+    <string name="text_rentBeautiful">Rent beautiful furniture with matching home decor.</string>
+    <string name="title_activity_collections">CollectionsActivity</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+    <string name="allen_bedroom">Allen Bedroom</string>
+
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <string name="title_activity_home2">HomeActivity2</string>
+    <!--
+    This string is used for square devices and overridden by hello_world in
+    values-round/strings.xml for round devices.
+    -->
+    <string name="hello_world">Hello Square World!</string>
+    <string name="text_sanitised_furniture_and_appliances">Sanitised Furniture and Appliances</string>
+    <string name="know_more">Know More</string>
+    <string name="add_to_cart">Add To Cart</string>
+    <string name="minimum_rental_tenure_is_6_months">Minimum rental tenure is 6 months</string>
+    <string name="here_are_some_offers_for_you">Here are some offers for you</string>
+    <string name="go_rent_free_for_4_months_get_flat_50_off_per_month_hurry_offer_ends_at_midnight_t_and_c_apply">Go rent-free for 4 months. Get flat 50% off per month. Hurry! Offer ends at midnight. T and C Apply.</string>
+    <string name="ends_in_1_days">Ends in 1 days</string>
+    <string name="view_terms">View Terms</string>
+    <string name="text_our_designs">Our designs are user inspired, and our furniture is uniquely designed by in-house experts to solve your day to day problems</string>
+    <string name="text_awrd_winning">With our award winning furniture complete with decor, create your dream space today. Without waiting for that elusive tomorrow.</string>
+    <string name="text_explore_products">Explore Products</string>
+    <string name="text_bed_or_sofa">Bed or sofa? It\'s not a choice anymore. With our wallet friendly packages, you can have that perfect home at a fraction of the cost and effort.</string>
+    <string name="text_upgrade">Upgrade as you evolve. Relocate for free. Pause your subscription at will. Things you can never do uf you buy furniture.</string>
+    <string name="text_our_designs_are">Our designs are user inspired and our furniture is uniquely designed by in-house experts to solve your day to day problems. Our designers ensure that all furniture is designed to the highest standards of quality and craftsmanship</string>
+    <string name="text_just_furniture">Not just furniture - but decor, appliances and furnishings. Everything you need to crate your dream home, your way.</string>
+    <string name="text_living_room">Lounge, host friends, watch TV, work, laze and doze. Find the perfect package for whatever you do.</string>
+    <string name="text_bedroom">From beautiful single and queen beds - to spacious wardrobes and dressers - to creative work zones for when you DO eventually wake up!</string>
+    <string name="text_appliances">Are you a baker? A hoarder? A binge-watcher? Or just a midnight-dessert person? We"\'"ve got you all covered.</string>
+    <string name="text_free_location">Moving between homes? Moving cities? We will relocate your furniture. Just pack your bags and leave!</string>
+    <string name="text_damage_waiver">Treat it like your own. We mean it. We cover furniture damages upto Rs. 10,000</string>
+    <string name="text_deep">We understand that your furniture gets dirty and stained. That"\'" why we have free deep cleaning services, to keep your furniture sparkling, always.</string>
+    <string name="text_swap">Upgrading your home? Tired of the same look? Bored with the furniture? Our free swap ensures that your home constantly evolves with your needs.</string>
+    <string name="text_guest">You are using Furlenco as a guest. Login\nto manage your subscription.</string>
+
+
 </resources>

@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/button_blue"
+    tools:context=".LoginActivities.SignUpActivity">
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_margin="@dimen/dp_10"
+        android:background="@android:color/transparent"
+        android:src="@drawable/ic_baseline_close_24"
+        android:text="@string/hello_blank_fragment" />
+
+    <TextView
+        android:id="@+id/tvSignUp2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/dp_30"
+        android:fontFamily="@font/roboto"
+        android:text="Sign up Using"
+        android:textColor="@color/white" />
+
+    <LinearLayout
+        android:id="@+id/llButtons2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvSignUp2"
+        android:layout_marginTop="@dimen/dp_20"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="@dimen/dp_10"
+            android:background="@drawable/facebook_bg"
+            android:src="@drawable/ic_fb" />
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="@dimen/dp_10"
+            android:background="@drawable/facebook_bg"
+            android:src="@drawable/ic_google" />
+
+    </LinearLayout>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cvLoginCard2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/llButtons2"
+        android:layout_margin="@dimen/dp_20"
+        android:elevation="@dimen/dp_10"
+        app:cardCornerRadius="@dimen/dp_10">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="@dimen/dp_20"
+                android:text="Sign Up"
+                android:textSize="@dimen/sp_20" />
+
+            <EditText
+                android:id="@+id/etYourMobile"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp_20"
+                android:layout_marginEnd="@dimen/dp_20"
+                android:drawableStart="@drawable/ic_baseline_person_outline_24"
+                android:drawablePadding="@dimen/dp_10"
+                android:hint="Your Full Name"
+                android:textSize="@dimen/sp_16" />
+
+            <EditText
+                android:id="@+id/etMobile"
+                android:layout_width="match_parent"
+                android:inputType="number"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp_20"
+                android:layout_marginTop="@dimen/dp_20"
+                android:layout_marginEnd="@dimen/dp_20"
+                android:drawableStart="@drawable/ic_outline_local_phone_24"
+                android:drawablePadding="@dimen/dp_10"
+                android:hint="Mobile Number"
+                android:textSize="@dimen/sp_16" />
+
+            <EditText
+                android:id="@+id/etEmail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp_20"
+                android:layout_marginTop="@dimen/dp_20"
+                android:layout_marginEnd="@dimen/dp_20"
+                android:drawableStart="@drawable/ic_outline_email_24"
+                android:drawablePadding="@dimen/dp_10"
+                android:hint="Emaail"
+                android:textSize="@dimen/sp_16" />
+
+
+            <Button
+                android:id="@+id/btnSignUp3"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/dp_40"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/dp_30"
+                android:layout_marginBottom="@dimen/dp_30"
+                android:background="@drawable/next_button_bg"
+                android:paddingStart="@dimen/dp_30"
+                android:paddingEnd="@dimen/dp_30"
+                android:text="Sign Up"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp_16" />
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/tvNewUser"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/cvLoginCard2"
+        android:layout_centerHorizontal="true"
+        android:text="Already Registered?"
+        android:textColor="@color/white" />
+
+    <Button
+        android:id="@+id/btnLogin3"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/dp_40"
+        android:layout_below="@+id/tvNewUser"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/dp_15"
+        android:background="@drawable/sign_up_button_bg"
+        android:paddingStart="@dimen/dp_30"
+        android:paddingEnd="@dimen/dp_30"
+        android:text="Login"
+        android:textAllCaps="false"
+        android:textColor="@color/button_blue"
+        android:textSize="@dimen/sp_16" />
+
+</RelativeLayout>
