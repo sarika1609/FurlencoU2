@@ -1,4 +1,4 @@
-# Furlenco
+# Furlenco - A Furniture Renting App Clone
 
 <img src="https://upload.wikimedia.org/wikipedia/commons/8/81/Furlenco.jpg" width="320">
 
