@@ -32,7 +32,7 @@
                 android:layout_below="@id/tvHi"
                 android:layout_marginStart="@dimen/dp_20"
                 android:layout_marginBottom="@dimen/dp_30"
-                android:text="You are using Furlenco as a guest. Login\nto manage your subscription."
+                android:text="@string/text_guest"
                 android:textSize="@dimen/sp_14" />
 
             <Button

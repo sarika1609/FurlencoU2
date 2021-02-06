@@ -39,7 +39,7 @@ import java.util.List;
 
 public class HomeFragment extends Fragment implements OnProductClick, OnHomeFragmentItemPosition {
 
-    RecyclerView rv_products, rv_collection, rvRentingIsAwesome, rvWeDesign, rvCuratedPackages, rvAwesomeServices;
+    RecyclerView rv_products, rv_collection, rvRentingIsAwesome, rvWeDesign, rvCuratedPackages;
     ResponseModel responseModel;
     private HomeActivity homeActivity;
 
@@ -153,7 +153,6 @@ public class HomeFragment extends Fragment implements OnProductClick, OnHomeFrag
         rvRentingIsAwesome = view.findViewById(R.id.rvRentingIsAwesome);
         rvWeDesign = view.findViewById(R.id.rvWeDesign);
         rvCuratedPackages = view.findViewById(R.id.rvCuratedPackages);
-        rvAwesomeServices = view.findViewById(R.id.rvAwesomeServices);
     }
 
     private void bindCollectionData() {

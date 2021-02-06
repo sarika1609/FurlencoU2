@@ -11,6 +11,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.cardview.widget.CardView;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
 
 import com.example.furlenco.Activities.MainActivity;
 import com.example.furlenco.Activities.HomeActivity;
@@ -67,11 +68,7 @@ public class FragmentFive extends Fragment implements View.OnClickListener {
 
     }
 
-    @Override
-    public void onResume() {
-        super.onResume();
 
-    }
 
     @Override
     public void onCreate(Bundle savedInstanceState) {

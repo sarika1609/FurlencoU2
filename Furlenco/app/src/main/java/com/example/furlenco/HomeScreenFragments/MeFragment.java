@@ -15,6 +15,7 @@ import androidx.fragment.app.Fragment;
 import com.example.furlenco.CartPreferenceHelper;
 import com.example.furlenco.LoginActivities.LoginActivity;
 import com.example.furlenco.R;
+import com.example.furlenco.StartScreenFragments.FragmentFive;
 
 public class MeFragment extends Fragment {
 
@@ -45,6 +46,14 @@ public class MeFragment extends Fragment {
         String location = CartPreferenceHelper.getString("city_name");
         mTvLocation.setText(location);
 
+        mTvLocation.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+//                FragmentFive.newInstance().onStart();
+            }
+        });
+
+
         mBtnLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -58,15 +67,16 @@ public class MeFragment extends Fragment {
     public void onResume() {
         super.onResume();
         String name = CartPreferenceHelper.getString("name");
-        if (name != null) {
+        if (name != null && !name.equalsIgnoreCase("")) {
             mTvHi.setText(name);
-        }
+            mBtnLogin.setVisibility(View.GONE);
+        } else mTvHi.setText("Hi");
 
         String mobile = CartPreferenceHelper.getString("mobile");
         String email = CartPreferenceHelper.getString("email");
-        if (mobile != null && email != null) {
+        if (mobile != null && email != null && !email.equalsIgnoreCase("") && !mobile.equalsIgnoreCase("")) {
             mTvFurlencoGuest.setText(mobile + "." + email);
-        }
+        } else mTvFurlencoGuest.setText(getString(R.string.text_guest));
 
 
     }

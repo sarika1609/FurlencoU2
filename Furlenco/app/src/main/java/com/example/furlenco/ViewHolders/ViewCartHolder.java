@@ -25,7 +25,6 @@ public class ViewCartHolder extends RecyclerView.ViewHolder {
         tv_item_name = itemView.findViewById(R.id.tv_item_name);
         tv_item_count = itemView.findViewById(R.id.tv_item_count);
         tv_item_price = itemView.findViewById(R.id.tv_item_price);
-        tv_item_discount = itemView.findViewById(R.id.tv_item_discount);
         tv_item_gst = itemView.findViewById(R.id.tv_item_gst);
         iv_item = itemView.findViewById(R.id.iv_item);
     }
@@ -33,9 +32,8 @@ public class ViewCartHolder extends RecyclerView.ViewHolder {
     public void setData(CartModelClass cartModelClass) {
         tv_item_name.setText(cartModelClass.getName());
         tv_item_delivery.setText(cartModelClass.getDelivery_time());
-        tv_item_count.setText(cartModelClass.getCart_count()+"");
+        tv_item_count.setText("1 +");
         tv_item_price.setText(cartModelClass.getPrice());
-        tv_item_discount.setText(cartModelClass.getDiscount() + "");
         tv_item_gst.setText(cartModelClass.getGst() + "");
         Glide.with(iv_item).load(cartModelClass.getUrl()).placeholder(R.drawable.loading).into(iv_item);
 
