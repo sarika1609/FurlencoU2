@@ -4,8 +4,7 @@
 
 ## Intro
 
-The project statement given to us was to create a dynamic clone of Furlenco app.
-Furlenco is a platform for renting furniture in major cities in India.
+The project statement given to us was to create a dynamic clone of Furlenco, an app used for renting furniture in major cities in India.
 
 ## Libraries Used
     // Retrofit & OkHttp
