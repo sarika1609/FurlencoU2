@@ -24,6 +24,7 @@ import com.example.furlenco.HomeScreenModelClasses.BrowseCollections;
 import com.example.furlenco.HomeScreenModelClasses.Curated;
 import com.example.furlenco.HomeScreenModelClasses.Design;
 import com.example.furlenco.HomeScreenModelClasses.Renting;
+import com.example.furlenco.Interfaces.OnHomeFragmentItemPosition;
 import com.example.furlenco.Interfaces.OnProductClick;
 import com.example.furlenco.POJOClasses.ResponseModel;
 import com.example.furlenco.R;
@@ -36,7 +37,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 
-public class HomeFragment extends Fragment implements OnProductClick {
+public class HomeFragment extends Fragment implements OnProductClick, OnHomeFragmentItemPosition {
 
     RecyclerView rv_products, rv_collection, rvRentingIsAwesome, rvWeDesign, rvCuratedPackages, rvAwesomeServices;
     ResponseModel responseModel;
@@ -103,17 +104,17 @@ public class HomeFragment extends Fragment implements OnProductClick {
     private void setCuratedRecyclerData() {
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getContext(), LinearLayoutManager.HORIZONTAL, false);
         rvCuratedPackages.setLayoutManager(linearLayoutManager);
-        CuratedAdapter adapter = new CuratedAdapter(curatedList);
+        CuratedAdapter adapter = new CuratedAdapter(curatedList, this::productItemClicked);
         rvCuratedPackages.setAdapter(adapter);
     }
 
     private void bindCuratedData() {
         curatedList = new ArrayList<>();
-        curatedList.add(new Curated(R.drawable.vibrent,"","",Curated.ITEM_TYPE_IMAGE));
-        curatedList.add(new Curated(0,"Curated\nPackages",getString(R.string.text_just_furniture),Curated.ITEM_TYPE_DESC));
-        curatedList.add(new Curated(0,"Living\nRoom",getString(R.string.text_living_room),Curated.ITEM_TYPE_DESC));
-        curatedList.add(new Curated(0,"Bedroom",getString(R.string.text_bedroom),Curated.ITEM_TYPE_DESC));
-        curatedList.add(new Curated(0,"Appliances",getString(R.string.text_appliances),Curated.ITEM_TYPE_DESC));
+        curatedList.add(new Curated(R.drawable.vibrent, "", "", Curated.ITEM_TYPE_IMAGE));
+        curatedList.add(new Curated(0, "Curated\nPackages", getString(R.string.text_just_furniture), Curated.ITEM_TYPE_DESC));
+        curatedList.add(new Curated(0, "Living\nRoom", getString(R.string.text_living_room), Curated.ITEM_TYPE_DESC));
+        curatedList.add(new Curated(0, "Bedroom", getString(R.string.text_bedroom), Curated.ITEM_TYPE_DESC));
+        curatedList.add(new Curated(0, "Appliances", getString(R.string.text_appliances), Curated.ITEM_TYPE_DESC));
 
     }
 
@@ -234,4 +235,10 @@ public class HomeFragment extends Fragment implements OnProductClick {
     }
 
 
+    @Override
+    public void onHomeFragmentClic(int position) {
+        if (homeActivity != null) {
+            homeActivity.sendingAdapterPosition(position);
+        }
+    }
 }

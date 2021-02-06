@@ -91,9 +91,9 @@ public class AddCartActivity extends AppCompatActivity implements View.OnClickLi
         tv_cart_count.setText(cartModelClassList.size() + "");
 
         if (url != null) {
-            Glide.with(btnWin2).load(url).into(btnWin2);
-            Glide.with(ivWin1).load(url).into(ivWin1);
-            Glide.with(iv_cart_product).load(url).into(iv_cart_product);
+            Glide.with(btnWin2).load(url).placeholder(R.drawable.loading).into(btnWin2);
+            Glide.with(ivWin1).load(url).placeholder(R.drawable.loading).into(ivWin1);
+            Glide.with(iv_cart_product).load(url).placeholder(R.drawable.loading).into(iv_cart_product);
         }
         if (win1_name != null) {
             tv_win1_name.setText(win1_name);
@@ -103,8 +103,8 @@ public class AddCartActivity extends AppCompatActivity implements View.OnClickLi
         }
 
         if (url2 != null) {
-            Glide.with(ivWin2).load(url2).into(ivWin2);
-            Glide.with(btnWin3).load(url2).into(btnWin3);
+            Glide.with(ivWin2).load(url2).placeholder(R.drawable.loading).into(ivWin2);
+            Glide.with(btnWin3).load(url2).placeholder(R.drawable.loading).into(btnWin3);
         }
 
         if (rent != null) {

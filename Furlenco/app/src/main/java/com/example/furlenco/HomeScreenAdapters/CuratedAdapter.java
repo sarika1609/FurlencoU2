@@ -12,6 +12,7 @@ import com.example.furlenco.HomeScreenModelClasses.Design;
 import com.example.furlenco.HomeScreenModelClasses.Renting;
 import com.example.furlenco.HomeScreenViewHolders.RentingDescriptionViewHolder;
 import com.example.furlenco.HomeScreenViewHolders.RentingImageViewHolder;
+import com.example.furlenco.Interfaces.OnHomeFragmentItemPosition;
 import com.example.furlenco.R;
 
 import java.util.List;
@@ -19,9 +20,11 @@ import java.util.List;
 public class CuratedAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
 
     private List<Curated> curatedList;
+    OnHomeFragmentItemPosition onHomeFragmentItemPosition;
 
-    public CuratedAdapter(List<Curated> curatedList) {
+    public CuratedAdapter(List<Curated> curatedList,OnHomeFragmentItemPosition position) {
         this.curatedList = curatedList;
+       this. onHomeFragmentItemPosition=position;
     }
 
     @NonNull

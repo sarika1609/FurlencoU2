@@ -119,12 +119,6 @@ public class HomeActivity extends AppCompatActivity {
         this.cartModelClassList = cartModelClassList;
     }
 
-    public void sendCartDataToDisplayFragment(CartCommunationListner listner) {
-        if (listner != null) {
-            listner.updateCartList(cartModelClassList);
-        }
-    }
-
     public void sendingAdapterPosition(int position) {
         this.current_postion = position;
         viewPager.setCurrentItem(1);

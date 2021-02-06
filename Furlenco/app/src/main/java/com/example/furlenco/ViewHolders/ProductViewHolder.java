@@ -54,7 +54,7 @@ public class ProductViewHolder extends RecyclerView.ViewHolder {
                 tvOffer.setText(livingRoomItem.getOffer());
                 tvPrice.setText(livingRoomItem.getMonthlyRental());
                 tvVariant.setText(livingRoomItem.getVariants());
-                Glide.with(ivImage).load(livingRoomItem.getImageUrl()).into(ivImage);
+                Glide.with(ivImage).load(livingRoomItem.getImageUrl()).placeholder(R.drawable.loading).into(ivImage);
 
                 llProduct.setOnClickListener(new View.OnClickListener() {
                     @Override
@@ -89,7 +89,7 @@ public class ProductViewHolder extends RecyclerView.ViewHolder {
             tvOffer.setText(appliancesItem.getOffer());
             tvPrice.setText(appliancesItem.getMonthlyRental());
             //tvVariant.setText(appliancesItem.getVariants());
-            Glide.with(ivImage).load(appliancesItem.getImageUrl()).into(ivImage);
+            Glide.with(ivImage).load(appliancesItem.getImageUrl()).placeholder(R.drawable.loading).into(ivImage);
 
             llProduct.setOnClickListener(new View.OnClickListener() {
                 @Override
@@ -106,7 +106,7 @@ public class ProductViewHolder extends RecyclerView.ViewHolder {
             tvOffer.setText(fullHomeItem.getOffer());
             tvPrice.setText(fullHomeItem.getMonthlyRental());
             // tvVariant.setText(fullHomeItem.getVariants());
-            Glide.with(ivImage).load(fullHomeItem.getImageUrl()).into(ivImage);
+            Glide.with(ivImage).load(fullHomeItem.getImageUrl()).placeholder(R.drawable.loading).into(ivImage);
 
             llProduct.setOnClickListener(new View.OnClickListener() {
                 @Override
@@ -123,7 +123,7 @@ public class ProductViewHolder extends RecyclerView.ViewHolder {
             tvOffer.setText(storageItem.getOffer());
             tvPrice.setText(storageItem.getMonthlyRental());
             //tvVariant.setText(storageItem.getVariants());
-            Glide.with(ivImage).load(storageItem.getImageUrl()).into(ivImage);
+            Glide.with(ivImage).load(storageItem.getImageUrl()).placeholder(R.drawable.loading).into(ivImage);
 
             llProduct.setOnClickListener(new View.OnClickListener() {
                 @Override
@@ -140,7 +140,7 @@ public class ProductViewHolder extends RecyclerView.ViewHolder {
             tvOffer.setText(studyRoomItem.getOffer());
             tvPrice.setText(studyRoomItem.getMonthlyRental());
             //  tvVariant.setText(studyRoomItem.getVariants());
-            Glide.with(ivImage).load(studyRoomItem.getImageUrl()).into(ivImage);
+            Glide.with(ivImage).load(studyRoomItem.getImageUrl()).placeholder(R.drawable.loading).into(ivImage);
 
             llProduct.setOnClickListener(new View.OnClickListener() {
                 @Override
@@ -157,7 +157,7 @@ public class ProductViewHolder extends RecyclerView.ViewHolder {
             tvOffer.setText(kidsRoomItem.getOffer());
             tvPrice.setText(kidsRoomItem.getMonthlyRental());
             // tvVariant.setText(kidsRoomItem.getVariants());
-            Glide.with(ivImage).load(kidsRoomItem.getImageUrl()).into(ivImage);
+            Glide.with(ivImage).load(kidsRoomItem.getImageUrl()).placeholder(R.drawable.loading).into(ivImage);
             llProduct.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
@@ -173,7 +173,7 @@ public class ProductViewHolder extends RecyclerView.ViewHolder {
             tvOffer.setText(diningRoomItem.getOffer());
             tvPrice.setText(diningRoomItem.getMonthlyRental());
             tvVariant.setText(diningRoomItem.getVariants());
-            Glide.with(ivImage).load(diningRoomItem.getImageUrl()).into(ivImage);
+            Glide.with(ivImage).load(diningRoomItem.getImageUrl()).placeholder(R.drawable.loading).into(ivImage);
 
             llProduct.setOnClickListener(new View.OnClickListener() {
                 @Override
@@ -190,7 +190,7 @@ public class ProductViewHolder extends RecyclerView.ViewHolder {
             tvOffer.setText(jsonMember2WheelersItem.getOffer());
             tvPrice.setText(jsonMember2WheelersItem.getMonthlyRental());
             // tvVariant.setText(jsonMember2WheelersItem.getVariants());
-            Glide.with(ivImage).load(jsonMember2WheelersItem.getImageUrl()).into(ivImage);
+            Glide.with(ivImage).load(jsonMember2WheelersItem.getImageUrl()).placeholder(R.drawable.loading).into(ivImage);
 
             llProduct.setOnClickListener(new View.OnClickListener() {
                 @Override

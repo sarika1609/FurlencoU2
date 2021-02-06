@@ -27,7 +27,7 @@ public class CollectionViewHolder extends RecyclerView.ViewHolder {
 
     public void setCollectionData(ProductModelClass productModelClass) {
         tv_collection.setText(productModelClass.getName());
-        Glide.with(iv_collection).load(productModelClass.getImage_url()).into(iv_collection);
+        Glide.with(iv_collection).load(productModelClass.getImage_url()).placeholder(R.drawable.loading).into(iv_collection);
 
 
     }

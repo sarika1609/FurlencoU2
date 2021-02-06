@@ -89,7 +89,7 @@ public class AddCartFragment extends Fragment implements AddCartListner, BedRoom
         }
         tv_cart_count.setText(cartModelClassList.size()+"");
         if (url != null) {
-            Glide.with(iv_cart_product).load(url).into(iv_cart_product);
+            Glide.with(iv_cart_product).load(url).placeholder(R.drawable.loading).into(iv_cart_product);
         }
     }
 

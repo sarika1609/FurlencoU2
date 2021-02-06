@@ -78,7 +78,7 @@ public class CartFragment extends Fragment {
 
 
     public List<CartModelClass> getList() {
-        //CartPreferenceHelper.getInstance(getActivity());
+        CartPreferenceHelper.getInstance(getActivity());
         String serializedObject = CartPreferenceHelper.getString("data");
         if (serializedObject != null) {
             Gson gson = new Gson();
