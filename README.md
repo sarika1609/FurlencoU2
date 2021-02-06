@@ -27,7 +27,7 @@ The project statement given to us was to create a dynamic clone of Furlenco, an 
 
 1) Chaithanya Guptha Gollapalli: [GitHub Link] (https://github.com/chaithanyagollapalli)
 2) Sarika Thota: [GitHub Link] (https://github.com/sarika1609)
-3) Kalpesh Dhupia: [GitHub Profile) ()
+3) Kalpesh Dhupia: [GitHub Profile) (https://github.com/kalpesh022)
 
 ## Screenshots 
 
