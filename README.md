@@ -1,6 +1,6 @@
 # Furlenco
 
-<img src="https://www.nextbigbrand.in/wp-content/uploads/2020/02/logo.png" width="320">
+<img src="https://upload.wikimedia.org/wikipedia/commons/8/81/Furlenco.jpg" width="320">
 
 ## Intro
 
