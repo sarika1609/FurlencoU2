@@ -130,28 +130,28 @@ public class BedroomFragment extends Fragment implements RecyclerItemClickListen
 
     @Override
     public void onItemClicked(BedroomItem bedroomItem) {
-        Intent intent = new Intent(getContext(), AddCartActivity.class);
-        intent.putExtra("name", bedroomItem.getName());
-        intent.putExtra("url", bedroomItem.getImageUrl());
-        intent.putExtra("rent", bedroomItem.getMonthlyRental());
-        intent.putExtra("price", bedroomItem.getPrice());
-        intent.putExtra("url2", bedroomItem.getImageUrl2());
-        intent.putExtra("win1", bedroomItem.getWin2().getName());
-        intent.putExtra("win2", bedroomItem.getWin2().getName());
+        Intent intent= new Intent(getContext(), AddCartActivity.class);
+        intent.putExtra("name",bedroomItem.getName());
+        intent.putExtra("url",bedroomItem.getImageUrl());
+        intent.putExtra("rent",bedroomItem.getMonthlyRental());
+        intent.putExtra("price",bedroomItem.getPrice());
+        intent.putExtra("url2",bedroomItem.getImageUrl2());
+        intent.putExtra("win1",bedroomItem.getWin2().getName());
+        intent.putExtra("win2",bedroomItem.getWin2().getName());
         startActivity(intent);
         //sendDataToActivity(bedroomItem.getName(),bedroomItem.getImageUrl());
     }
 
-    private void sendDataToActivity(String name, String url) {
-        if (homeActivity != null) {
-            homeActivity.setBedRoomCartData(name, url, "bedroom_tag");
+    private void sendDataToActivity(String name,String url) {
+        if (homeActivity !=null){
+            homeActivity.setBedRoomCartData(name,url,"bedroom_tag");
         }
     }
 
     @Override
     public void onAttach(@NonNull Context context) {
         super.onAttach(context);
-        homeActivity = (HomeActivity) context;
+        homeActivity= (HomeActivity) context;
     }
 
     @Override

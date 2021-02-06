@@ -125,7 +125,7 @@ public class HomeActivity extends AppCompatActivity {
         ProductsFragment.newInstance().onResume();
     }
 
-    public void sendPositionToFragment(ProductsClickListener listener) {
+    public void sendPostionToFragment(ProductsClickListener listener) {
         if (listener != null) {
             Bundle bundle = new Bundle();
             bundle.putInt("position", current_postion);

@@ -64,7 +64,6 @@ public class CartFragment extends Fragment {
     private void setCardAdapterData(List<CartModelClass> cartModelClassList) {
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getContext());
         rv_carts.setLayoutManager(linearLayoutManager);
-
         ViewCartAdapter viewCartAdapter = new ViewCartAdapter(cartModelClassList);
         rv_carts.setAdapter(viewCartAdapter);
 
@@ -83,7 +82,6 @@ public class CartFragment extends Fragment {
                 cartModelClassList = gson.fromJson(serializedObject, type);
             }
         }
-
         return cartModelClassList;
     }
 

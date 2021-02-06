@@ -37,7 +37,7 @@ public class ViewCartHolder extends RecyclerView.ViewHolder {
         tv_item_price.setText(cartModelClass.getPrice());
         tv_item_discount.setText(cartModelClass.getDiscount() + "");
         tv_item_gst.setText(cartModelClass.getGst() + "");
-        Glide.with(iv_item).load(cartModelClass.getUrl()).into(iv_item);
+        Glide.with(iv_item).load(cartModelClass.getUrl()).placeholder(R.drawable.loading).into(iv_item);
 
 
     }

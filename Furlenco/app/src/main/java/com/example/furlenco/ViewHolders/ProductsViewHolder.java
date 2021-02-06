@@ -37,11 +37,11 @@ public class ProductsViewHolder extends RecyclerView.ViewHolder {
         } else tv_product.setText(exploreProductsItem.getName());
 
         if (exploreProductsItem.getImageUrl()==null){
-            iv_product.setImageResource(R.drawable.ic_launcher_background);
+            iv_product.setImageResource(R.drawable.loading);
         }else {
             Glide.with(iv_product).
                     load(exploreProductsItem.getImageUrl()).
-                    placeholder(R.drawable.ic_launcher_background).
+                    placeholder(R.drawable.loading).
                     into(iv_product);
         }
 
