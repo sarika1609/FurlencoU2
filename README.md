@@ -7,7 +7,7 @@
 The project statement given to us was to create a dynamic clone of Furlenco app.
 Furlenco is a platform for renting furniture in major cities in India.
 
-## Dependencies Used
+## Libraries Used
     // Retrofit & OkHttp
     implementation 'com.squareup.retrofit2:retrofit:2.5.0'
     // This library is used by retrofit internally to convert json-pojo and pojo-json
