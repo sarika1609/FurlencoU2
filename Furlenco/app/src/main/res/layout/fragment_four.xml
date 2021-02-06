@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".Fragments.FragmentFour">
+    tools:context=".StartScreenFragments.FragmentFour">
 
     <TextView
         android:id="@+id/tvGreatDesign"
@@ -23,7 +23,8 @@
         android:layout_marginTop="@dimen/dp_30"
         android:layout_below="@id/tvGreatDesign"
         android:layout_width="match_parent"
-        android:layout_height="350dp"
+        android:layout_height="300dp"
+        android:layout_marginBottom="@dimen/dp_50"
         android:src="@drawable/fur"
         />
 

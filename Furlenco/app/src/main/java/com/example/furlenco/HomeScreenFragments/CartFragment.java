@@ -1,8 +1,9 @@
 package com.example.furlenco.HomeScreenFragments;
 
-import android.content.Context;
-import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -10,22 +11,14 @@ import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
-
-import com.example.furlenco.Activities.HomeActivity;
 import com.example.furlenco.Adapters.ViewCartAdapter;
 import com.example.furlenco.CartPreferenceHelper;
-import com.example.furlenco.Listners.CartCommunationListner;
+import com.example.furlenco.Listeners.CartCommunationListner;
 import com.example.furlenco.ModelClasses.CartModelClass;
 import com.example.furlenco.R;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.InputStreamReader;
 import java.lang.reflect.Type;
 import java.util.ArrayList;
 import java.util.List;
@@ -71,6 +64,7 @@ public class CartFragment extends Fragment {
     private void setCardAdapterData(List<CartModelClass> cartModelClassList) {
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getContext());
         rv_carts.setLayoutManager(linearLayoutManager);
+
         ViewCartAdapter viewCartAdapter = new ViewCartAdapter(cartModelClassList);
         rv_carts.setAdapter(viewCartAdapter);
 
@@ -78,14 +72,18 @@ public class CartFragment extends Fragment {
 
 
     public List<CartModelClass> getList() {
-        //CartPreferenceHelper.getInstance(getActivity());
-        String serializedObject = CartPreferenceHelper.getString("data");
-        if (serializedObject != null) {
-            Gson gson = new Gson();
-            Type type = new TypeToken<List<CartModelClass>>() {
-            }.getType();
-            cartModelClassList = gson.fromJson(serializedObject, type);
+        cartModelClassList = new ArrayList<>();
+        CartPreferenceHelper.getInstance(getActivity());
+        if ( cartModelClassList != null) {
+            String serializedObject = CartPreferenceHelper.getString("data");
+            if (serializedObject != null) {
+                Gson gson = new Gson();
+                Type type = new TypeToken<List<CartModelClass>>() {
+                }.getType();
+                cartModelClassList = gson.fromJson(serializedObject, type);
+            }
         }
+
         return cartModelClassList;
     }
 
