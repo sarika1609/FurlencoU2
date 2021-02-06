@@ -8,6 +8,7 @@ import android.widget.EditText;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.example.furlenco.CartPreferenceHelper;
 import com.example.furlenco.R;
 
 public class SignUpActivity extends AppCompatActivity {
@@ -28,14 +29,15 @@ public class SignUpActivity extends AppCompatActivity {
         mEtEmail = findViewById(R.id.etEmail);
         mBtnSignUp = findViewById(R.id.btnSignUp3);
         mBtnLogin = findViewById(R.id.btnLogin3);
+        CartPreferenceHelper.getInstance(this);
 
         mBtnSignUp.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(SignUpActivity.this,OTPActivity.class);
-                intent.putExtra("name",mEtYourName.getText().toString());
-                intent.putExtra("mobile",mEtYourName.getText().toString());
-                intent.putExtra("email",mEtYourName.getText().toString());
+                CartPreferenceHelper.WriteString("name",mEtYourName.getText().toString());
+                CartPreferenceHelper.WriteString("mobile",mEtYourName.getText().toString());
+                CartPreferenceHelper.WriteString("email",mEtYourName.getText().toString());
                 startActivity(intent);
                 finish();
             }
