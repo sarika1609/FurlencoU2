@@ -14,6 +14,7 @@ import androidx.fragment.app.Fragment;
 
 import com.example.furlenco.Activities.MainActivity;
 import com.example.furlenco.Activities.HomeActivity;
+import com.example.furlenco.CartPreferenceHelper;
 import com.example.furlenco.R;
 
 public class FragmentFive extends Fragment implements View.OnClickListener {
@@ -46,6 +47,7 @@ public class FragmentFive extends Fragment implements View.OnClickListener {
         cvNoida = view.findViewById(R.id.cvNoida);
         cvHyderabad = view.findViewById(R.id.cvHyderabad);
         cvChennai = view.findViewById(R.id.cvChennai);
+        CartPreferenceHelper.getInstance(getContext());
 
         cvBengaluru.setOnClickListener(this);
         cvMumbai.setOnClickListener(this);
@@ -58,11 +60,18 @@ public class FragmentFive extends Fragment implements View.OnClickListener {
     }
 
     public void launchHomeActivity(String name) {
+        CartPreferenceHelper.WriteString("city_name",name);
         Intent intent = new Intent(getContext(), HomeActivity.class);
         intent.putExtra("city_name", name);
         startActivity(intent);
+
     }
 
+    @Override
+    public void onResume() {
+        super.onResume();
+
+    }
 
     @Override
     public void onCreate(Bundle savedInstanceState) {

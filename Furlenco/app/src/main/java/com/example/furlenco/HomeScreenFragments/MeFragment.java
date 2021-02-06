@@ -19,7 +19,7 @@ import com.example.furlenco.R;
 public class MeFragment extends Fragment {
 
     private Button mBtnLogin;
-    private TextView mTvHi;
+    private TextView mTvHi, mTvFurlencoGuest, mTvLocation;
 
     public static MeFragment newInstance() {
         MeFragment fragment = new MeFragment();
@@ -38,8 +38,12 @@ public class MeFragment extends Fragment {
         super.onViewCreated(view, savedInstanceState);
         mBtnLogin = view.findViewById(R.id.btnLogin);
         mTvHi = view.findViewById(R.id.tvHi);
+        mTvLocation = view.findViewById(R.id.tvLocation);
+        mTvFurlencoGuest = view.findViewById(R.id.tvFurlencoGuest);
         CartPreferenceHelper.getInstance(getContext());
-        String name = CartPreferenceHelper.getString("name");
+
+        String location = CartPreferenceHelper.getString("city_name");
+        mTvLocation.setText(location);
 
         mBtnLogin.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -57,5 +61,13 @@ public class MeFragment extends Fragment {
         if (name != null) {
             mTvHi.setText(name);
         }
+
+        String mobile = CartPreferenceHelper.getString("mobile");
+        String email = CartPreferenceHelper.getString("email");
+        if (mobile != null && email != null) {
+            mTvFurlencoGuest.setText(mobile + "." + email);
+        }
+
+
     }
 }

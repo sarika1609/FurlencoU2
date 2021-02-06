@@ -20,6 +20,6 @@ public final class CartPreferenceHelper {
         editor.apply();
     }
     public static String getString(String key){
-        return sharedPreferences.getString(key," ");
+        return sharedPreferences.getString(key,"");
     }
 }

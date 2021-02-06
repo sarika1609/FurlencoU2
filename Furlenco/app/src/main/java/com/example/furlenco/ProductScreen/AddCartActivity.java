@@ -1,17 +1,20 @@
 package com.example.furlenco.ProductScreen;
 
 import android.app.AlertDialog;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.bumptech.glide.Glide;
 import com.example.furlenco.CartPreferenceHelper;
+import com.example.furlenco.LoginActivities.LoginActivity;
 import com.example.furlenco.ModelClasses.CartModelClass;
 import com.example.furlenco.R;
 import com.google.gson.Gson;
@@ -29,7 +32,7 @@ public class AddCartActivity extends AppCompatActivity implements View.OnClickLi
     ImageButton btnLike, btn_cart_count;
     ImageButton btnWin2, btnWin3;
     ImageView ivWin1, ivWin2;
-    TextView tv_win2_name, tv_win1_name;
+    TextView tv_win2_name, tv_win1_name, mTvName;
 
 
     @Override
@@ -53,6 +56,7 @@ public class AddCartActivity extends AppCompatActivity implements View.OnClickLi
         ivWin2 = findViewById(R.id.ivWin2);
         tv_win2_name = findViewById(R.id.tv_win2_name);
         tv_win1_name = findViewById(R.id.tv_win1_name);
+        mTvName = findViewById(R.id.tvNameInProductView);
 
         CartPreferenceHelper.getInstance(this);
         //fragmentManage=gets
@@ -78,6 +82,8 @@ public class AddCartActivity extends AppCompatActivity implements View.OnClickLi
 
         }
         tv_cart_count.setText(cartModelClassList.size() + "");
+
+        mTvName.setText(name);
 
         if (url != null) {
             Glide.with(btnWin2).load(url).placeholder(R.drawable.loading).into(btnWin2);
@@ -114,6 +120,10 @@ public class AddCartActivity extends AppCompatActivity implements View.OnClickLi
         cartModelClassList.add(new CartModelClass(name, url, "Allen Queen bed with 6 mattress-basic", cartModelClassList.size(), "Delivery in next 2 hours", price, 32.7, 135.5));
         tv_cart_count.setText(cartModelClassList.size() + "");
         setList("data", cartModelClassList);
+
+        Toast.makeText(AddCartActivity.this,"Item added to cart",Toast.LENGTH_SHORT).show();
+
+
     }
 
     @Override

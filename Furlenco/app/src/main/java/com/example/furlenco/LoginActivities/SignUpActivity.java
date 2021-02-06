@@ -36,8 +36,8 @@ public class SignUpActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent(SignUpActivity.this,OTPActivity.class);
                 CartPreferenceHelper.WriteString("name",mEtYourName.getText().toString());
-                CartPreferenceHelper.WriteString("mobile",mEtYourName.getText().toString());
-                CartPreferenceHelper.WriteString("email",mEtYourName.getText().toString());
+                CartPreferenceHelper.WriteString("mobile",mEtMobile.getText().toString());
+                CartPreferenceHelper.WriteString("email",mEtEmail.getText().toString());
                 startActivity(intent);
                 finish();
             }

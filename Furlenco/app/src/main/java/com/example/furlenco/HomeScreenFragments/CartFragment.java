@@ -1,9 +1,12 @@
 package com.example.furlenco.HomeScreenFragments;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -14,6 +17,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.example.furlenco.Adapters.ViewCartAdapter;
 import com.example.furlenco.CartPreferenceHelper;
 import com.example.furlenco.Listeners.CartCommunationListner;
+import com.example.furlenco.LoginActivities.LoginActivity;
 import com.example.furlenco.ModelClasses.CartModelClass;
 import com.example.furlenco.R;
 import com.google.gson.Gson;
@@ -27,6 +31,7 @@ public class CartFragment extends Fragment {
     RecyclerView rv_carts;
     List<CartModelClass> cartModelClassList;
     CartCommunationListner listner;
+    private Button mBtnContinue;
 
     public static CartFragment newInstance() {
         CartFragment fragment = new CartFragment();
@@ -56,6 +61,18 @@ public class CartFragment extends Fragment {
 
     private void initUI(View view) {
         rv_carts = view.findViewById(R.id.rv_carts);
+        mBtnContinue = view.findViewById(R.id.btnContinue);
+        CartPreferenceHelper.getInstance(getContext());
+        mBtnContinue.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (CartPreferenceHelper.getString("name").equalsIgnoreCase("")) {
+                    Intent intent = new Intent(getActivity(), LoginActivity.class);
+                    startActivity(intent);
+                } else Toast.makeText(getContext(),"Order Placed",Toast.LENGTH_SHORT).show();
+
+            }
+        });
         getList();
         setCardAdapterData(cartModelClassList);
 
@@ -73,7 +90,7 @@ public class CartFragment extends Fragment {
     public List<CartModelClass> getList() {
         cartModelClassList = new ArrayList<>();
         CartPreferenceHelper.getInstance(getActivity());
-        if ( cartModelClassList != null) {
+        if (cartModelClassList != null) {
             String serializedObject = CartPreferenceHelper.getString("data");
             if (serializedObject != null) {
                 Gson gson = new Gson();

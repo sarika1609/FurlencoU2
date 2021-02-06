@@ -74,7 +74,7 @@ public class ProductsFragment extends Fragment implements ProductsClickListener 
     public void onResume() {
         super.onResume();
         if (homeActivity != null) {
-            homeActivity.sendPositionToFragment(this);
+            homeActivity.sendPostionToFragment(this);
         }
     }
 
