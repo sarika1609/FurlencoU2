@@ -11,16 +11,22 @@
         android:roundIcon="@drawable/ic_furlenco_logo"
         android:supportsRtl="true"
         android:theme="@style/Theme.Furlenco">
+        <activity android:name=".LoginActivities.LoginActivityWithPassword"></activity>
+        <activity android:name=".LoginActivities.PasswordActivity" />
+        <activity android:name=".Activities.HomeActivity" />
+        <activity android:name=".LoginActivities.SignUpActivity" />
+        <activity android:name=".LoginActivities.LoginActivity" />
+
         <service
             android:name=".DetailsIntentService"
-            android:exported="false"></service>
+            android:exported="false" />
         <service
             android:name=".MyIntentService"
             android:exported="false" />
 
-        <activity android:name=".Activities.AddCartActivity" />
-        <activity android:name=".Activities.MainActivity" />
-        <activity android:name=".Activities.HomeActivity">
+        <activity android:name=".ProductScreen.AddCartActivity" />
+        <activity android:name=".LoginActivities.OTPActivity" />
+        <activity android:name=".Activities.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

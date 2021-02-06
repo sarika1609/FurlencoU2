@@ -1,8 +1,7 @@
-package com.example.furlenco.Fragments;
+package com.example.furlenco.ProductScreen;
 
 import android.app.AlertDialog;
 import android.content.Context;
-import android.content.DialogInterface;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -15,25 +14,20 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
 import com.example.furlenco.Activities.HomeActivity;
 import com.example.furlenco.Interfaces.BedRoomCartCommunicationListner;
-import com.example.furlenco.Listners.AddCartListner;
+import com.example.furlenco.Listeners.AddCartListner;
 import com.example.furlenco.ModelClasses.CartModelClass;
 import com.example.furlenco.ModelClasses.ProductModelClass;
 import com.example.furlenco.POJOClasses.BedroomItem;
-import com.example.furlenco.ProdcutsFragments.BedroomFragment;
 import com.example.furlenco.R;
 
-import java.io.FileInputStream;
-import java.io.ObjectInputStream;
 import java.util.ArrayList;
 import java.util.List;
 

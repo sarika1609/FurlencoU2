@@ -1,113 +1,187 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/button_blue"
+    android:orientation="vertical"
     tools:context=".HomeScreenFragments.MeFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <ImageButton
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentEnd="true"
-        android:background="@android:color/transparent"
-        android:src="@drawable/ic_baseline_close_24"
-        android:text="@string/hello_blank_fragment" />
-
-    <TextView
-        android:id="@+id/tvSignUp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="@dimen/dp_30"
-        android:fontFamily="@font/roboto"
-        android:text="Sign up Using"
-        android:textColor="@color/white" />
-
-    <LinearLayout
-        android:id="@+id/llButtons"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/tvSignUp"
-        android:layout_marginTop="@dimen/dp_20"
-        android:gravity="center"
-        android:orientation="horizontal">
-
-        <ImageButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_margin="@dimen/dp_10"
-            android:background="@drawable/facebook_bg"
-            android:src="@drawable/ic_fb" />
-
-        <ImageButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_margin="@dimen/dp_10"
-            android:background="@drawable/facebook_bg"
-            android:src="@drawable/ic_google" />
-
-    </LinearLayout>
-
     <androidx.cardview.widget.CardView
-        android:id="@+id/cvLoginCard"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/llButtons"
-        android:layout_margin="@dimen/dp_20"
-        android:elevation="@dimen/dp_10"
-        app:cardCornerRadius="@dimen/dp_10">
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/tvHi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp_20"
+                android:layout_marginTop="@dimen/dp_20"
+                android:fontFamily="@font/roboto"
+                android:text="Hi"
+                android:textColor="@color/black"
+                android:textSize="@dimen/sp_20" />
+
+            <TextView
+                android:id="@+id/tvFurlencoGuest"
+                android:layout_width="275dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tvHi"
+                android:layout_marginStart="@dimen/dp_20"
+                android:layout_marginBottom="@dimen/dp_30"
+                android:text="You are using Furlenco as a guest. Login\nto manage your subscription."
+                android:textSize="@dimen/sp_14" />
+
+            <Button
+                android:id="@+id/btnLogin"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/dp_30"
+                android:layout_marginStart="@dimen/dp_10"
+                android:layout_marginTop="45dp"
+                android:layout_toEndOf="@+id/tvFurlencoGuest"
+                android:background="@drawable/next_button_bg"
+                android:text="LOGIN"
+                android:textColor="@color/white" />
+
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:orientation="vertical">
 
             <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_margin="@dimen/dp_20"
-                android:text="Login"
-                android:textSize="@dimen/sp_20" />
-
-            <EditText
-                android:id="@+id/etYourMobile"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Your Emaail ID/Mobile Number"
-                android:padding="@dimen/dp_20"
-                android:textSize="@dimen/sp_16" />
+                android:layout_margin="@dimen/dp_20"
+                android:drawableStart="@drawable/ic_outline_location_on_24_me"
+                android:drawablePadding="@dimen/dp_20"
+                android:fontFamily="@font/roboto_light"
+                android:text="Hyderabad"
+                android:textColor="@color/black"
+                android:textSize="@dimen/sp_20" />
 
-            <Button
-                android:layout_width="wrap_content"
+            <TextView
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_marginTop="@dimen/dp_30"
-                android:layout_marginBottom="@dimen/dp_30"
-                android:background="@drawable/next_button_bg"
-                android:paddingStart="@dimen/dp_30"
-                android:paddingEnd="@dimen/dp_30"
-                android:text="Next"
-                android:textAllCaps="false"
-                android:textColor="@color/white"
-                android:textSize="@dimen/sp_18" />
+                android:layout_margin="@dimen/dp_20"
+                android:drawableStart="@drawable/ic_truck__1_me"
+                android:drawablePadding="@dimen/dp_20"
+                android:fontFamily="@font/roboto_light"
+                android:text="My Orders"
+                android:textColor="@color/black"
+                android:textSize="@dimen/sp_20" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/dp_20"
+                android:drawableStart="@drawable/ic_outline_note_24_me"
+                android:drawablePadding="@dimen/dp_20"
+                android:fontFamily="@font/roboto_light"
+                android:text="My Subscription"
+                android:textColor="@color/black"
+                android:textSize="@dimen/sp_20" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/dp_20"
+                android:drawableStart="@drawable/ic_outline_credit_card_24_me"
+                android:drawablePadding="@dimen/dp_20"
+                android:fontFamily="@font/roboto_light"
+                android:text="Payment and Invoices"
+                android:textColor="@color/black"
+                android:textSize="@dimen/sp_20" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/dp_20"
+                android:drawableStart="@drawable/ic_baseline_settings_24_me"
+                android:drawablePadding="@dimen/dp_20"
+                android:fontFamily="@font/roboto_light"
+                android:text="Payment Settings"
+                android:textColor="@color/black"
+                android:textSize="@dimen/sp_20" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/dp_20"
+                android:drawableStart="@drawable/ic_discount_me"
+                android:drawablePadding="@dimen/dp_20"
+                android:fontFamily="@font/roboto_light"
+                android:text="Offers"
+                android:textColor="@color/black"
+                android:textSize="@dimen/sp_20" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/dp_20"
+                android:drawableStart="@drawable/ic_heart__1_me"
+                android:drawablePadding="@dimen/dp_20"
+                android:fontFamily="@font/roboto_light"
+                android:text="Wishlist"
+                android:textColor="@color/black"
+                android:textSize="@dimen/sp_20" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/dp_20"
+                android:drawableStart="@drawable/ic_refer_me"
+                android:drawablePadding="@dimen/dp_20"
+                android:fontFamily="@font/roboto_light"
+                android:text="Refer a friend"
+                android:textColor="@color/black"
+                android:textSize="@dimen/sp_20" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/dp_20"
+                android:drawableStart="@drawable/ic_outline_help_24_me"
+                android:drawablePadding="@dimen/dp_20"
+                android:fontFamily="@font/roboto_light"
+                android:text="Help"
+                android:textColor="@color/black"
+                android:textSize="@dimen/sp_20" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/dp_20"
+                android:drawableStart="@drawable/ic_outline_star_24_me"
+                android:drawablePadding="@dimen/dp_20"
+                android:fontFamily="@font/roboto_light"
+                android:text="Rate us"
+                android:textColor="@color/black"
+                android:textSize="@dimen/sp_20" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/dp_20"
+                android:drawableStart="@drawable/ic_outline_notifications_24_me"
+                android:drawablePadding="@dimen/dp_20"
+                android:fontFamily="@font/roboto_light"
+                android:text="Notifications"
+                android:textColor="@color/black"
+                android:textSize="@dimen/sp_20" />
+
 
         </LinearLayout>
 
-    </androidx.cardview.widget.CardView>
+    </ScrollView>
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:text="____"
-        android:textColor="@color/white"
-        android:layout_below="@+id/cvLoginCard"
-        android:layout_centerHorizontal="true"
-        android:layout_height="wrap_content" />
-
-
-</RelativeLayout>
+</LinearLayout>

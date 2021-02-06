@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/button_blue"
+    tools:context=".LoginActivities.OTPActivity">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cvLoginCard"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/llButtons"
+        android:layout_marginStart="@dimen/dp_20"
+        android:layout_marginTop="@dimen/dp_50"
+        android:layout_marginEnd="@dimen/dp_20"
+        android:elevation="@dimen/dp_10"
+        app:cardCornerRadius="@dimen/dp_10">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <ImageButton
+                android:id="@+id/btnBack"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp_30"
+                android:layout_marginTop="40dp"
+                android:background="@android:color/transparent"
+                android:src="@drawable/ic_baseline_arrow_back_24" />
+
+            <TextView
+                android:id="@+id/tvOTP"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="40dp"
+                android:text="OTP Verification"
+                android:textSize="@dimen/sp_20" />
+
+            <TextView
+                android:id="@+id/tvPleaseType"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tvOTP"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="5dp"
+                android:text="Please type the OTP sent to 9640024533"
+                android:textSize="@dimen/sp_14" />
+
+            <LinearLayout
+                android:id="@+id/llEditTexts"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tvPleaseType"
+                android:layout_centerHorizontal="true">
+
+                <EditText
+                    android:id="@+id/etFirstNumber"
+                    android:layout_width="@dimen/dp_30"
+                    android:layout_height="wrap_content"
+                    android:inputType="number" />
+
+                <EditText
+                    android:id="@+id/etSecondNumber"
+                    android:layout_width="@dimen/dp_30"
+                    android:layout_height="wrap_content"
+                    android:inputType="number" />
+
+                <EditText
+                    android:id="@+id/etThirdNumber"
+                    android:layout_width="@dimen/dp_30"
+                    android:layout_height="wrap_content"
+                    android:inputType="number" />
+
+                <EditText
+                    android:id="@+id/etFourthNumber"
+                    android:layout_width="@dimen/dp_30"
+                    android:layout_height="wrap_content"
+                    android:inputType="number" />
+
+            </LinearLayout>
+
+
+            <Button
+                android:id="@+id/btnVerify"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/dp_40"
+                android:layout_below="@id/llEditTexts"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/dp_30"
+                android:background="@drawable/next_button_bg"
+                android:paddingStart="@dimen/dp_30"
+                android:paddingEnd="@dimen/dp_30"
+                android:text="Verify"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp_16" />
+
+            <TextView
+                android:id="@+id/tvTerms"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/btnVerify"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/dp_15"
+                android:layout_marginBottom="@dimen/dp_20"
+                android:gravity="center"
+                android:text="By clicking on Verify Button, you agree to Terms and Conditions"
+                android:textSize="@dimen/sp_14" />
+
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>

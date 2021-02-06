@@ -15,7 +15,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.example.furlenco.Activities.AddCartActivity;
+import com.example.furlenco.ProductScreen.AddCartActivity;
 import com.example.furlenco.Activities.HomeActivity;
 import com.example.furlenco.Adapters.ProductAdapter;
 import com.example.furlenco.Interfaces.RecyclerItemClickListener;
@@ -36,7 +36,6 @@ import com.google.gson.reflect.TypeToken;
 
 import java.io.InputStream;
 import java.lang.reflect.Type;
-import java.util.ArrayList;
 
 public class AppliancesFragment extends Fragment implements RecyclerItemClickListener {
     private RecyclerView rvappliance;
