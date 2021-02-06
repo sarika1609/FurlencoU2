@@ -31,14 +31,5 @@ The project statement given to us was to create a dynamic clone of Furlenco, an 
 
 ## Screenshots 
 
-<p align="center">
-  <img alt=src="https://user-images.githubusercontent.com/44438444/107111093-266ae700-6873-11eb-9e3c-de94040d1bbc.png" width="45%">
-&nbsp; &nbsp; &nbsp; &nbsp;
-  <img alt=src="https://user-images.githubusercontent.com/44438444/107111120-4f8b7780-6873-11eb-85b8-1b705e4244cf.png"> width="45%">
-    &nbsp; &nbsp; &nbsp; &nbsp;
-     <img alt=src="https://user-images.githubusercontent.com/44438444/107111120-4f8b7780-6873-11eb-85b8-1b705e4244cf.png" width="45%">
-</p>
-
-## Cloned App
-<img src="https://media1.giphy.com/media/Xvik9fIBTKTyG0sm6I/giphy.gif"/>
+<img src="https://user-images.githubusercontent.com/44438444/107111093-266ae700-6873-11eb-9e3c-de94040d1bbc.png" width="300"/> <img src="https://user-images.githubusercontent.com/44438444/107111114-47333c80-6873-11eb-97f0-fdfdf051b835.png" width="300"/> <img src="https://user-images.githubusercontent.com/44438444/107111120-4f8b7780-6873-11eb-85b8-1b705e4244cf.png" width="300"/>
 
