@@ -25,3 +25,6 @@ This is a an android project based on Furlenco, an app used for renting furnitur
 - [Retrofit](https://github.com/square/retrofit) - for REST APIs and network data.
 - [Lottie](https://github.com/airbnb/lottie-android) - for animations.
 - [Gif Drawable](https://github.com/koral--/android-gif-drawable) - for GIFs.
+
+
+Play Store Link - https://play.google.com/store/apps/details?id=com.boss.furlencou2
